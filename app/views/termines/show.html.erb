@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @termine.date %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @termine.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_termine_path(@termine) %> |
+<%= link_to 'Back', termines_path %>

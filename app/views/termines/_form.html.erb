@@ -1,0 +1,25 @@
+<%= form_for(@termine) do |f| %>
+  <% if @termine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@termine.errors.count, "error") %> prohibited this termine from being saved:</h2>
+
+      <ul>
+      <% @termine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
