@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20111108132054) do
     t.datetime "updated_at"
   end
 
+
   create_table "termines", :force => true do |t|
     t.datetime "date"
     t.string   "note"

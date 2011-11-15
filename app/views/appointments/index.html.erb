@@ -1,4 +1,4 @@
-<h1>Listing appointments</h1>
+<h1>Agenda</h1>
 
 <table>
   <tr>
@@ -10,7 +10,7 @@
   </tr>
 
 <% @appointments.each do |appointment| %>
-  <tr>
+  <tr class='spalte'>
     <td><%= appointment.date %></td>
     <td><%= appointment.note %></td>
     <td><%= link_to 'Show', appointment %></td>
@@ -20,6 +20,11 @@
 <% end %>
 </table>
 
+<h1>New appointment</h1>
+
+<%= render 'form' %>
+
 <br />
 
 <%= link_to 'New Appointment', new_appointment_path %>
+

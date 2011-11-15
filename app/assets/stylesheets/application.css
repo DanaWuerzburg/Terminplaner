@@ -5,3 +5,9 @@
  *= require_self
  *= require_tree . 
 */
+
+.spalte{
+    width: 100px;
+    height: 25px;
+    background:  #adafba;
+}
