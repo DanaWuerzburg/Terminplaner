@@ -2,8 +2,11 @@
 
 <table>
   <tr>
-    <th>Date</th>
+
+    <th><%= sortable "date" %></th>
     <th>Note</th>
+
+    <th><%= sortable "priority_number","Priority" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +16,7 @@
   <tr class='spalte'>
     <td><%= appointment.date %></td>
     <td><%= appointment.note %></td>
+    <td><%= appointment.priority_number %></td>
     <td><%= link_to 'Show', appointment %></td>
     <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
     <td><%= link_to 'Destroy', appointment, confirm: 'Are you sure?', method: :delete %></td>

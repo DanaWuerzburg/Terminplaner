@@ -1,8 +1,13 @@
 class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
+
+  helper_method :sort_column, :sort_direction
+
   def index
-    @appointments = Appointment.all
+   # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
+    # .order("date DESC")   zum ordnen der inhalte nach datum
+    @appointments = Appointment.order(sort_column + " " + sort_direction)
 
     @appointment = Appointment.new
 
@@ -82,4 +87,16 @@ class AppointmentsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  #########################
+  private
+
+  def sort_column
+    Appointment.column_names.include?(params[:sort]) ? params[:sort] : "date"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+  end
+
 end
