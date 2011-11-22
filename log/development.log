@@ -1,0 +1,188 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:02:07 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:13:06 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:13:08 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:13:09 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-22 16:13:32 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (30.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.0ms)
+
+
+Started GET "/appointments/" for 127.0.0.1 at 2011-11-22 16:13:38 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2011-11-22 16:13:38 +0100
+  Processing by AppointmentsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:34:in `new'
+  app/controllers/appointments_controller.rb:34:in `new'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2011-11-22 16:13:39 +0100
+  Processing by AppointmentsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:34:in `new'
+  app/controllers/appointments_controller.rb:34:in `new'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/appointments/ne" for 127.0.0.1 at 2011-11-22 16:13:42 +0100
+  Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"ne"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:23:in `show'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:13:44 +0100
+  Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'appointments'):
+  app/controllers/appointments_controller.rb:95:in `sort_column'
+  app/controllers/appointments_controller.rb:10:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-22 16:15:29 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (18.0ms)
+Rendered appointments/index.html.erb within layouts/application (326.0ms)
+Compiled application.css  (11ms)  (pid 5264)
+Compiled appointments.css  (23ms)  (pid 5264)
+Compiled inputs.css  (1ms)  (pid 5264)
+Compiled main.css  (1ms)  (pid 5264)
+Compiled scaffolds.css  (30ms)  (pid 5264)
+Compiled table.css  (0ms)  (pid 5264)
+Compiled application.js  (11ms)  (pid 5264)
+Compiled jquery.js  (136ms)  (pid 5264)
+Compiled jquery_ujs.js  (44ms)  (pid 5264)
+Compiled appointments.js  (2404ms)  (pid 5264)
+Completed 200 OK in 3650ms (Views: 3648.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /appointments.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /main.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /inputs.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /table.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /appointments.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-22 16:15:33 +0100
+Served asset /application.js - 304 Not Modified (0ms)

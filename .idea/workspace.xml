@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe949672-e734-434a-af33-743ad0a06f70" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="Terminplaner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +55,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="232" selection-end="232" vertical-scroll-proportion="0.5586854">
+            <state line="18" column="35" selection-start="349" selection-end="349" vertical-scroll-proportion="0.5586854">
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/appointments/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="78" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="27" column="78" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -450,7 +450,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1486" height="870" extended-state="0" />
+    <frame x="0" y="0" width="1486" height="870" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -583,7 +583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="78" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+        <state line="27" column="78" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -595,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="232" selection-end="232" vertical-scroll-proportion="0.5586854">
+        <state line="18" column="35" selection-start="349" selection-end="349" vertical-scroll-proportion="0.5586854">
           <folding />
         </state>
       </provider>

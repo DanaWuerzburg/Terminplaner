@@ -1,6 +1,4 @@
 .idea
-.bundle
-db/*.sqlite3
-log/*.log
+.bundlelog/*.log
 tmp/
 .sass-cache/

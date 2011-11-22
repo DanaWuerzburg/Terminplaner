@@ -21,11 +21,4 @@ ActiveRecord::Schema.define(:version => 20111120222231) do
     t.integer  "priority_number"
   end
 
-  create_table "termines", :force => true do |t|
-    t.datetime "date"
-    t.string   "note"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
