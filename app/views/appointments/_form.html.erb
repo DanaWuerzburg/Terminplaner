@@ -12,18 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date %>
+    <%= f.label :date, class: 'label' %><br />
+    <%= f.datetime_select :date, {:order => [:day, :month, :year], :default => 24.hours.from_now, :minute_step => 15}, {:class => 'drop'}%>
+
+
   </div>
   <div class="field">
-    <%= f.label :note %><br />
-    <%= f.text_field :note %>
+    <%= f.label :note, class: 'label' %><br />
+    <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
   </div>
   <div class="field">
-    <%= f.label :priority_number %><br />
-    <%= f.select(:priority_number,options_for_select([[0,0],[1,1],[2,2],[3,3]]) ) %>
+    <%= f.label :priority, class: 'label' %><br />
+    <%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+
+    <%= f.submit 'Create Appointment', :class => 'button' %>
+
   </div>
 <% end %>
