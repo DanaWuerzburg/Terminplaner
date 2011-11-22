@@ -25,3 +25,6 @@ hallo, hier die Befehle / meine history:
 
 - mit der 2. url, die ich angezeigt bekomme, wenn ich committen darf (nachdem Sie mich als Collaborateur eingetragen hatten) klappt dann auch das git push. in zeile 575/576 sehen Sie, wie man das origin ändern kann (die 2. url eintragen).
 
+Zur Datenbank: wenn Sie die tatsächliche datenbank (also z.B. development.sqlite) über github austauschen wollen, dann müssen Sie sie zuerst aus dem .gitignore rausnehmen - im moment ist sie nicht im repository. Erst dann können Sie sie adden und committen.
+
+bk
