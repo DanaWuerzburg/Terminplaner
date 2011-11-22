@@ -1,0 +1,27 @@
+hallo, hier die Befehle / meine history:
+
+ 557  mkdir Terminplaner
+  558  cd Terminplaner/
+  559  git init
+  560  git remote add origin https://github.com/green-eis/Terminplaner.git
+  561  git pull origin master
+  562  ls
+  563  vi hallo.txt
+  564  history
+  565  git status
+  566  git add .
+  567  git commit -m "created hallo file"
+  568  git status
+  569  git push origin master
+  570  git push origin master
+  571  history
+  572  git remote remove origin
+  573  pwd
+  574  git remote 
+  575  git remote rm origin
+  576  git remote add origin git@github.com:green-eis/Terminplaner.git
+  577  git status
+  578  git push origin master
+
+- mit der 2. url, die ich angezeigt bekomme, wenn ich committen darf (nachdem Sie mich als Collaborateur eingetragen hatten) klappt dann auch das git push. in zeile 575/576 sehen Sie, wie man das origin ändern kann (die 2. url eintragen).
+
