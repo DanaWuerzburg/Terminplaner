@@ -1,6 +1,16 @@
-<h1>Editing appointment</h1>
+<header>
 
-<%= render 'form' %>
+</header>
+<div id="cont">
+  <section class="appointments">
 
-<%= link_to 'Show', @appointment %> |
-<%= link_to 'Back', appointments_path %>
+    <h1>Editing appointment</h1>
+
+    <div class="formular">
+        <%= render 'form' %>
+        <%= link_to 'Back', appointments_path, class: 'button right' %>
+    </div>
+    </section>
+</div>
+<footer>
+</footer>

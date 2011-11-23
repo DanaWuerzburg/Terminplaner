@@ -25,9 +25,8 @@
     <%= f.label :priority, class: 'label' %><br />
     <%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
   </div>
-  <div class="actions">
 
-    <%= f.submit 'Create Appointment', :class => 'button' %>
 
-  </div>
+    <%= f.submit 'Create Appointment', :class => 'button left' %>
+
 <% end %>

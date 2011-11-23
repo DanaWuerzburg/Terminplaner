@@ -1,4 +1,4 @@
-<div id="wrap">
+
 <header>
 </header>
 <div id="cont">
@@ -22,8 +22,7 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-    <td><%= link_to 'Edit', edit_appointment_path(appointment), class: 'button' %></td>
-    <td><%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button' %></td>
+    <td style="width:150px;"><%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left' %><%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right' %></td>
     </tr>
   </tbody>
 <% end %>
@@ -39,4 +38,3 @@
 </div>
 <footer>
 </footer>
-</div>
