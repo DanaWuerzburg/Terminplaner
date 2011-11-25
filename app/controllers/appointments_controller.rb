@@ -7,13 +7,13 @@ class AppointmentsController < ApplicationController
   def index
    # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
     # .order("date DESC")   zum ordnen der inhalte nach datum
-    @appointments = Appointment.order(sort_column + " " + sort_direction)
-
+   # @appointments = Appointment.order(sort_column + " " + sort_direction)
+    @appointments= Appointment.all
     @appointment = Appointment.new
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @appointments }
+      format.json { render json: @appointments, :notice => 'Appointment in index.' }
     end
   end
 
@@ -35,8 +35,9 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @appointment }
+      format.json { render json: @appointment, :notice => 'Appointment in new' }
     end
+    render 'erstellt'
   end
 
   # GET /appointments/1/edit
@@ -47,18 +48,14 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    @appointment = Appointment.new(params[:appointment])
-
-    respond_to do |format|
+      @appointment = Appointment.new(params[:appointment])
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-        format.json { render json: @appointment, status: :created, location: @appointment }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+        flash[:notice] = 'Der Termin wurde hinzugefuegt '
+        redirect_to :action => :index and return
       end
+    else
+    render :text => "MIST"
     end
-  end
 
   # PUT /appointments/1
   # PUT /appointments/1.json
@@ -67,7 +64,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
+         flash[:notice] = 'Appointment was successfully updated.'
+        format.html { redirect_to :action => :index and return }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -83,6 +81,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
 
     respond_to do |format|
+       flash[:notice] = 'Appointment was deleted'
       format.html { redirect_to appointments_url }
       format.json { head :ok }
     end
