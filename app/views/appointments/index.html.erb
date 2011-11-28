@@ -11,27 +11,24 @@
   <%= flash[:notice] %>
     </section>
 <table>
-  <thead class="thead">
   <tr>
     <th><%= sortable "date" %></th>
     <th>Note</th>
-
     <th><%= sortable "priority_number","Priority" %></th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
-  </thead>
 <% @appointments.each do |appointment| %>
-  <tbody>
+
     <tr>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
-    <td><%= appointment.note %></td>
+    <td class="note"><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-    <td style="width:150px;"><%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left' %><%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right' %></td>
+    <td class="tdtools">
+      <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+      <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+    </td>
     </tr>
-
-  </tbody>
 <% end %>
 
 </table>
@@ -43,7 +40,7 @@
 
 
 <section class="newappointment">
-<h1>New Appointment!!!</h1>
+<h1>New Appointment</h1>
    <div class="formular">
 
         <%= render 'form' %>

@@ -50,25 +50,30 @@
     }
     header{
         height:30px;
-        margin-left: 10px;
     }
+        #navbar{
+            height: 30px;
+            background:  #adafba;
+        }
     #cont{
         min-height: 200px;
-
     }
         section{
             float: left;
             position:relative;
             margin-left: 10px;
+
         }
             .appointments{
                 border-right: 1px solid #6678b1;
+                width: 730px;
             }
             .notify{
                 position:relative;
                 top: 20px;
                 font-size: 20px;
                 color: #ff0000;
+                max-width: 640px;
             }
             .newappointment{
             }
