@@ -49,11 +49,18 @@
         height: auto;
     }
     header{
-        height:30px;
+        height:40px;
+        margin-bottom: 10px;
     }
         #navbar{
             height: 30px;
             background:  #adafba;
+            text-align: right;
+            padding: 5px 15px;
+        }
+        #navbar ul li{
+            float: right;
+            text-align: right;
         }
     #cont{
         min-height: 200px;

@@ -7,8 +7,8 @@ class AppointmentsController < ApplicationController
   def index
    # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
     # .order("date DESC")   zum ordnen der inhalte nach datum
-   # @appointments = Appointment.order(sort_column + " " + sort_direction)
-    @appointments= Appointment.all
+    @appointments = Appointment.order(sort_column + " " + sort_direction)
+   # @appointments= Appointment.all
     @appointment = Appointment.new
 
     respond_to do |format|
