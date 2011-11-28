@@ -64,6 +64,12 @@
             .appointments{
                 border-right: 1px solid #6678b1;
             }
+            .notify{
+                position:relative;
+                top: 20px;
+                font-size: 20px;
+                color: #ff0000;
+            }
             .newappointment{
             }
                 .field, .actions{
@@ -82,4 +88,5 @@
         height:30px;
         position:relative;
         text-align:right;
+
     }

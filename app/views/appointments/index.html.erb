@@ -3,7 +3,10 @@
 </header>
 <div id="cont">
 <section class="appointments">
-   <h1>Agenda</h1>
+   <h1>Agenda   </h1>
+  <section class="notify">
+  <%= flash[:notice] %>
+    </section>
 <table>
   <thead class="thead">
   <tr>
@@ -24,17 +27,26 @@
     <td><%= appointment.priority_number %></td>
     <td style="width:150px;"><%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left' %><%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right' %></td>
     </tr>
+
   </tbody>
 <% end %>
+
 </table>
 </section>
 
+
+
+
+
+
 <section class="newappointment">
-<h1>New Appointment</h1>
-<div class="formular">
+<h1>New Appointment!!!</h1>
+   <div class="formular">
+
         <%= render 'form' %>
 </div>
 </section>
 </div>
 <footer>
+
 </footer>
