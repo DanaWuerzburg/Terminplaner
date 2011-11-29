@@ -22226,3 +22226,2091 @@ Served asset /appointments.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 18:02:27 +0100
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/appointments/53" for 127.0.0.1 at 2011-11-29 18:08:28 +0100
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MMCQ+n8LEoIlgr+MpIMGAPZa+Rnmkxcg/E1Zu8RDNXQ=", "id"=>"53"}
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT 1[0m  [["id", "53"]]
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "appointments" WHERE "appointments"."id" = ?  [["id", 53]]
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 107ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /table.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 18:08:29 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (101.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 241ms (Views: 239.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /table.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:54 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:31:56 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 97ms (Views: 93.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /table.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:31:57 +0100
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (81.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 244ms (Views: 239.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:12 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:32:32 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (103.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (9ms)  (pid 5552)
+Completed 200 OK in 229ms (Views: 226.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:32 +0100
+Served asset /table.css - 200 OK (28ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:32:33 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:34:16 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (98.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 211ms (Views: 207.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /table.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:34:17 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 101ms (Views: 96.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /main.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:04 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:35:54 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:35:55 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (66.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 202ms (Views: 199.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /table.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:00 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (79.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (6ms)  (pid 5552)
+Completed 200 OK in 375ms (Views: 372.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /table.css - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /appointments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (107.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 241ms (Views: 236.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /table.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:18 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (3.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (78.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 205ms (Views: 199.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /table.css - 200 OK (4ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:31 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (171.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (6ms)  (pid 5552)
+Completed 200 OK in 281ms (Views: 278.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /table.css - 200 OK (10ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:37:58 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (58.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (9ms)  (pid 5552)
+Completed 200 OK in 170ms (Views: 168.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /table.css - 200 OK (8ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:38:08 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (108.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 236ms (Views: 234.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /table.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:39:52 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:40:16 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (70.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 247ms (Views: 245.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:16 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:16 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:16 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:16 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /table.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:40:17 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (72.0ms)
+Compiled table.css  (2ms)  (pid 5552)
+Compiled application.css  (11ms)  (pid 5552)
+Completed 200 OK in 210ms (Views: 207.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /table.css - 200 OK (12ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:41:36 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 19:42:01 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (22.0ms)
+Rendered appointments/index.html.erb within layouts/application (132.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (12ms)  (pid 5552)
+Completed 200 OK in 327ms (Views: 322.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 19:42:02 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 20:51:48 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/index.html.erb within layouts/application (293.0ms)
+Completed 500 Internal Server Error in 315ms
+
+ActionView::Template::Error (undefined method `group' for #<Appointment:0x5a90d68>):
+    27:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    28:     <td class="note"><%= appointment.note %></td>
+    29:     <td><%= appointment.priority_number %></td>
+    30:     <td><%= appointment.group %></td>
+    31:     <td class="tdtools">
+    32:       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+    33:       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+  app/views/appointments/index.html.erb:30:in `block in _app_views_appointments_index_html_erb___19218770_47519328'
+  app/views/appointments/index.html.erb:24:in `_app_views_appointments_index_html_erb___19218770_47519328'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 20:53:16 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/index.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `group' for #<Appointment:0x5a1d6e8>):
+    27:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    28:     <td class="note"><%= appointment.note %></td>
+    29:     <td><%= appointment.priority_number %></td>
+    30:     <td><%= appointment.group %></td>
+    31:     <td class="tdtools">
+    32:       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+    33:       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+  app/views/appointments/index.html.erb:30:in `block in _app_views_appointments_index_html_erb___19218770_47519328'
+  app/views/appointments/index.html.erb:24:in `_app_views_appointments_index_html_erb___19218770_47519328'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 20:53:47 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined method `group' for #<Appointment:0x5a96210>):
+    27:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    28:     <td class="note"><%= appointment.note %></td>
+    29:     <td><%= appointment.priority_number %></td>
+    30:     <td><%= appointment.group %></td>
+    31:     <td class="tdtools">
+    32:       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+    33:       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+  app/views/appointments/index.html.erb:30:in `block in _app_views_appointments_index_html_erb___19218770_47519328'
+  app/views/appointments/index.html.erb:24:in `_app_views_appointments_index_html_erb___19218770_47519328'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 20:54:37 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `group' for #<Appointment:0x5b10808>):
+    27:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    28:     <td class="note"><%= appointment.note %></td>
+    29:     <td><%= appointment.priority_number %></td>
+    30:     <td><%= appointment.group %></td>
+    31:     <td class="tdtools">
+    32:       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+    33:       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+  app/views/appointments/index.html.erb:30:in `block in _app_views_appointments_index_html_erb___19218770_47519328'
+  app/views/appointments/index.html.erb:24:in `_app_views_appointments_index_html_erb___19218770_47519328'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (119.0ms)[0m  [1mCREATE TABLE "appointments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "note" varchar(255), "created_at" datetime, "updated_at" datetime, "priority_number" integer, "group" varchar(255)) [0m
+  [1m[35m (217.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (128.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (103.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111120222231')
+  [1m[36m (94.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111108132054')[0m
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 21:04:01 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/index.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `group' for #<Appointment:0x5a65688>):
+    27:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    28:     <td class="note"><%= appointment.note %></td>
+    29:     <td><%= appointment.priority_number %></td>
+    30:     <td><%= appointment.group %></td>
+    31:     <td class="tdtools">
+    32:       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
+    33:       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+  app/views/appointments/index.html.erb:30:in `block in _app_views_appointments_index_html_erb___19218770_47519328'
+  app/views/appointments/index.html.erb:24:in `_app_views_appointments_index_html_erb___19218770_47519328'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAppointments (20111108132054)
+Migrating to AddFieldsToAppointment (20111120222231)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("appointments")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateAppointments (20111108132054)
+Migrating to AddFieldsToAppointment (20111120222231)
+Migrating to AddGroupColumn (20111129211204)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "appointments" ADD "group" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111129211204')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("appointments")[0m
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /table.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:29:10 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:37:15 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (88.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (11ms)  (pid 5552)
+Completed 200 OK in 264ms (Views: 260.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:15 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:15 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:37:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (80.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (5ms)  (pid 5552)
+Completed 200 OK in 218ms (Views: 216.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /table.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:38:29 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (135.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 254ms (Views: 251.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /table.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:39:06 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:39:07 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:39:07 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (58.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (42ms)  (pid 5552)
+Completed 200 OK in 203ms (Views: 200.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /table.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:42:56 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:45:03 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (75.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (10ms)  (pid 5552)
+Completed 200 OK in 256ms (Views: 252.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /table.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:04 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (64.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (8ms)  (pid 5552)
+Completed 200 OK in 218ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:45:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:46:10 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (80.0ms)
+Compiled table.css  (66ms)  (pid 5552)
+Compiled application.css  (10ms)  (pid 5552)
+Completed 200 OK in 295ms (Views: 293.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /inputs.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (58.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (6ms)  (pid 5552)
+Completed 200 OK in 175ms (Views: 172.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /table.css - 200 OK (9ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:46:40 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:47:25 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (107.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (11ms)  (pid 5552)
+Completed 200 OK in 254ms (Views: 251.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:25 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /table.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:26 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (2.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (69.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 193ms (Views: 190.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /table.css - 200 OK (9ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:41 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (23.0ms)
+Rendered appointments/index.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 254ms (Views: 250.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:45 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (275.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 424ms (Views: 422.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /table.css - 200 OK (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:47:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (85.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 220ms (Views: 217.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /table.css - 200 OK (7ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:12 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (20.0ms)
+Rendered appointments/index.html.erb within layouts/application (140.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 314ms (Views: 310.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /table.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:48:50 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (79.0ms)
+Compiled table.css  (1ms)  (pid 5552)
+Compiled application.css  (9ms)  (pid 5552)
+Completed 200 OK in 262ms (Views: 257.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /table.css - 200 OK (28ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:49:12 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:49:13 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:49:13 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:50:44 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date asc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 98ms (Views: 96.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /table.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:50:45 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:51:37 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date asc[0m
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (71.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 376ms (Views: 372.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:37 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:37 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /table.css - 200 OK (14ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:51:38 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:58:10 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date asc
+Rendered appointments/_form.html.erb (9.0ms)
+Rendered appointments/index.html.erb within layouts/application (205.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (7ms)  (pid 5552)
+Completed 200 OK in 318ms (Views: 318.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /table.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:11 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date asc[0m
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (55.0ms)
+Compiled table.css  (0ms)  (pid 5552)
+Compiled application.css  (40ms)  (pid 5552)
+Completed 200 OK in 210ms (Views: 207.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /table.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:58:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:59:22 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date asc
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /table.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:59:23 +0100
+Served asset /application.js - 304 Not Modified (1ms)

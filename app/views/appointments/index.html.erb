@@ -13,26 +13,28 @@
   <%= flash[:notice] %>
     </section>
 <table class="pretty">
-  <tr>
+  <thead>
     <th><%= sortable "date" %></th>
     <th>Note</th>
     <th><%= sortable "priority_number","Priority" %></th>
     <th></th>
 
-  </tr>
+  </thead>
+  <tbody>
 <% @appointments.each do |appointment| %>
 
     <tr>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td class="note"><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
+    <td><%= appointment.group %></td>
     <td class="tdtools">
       <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
       <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
     </td>
-    </tr>
+  </tr>
 <% end %>
-
+    </tbody>
 </table>
 </section>
 

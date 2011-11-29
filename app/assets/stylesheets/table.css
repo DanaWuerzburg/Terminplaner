@@ -9,32 +9,32 @@ table{
 }
     /*table header*/
     thead{
+        border-bottom: 2px solid #6678b1;
     }
-    th{
+    thead th{
         font-size: 14px;
         font-weight: normal;
-        color: #039;
+        color: #6678b1;
         padding: 10px 8px;
-        border-bottom: 2px solid #6678b1;
         text-align: center;
     }
-    th a{
+    thead th a{
         font-size: 14px;
         font-weight: normal;
-        color: #039;
+        color: #6678b1;
     }
-    th a:visited{
-        color: #039;
+    thead th a:visited{
+        color: #666699;
     }
-    th a:hover{
-        color: #333;
+    thead th a:hover{
+        color: #666699;
         background: none;
     }
 
     /*table data*/
     td{
-       border-bottom: 1px solid #ccc;
-        color: #669;
+       border-bottom: 1px solid #6678b1;
+        color: #6678b1;
         padding: 6px 8px;
 
     }
@@ -45,5 +45,9 @@ table{
          width:150px;
     }
     tbody tr:hover td{
-        color: #333;
+        color: #666699;
+        background:  #E5E5FF;
+    }
+    tbody tr:nth-child(odd){
+        background: #F6F6F2;
     }
