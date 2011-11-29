@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe949672-e734-434a-af33-743ad0a06f70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cancel_16-d2d9154d3150a41f8ebca161276ea277.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/down_arrow-1252359c3bffc863e21ec0002a597f34.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/down_arrow-145a38d44c2d296ccad371bafb4e6ec7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/edit_16-3929606df81b946720fc81dcb09c939f.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/minus_16-b9c25cb04c0cf21871f719839b44130a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/plus_16-693cd1caa51c30a9bb0081bfadf8eee7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/rails-e4b51606cd77fda2615e7439907bfc92.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/up_arrow-3f06160c6cd7276a02e2f3fb5278c20e.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/up_arrow-cea07fce7af66f23c92d820897734c0a.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/production.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Terminplaner.iml" afterPath="$PROJECT_DIR$/.idea/Terminplaner.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/inputs.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/inputs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appointments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="Terminplaner.iws" />
@@ -58,7 +41,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="28" selection-start="838" selection-end="838" vertical-scroll-proportion="0.41379312">
+            <state line="75" column="144" selection-start="838" selection-end="1348" vertical-scroll-proportion="0.9511494">
               <folding />
             </state>
           </provider>
@@ -659,7 +642,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="101" y="30" width="1517" height="870" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -809,7 +792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="28" selection-start="838" selection-end="838" vertical-scroll-proportion="0.41379312">
+        <state line="75" column="144" selection-start="838" selection-end="1348" vertical-scroll-proportion="0.9511494">
           <folding />
         </state>
       </provider>
