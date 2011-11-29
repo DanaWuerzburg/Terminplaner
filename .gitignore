@@ -1,4 +1,5 @@
 .idea
-.bundlelog/*.log
+.bundle
+log/*.log
 tmp/
 .sass-cache/
