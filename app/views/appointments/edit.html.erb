@@ -5,11 +5,38 @@
   <section class="appointments">
 
     <h1>Editing appointment</h1>
+      <div class="formular">
+         <%= form_for(@appointment) do |f| %>
+             <% if @appointment.errors.any? %>
+                 <div id="error_explanation">
+                  <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
 
-    <div class="formular">
-        <%= render 'form' %>
-        <%= link_to 'Back', appointments_path, class: 'button right' %>
-    </div>
+                     <ul>
+                     <% @appointment.errors.full_messages.each do |msg| %>
+                     <li><%= msg %></li>
+                     <% end %>
+                     </ul>
+                 </div>
+                 <% end %>
+
+         <div class="field">
+             <%= f.label :date, class: 'label' %><br />
+             <%= f.datetime_select :date, {:order => [:day, :month, :year], :default => 24.hours.from_now, :minute_step => 15}, {:class => 'drop'}%>
+         </div>
+         <div class="field">
+             <%= f.label :note, class: 'label' %><br />
+            <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
+         </div>
+         <div class="field">
+             <%= f.label :priority, class: 'label' %><br />
+             <%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
+         </div>
+             <%= link_to 'Back', appointments_path, class: 'button left' %>
+             <%= f.submit 'Save', :action => :index, :notice => 'Appointment in form',  class: 'button right' %>
+
+
+            <% end %>
+      </div>
     </section>
 </div>
 <footer>
