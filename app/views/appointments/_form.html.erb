@@ -26,6 +26,11 @@
     <%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
   </div>
 
+   <div class="field">
+    <%= f.label :group, class: 'label' %><br />
+    <%= f.select(:group, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
+  </div>
+
 
     <%= f.submit 'Create Appointment', :action => :new, :notice => 'Appointment in form', :class=> 'button create' %>
    <%# <%= render 'erstellt' %>
