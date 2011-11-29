@@ -15,8 +15,9 @@
 <table class="pretty">
   <thead>
     <th><%= sortable "date" %></th>
-    <th>Note</th>
+    <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
+    <th><%= sortable "group","Group" %></th>
     <th></th>
 
   </thead>
@@ -25,7 +26,7 @@
 
     <tr>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
-    <td class="note"><%= appointment.note %></td>
+    <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
     <td><%= appointment.group %></td>
     <td class="tdtools">
