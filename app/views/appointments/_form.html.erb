@@ -23,8 +23,8 @@
   </div>
   <div class="field">
     <%= f.label :priority, class: 'label' %><br />
-    <input id="priority_number" max="5" min="1" name="priority" size="50" type="range" value="3" />
-    <%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>
+    <input id="priority_number" max="5" min="1" name="appointment[priority_number]" size="50" type="range" value="3" />
+    <!--<%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>-->
   </div>
 
 
