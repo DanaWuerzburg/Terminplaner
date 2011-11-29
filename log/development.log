@@ -22602,3 +22602,55 @@ Served asset /jquery.js - 304 Not Modified (2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 13:10:53 +0100
 Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/appointments?direction=asc&sort=date" for 127.0.0.1 at 2011-11-29 22:24:25 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"date"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date asc[0m
+Rendered appointments/_form.html.erb (25.9ms)
+Rendered appointments/index.html.erb within layouts/application (108.5ms)
+Compiled application.js  (3ms)  (pid 14832)
+Compiled jquery.js  (21ms)  (pid 14832)
+Compiled jquery_ujs.js  (0ms)  (pid 14832)
+Completed 200 OK in 297ms (Views: 296.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /appointments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /inputs.css - 200 OK (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /table.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /appointments.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-11-29 22:24:27 +0100
+Served asset /application.js - 200 OK (0ms)
