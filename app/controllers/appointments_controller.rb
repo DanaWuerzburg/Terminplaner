@@ -64,7 +64,8 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
-         flash[:notice] = 'Appointment was successfully updated.'
+        strg = "#{@appointment.note}"
+        flash[:notice] = "Updated appointment:  " + strg[0..30] + "..."
         format.html { redirect_to :action => :index and return }
         format.json { head :ok }
       else

@@ -8,9 +8,11 @@
 
     <div class="formular">
         <%= render 'form' %>
-        <%= link_to 'Back', appointments_path, class: 'button right' %>
+        <script language="Javascript">
+            document.writeln("<a href='Javascript:history.back()' name='Back' class='button right'>Back</a>");
+        </script>
     </div>
-    </section>
+  </section>
 </div>
 <footer>
 </footer>
