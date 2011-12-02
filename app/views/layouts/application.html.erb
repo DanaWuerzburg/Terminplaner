@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terminplaner</title>
+  <title>Terminplaner -Login </title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+
 
   <!-- Modernizr -->
 	<script src="js/modernizr-1.5.min.js"></script>
@@ -16,7 +18,11 @@
 
 </head>
 <body>
-<div id="wrap">
+
+   <div id="nav">
+        <%= link_to "Register", new_user_path%>
+    </div>
+
 <%= yield %>
 </div>
 </body>

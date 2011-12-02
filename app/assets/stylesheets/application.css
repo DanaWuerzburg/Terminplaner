@@ -6,6 +6,11 @@
  *= require_tree .
 */
 
+#user_nav {
+  float: right;
+  font-size: 12px;
+}
+
 .pretty th .current {
   padding-right: 12px;
   background-repeat: no-repeat;
