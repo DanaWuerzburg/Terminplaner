@@ -11,8 +11,10 @@
 		margin: 0;
 		padding:0;
 		text-decoration: none;
-		font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-		color: #000000;
+		font-family: "Kozuka Gothic Pro","Myriad Pro","Estrangelo Edessa", "Arial", sans-serif;
+		font-size: 12px;
+		line-height: 18pt;
+        color: #000000;
 		border-style: none;
 		border-width: 0;
 		}
@@ -38,9 +40,6 @@
 	}
 
 	body{
-		font-family: "Kozuka Gothic Pro","Myriad Pro","Estrangelo Edessa", "Arial", sans-serif;
-		font-size: 12px;
-		line-height: 18pt;
 		}
     #wrap{
 	    margin:0;
