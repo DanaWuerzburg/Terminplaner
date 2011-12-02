@@ -7,7 +7,6 @@ a.button, input.button {
     display: inline-block;
     text-shadow: 0 1px 0 #fff;
     transition: border-color .218s;
-    background: #f3f3f3;
     border: solid 1px #dcdcdc;
     border-radius: 2px;
     margin-right: 10px;
@@ -68,13 +67,13 @@ a.right, input.right {
 }
 
 .edit{
-    background: url("/images/edit_16.png");
+    background: url("/images/edit_16.png") no-repeat;
 }
 .create{
-    background: url("/images/edit_16.png");
+    background: url("/images/edit_16.png") no-repeat;
 }
 .delete{
-    background: url("/images/cancel_16.png");
+    background: url("/images/cancel_16.png") no-repeat #f3f3f3;
 }
 .logout{
 
