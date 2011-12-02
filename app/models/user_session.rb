@@ -1,6 +1,9 @@
-class UserSession < ActiveRecord::Base
-  #returns	session	key
-  def	to_key
-			#	[session_key]
-	end
+class UserSession < Authlogic::Session::Base
+  def to_key
+     new_record? ? nil : [ self.send(self.class.primary_key) ]
+  end
+  
+  def persisted?
+    false
+  end
 end

@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>Login:</b>
+  <%= @user_session.login %>
+</p>
+
+<p>
+  <b>Password salt:</b>
+  <%= @user_session.password_salt %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_session_path(@user_session) %> |
 <%= link_to 'Back', user_sessions_path %>
