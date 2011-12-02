@@ -12,28 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date, class: 'label' %><br />
+    <label for="date" class="label">Date</label></br>
     <%= f.datetime_select :date, {:order => [:day, :month, :year], :default => 24.hours.from_now, :minute_step => 15}, {:class => 'drop'}%>
-
-
   </div>
   <div class="field">
-    <%= f.label :note, class: 'label' %><br />
+    <label for="note" class="label">Note</label></br>
     <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
   </div>
   <div class="field">
-    <%= f.label :priority, class: 'label' %><br />
-    <input id="priority_number" max="5" min="1" name="appointment[priority_number]" size="50" type="range" value="3" />
+    <label for="priority_number" class="label">Priority</label></br>
+    <input type="range" id="priority_number" max="5" min="1" name="appointment[priority_number]" size="50" value="3" />
     <!--<%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>-->
   </div>
-
   <div class="field">
-    <%= f.label :group, class: 'label' %><br />
+    <label for="priority_number" class="label">Group</label></br>
     <%= f.select(:group, options_for_select([["Keine Gruppe",0],["Gruppe 1",1],["Gruppe 2",2],["Gruppe 3",3]]), {}, {:class => "drop"}) %>
   </div>
 
+    <label for="range-slider">Slider</label>
+    <input type="range" name="range-slider" id="range-slider" class="slider" min="0" max="20" step="1" value="0">
 
-    <%= f.submit 'Save', :action => :new, :notice => 'Appointment in form', :class=> 'button create left' %>
+    <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create left' %>
    <%# <%= render 'erstellt' %>
 
 <% end %>

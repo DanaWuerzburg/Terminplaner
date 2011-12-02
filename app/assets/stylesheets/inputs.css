@@ -1,8 +1,10 @@
+
 a.button, input.button {
+    background: url("/images/sprite.png") no-repeat #f3f3f3;
     color: #6e6e6e;
     font: bold 12px Helvetica, Arial, sans-serif;
     text-decoration: none;
-    padding: 7px 12px;
+
     position: relative;
     display: inline-block;
     text-shadow: 0 1px 0 #fff;
@@ -12,11 +14,19 @@ a.button, input.button {
     margin-right: 10px;
     cursor: pointer;
     float: left;
+    min-height: 30px;
+    min-width: 40px;
+}
+
+input .button{
+    width: 16px;
+    height: 16px;
+    margin: 7px 12px;
 }
 a.button:hover, input.button:hover {
     color: #333;
     border-color: #999;
-    background: #f3f3f3;
+    background-color: #f3f3f3;
     -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -66,15 +76,28 @@ a.right, input.right {
     background:  #fff;
 }
 
-.edit{
-    background: url("/images/edit_16.png") no-repeat;
+a.edit, input.edit{
+    background-position: -40px -60px;
 }
-.create{
-    background: url("/images/edit_16.png") no-repeat;
+a.create, input.create{
+    background-position: -40px -120px;
 }
-.delete{
-    background: url("/images/cancel_16.png") no-repeat #f3f3f3;
+a.delete, input.delete{
+    background-position: -40px -90px;
 }
-.logout{
+a.logout, input.logout{
+    background-position: 0 0;
+}
 
+a.edit:hover, input.edit:hover{
+    background-position: 0 -60px;
+}
+a.create:hover, input.create:hover{
+    background-position: 0 -120px;
+}
+a.delete:hover, input.delete:hover{
+    background-position: 0 -90px;
+}
+a.logout:hover, input.logout:hover{
+    background-position: 0 0;
 }

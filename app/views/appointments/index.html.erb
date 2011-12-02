@@ -31,8 +31,8 @@
     <td><%= appointment.priority_number %></td>
     <td><%= appointment.group %></td>
     <td class="tdtools">
-      <%= link_to 'Edit', edit_appointment_path(appointment), class: 'button left edit' %>
-      <%= link_to 'Delete', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete' %>
+      <%= link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
+      <%= link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>
     </td>
   </tr>
 <% end %>
