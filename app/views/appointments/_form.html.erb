@@ -28,11 +28,7 @@
     <label for="priority_number" class="label">Group</label></br>
     <%= f.select(:group, options_for_select([["Keine Gruppe",0],["Gruppe 1",1],["Gruppe 2",2],["Gruppe 3",3]]), {}, {:class => "drop"}) %>
   </div>
-
-    <label for="range-slider">Slider</label>
-    <input type="range" name="range-slider" id="range-slider" class="slider" min="0" max="20" step="1" value="0">
-
-    <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create left' %>
+    <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create left', :title=>'Save Appointment' %>
    <%# <%= render 'erstellt' %>
 
 <% end %>

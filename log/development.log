@@ -37177,3 +37177,833 @@ ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/h
   
 
 Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (11.0ms)
+Rendered appointments/index.html.erb within layouts/application (145.0ms)
+Completed 200 OK in 173ms (Views: 169.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /table.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /appointments.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:31:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started DELETE "/appointments/49" for 127.0.0.1 at 2011-12-02 13:32:13 +0100
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qFUZgvAf8lm4NM77QwnrentSChNXtsbolNCHkRNBHbY=", "id"=>"49"}
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35mSQL (200.0ms)[0m  DELETE FROM "appointments" WHERE "appointments"."id" = ?  [["id", 49]]
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 412ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:32:13 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (11.0ms)
+Rendered appointments/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:32:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started DELETE "/appointments/51" for 127.0.0.1 at 2011-12-02 13:32:18 +0100
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qFUZgvAf8lm4NM77QwnrentSChNXtsbolNCHkRNBHbY=", "id"=>"51"}
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT 1  [["id", "51"]]
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "appointments" WHERE "appointments"."id" = ?[0m  [["id", 51]]
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 118ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:32:18 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (241.0ms)
+Completed 200 OK in 275ms (Views: 270.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:32:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started DELETE "/appointments/46" for 127.0.0.1 at 2011-12-02 13:32:21 +0100
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qFUZgvAf8lm4NM77QwnrentSChNXtsbolNCHkRNBHbY=", "id"=>"46"}
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT 1[0m  [["id", "46"]]
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "appointments" WHERE "appointments"."id" = ?  [["id", 46]]
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 339ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (11.0ms)
+Rendered appointments/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 99ms (Views: 94.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /table.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:32:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started DELETE "/appointments/44" for 127.0.0.1 at 2011-12-02 13:32:25 +0100
+  Processing by AppointmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qFUZgvAf8lm4NM77QwnrentSChNXtsbolNCHkRNBHbY=", "id"=>"44"}
+  [1m[35mAppointment Load (0.0ms)[0m  SELECT "appointments".* FROM "appointments" WHERE "appointments"."id" = ? LIMIT 1  [["id", "44"]]
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "appointments" WHERE "appointments"."id" = ?[0m  [["id", 44]]
+Redirected to http://localhost:3000/appointments
+Completed 302 Found in 118ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:32:25 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:32:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/appointments?direction=asc&sort=group" for 127.0.0.1 at 2011-12-02 13:32:30 +0100
+  Processing by AppointmentsController#index as HTML
+  Parameters: {"direction"=>"asc", "sort"=>"group"}
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY group asc[0m
+SQLite3::SQLException: near "group": syntax error: SELECT "appointments".* FROM "appointments"  ORDER BY group asc
+Rendered appointments/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (SQLite3::SQLException: near "group": syntax error: SELECT "appointments".* FROM "appointments"  ORDER BY group asc):
+    23: 
+    24:   </thead>
+    25:   <tbody>
+    26: <% @appointments.each do |appointment| %>
+    27: 
+    28:     <tr>
+    29:     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+  app/views/appointments/index.html.erb:26:in `_app_views_appointments_index_html_erb___489528576_50899800'
+  app/controllers/appointments_controller.rb:14:in `index'
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (14.0ms)
+Rendered appointments/index.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 140ms (Views: 136.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:35 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (10.0ms)
+Rendered appointments/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:36:56 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:36:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:36:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (11.0ms)
+Rendered appointments/index.html.erb within layouts/application (95.0ms)
+Compiled inputs.css  (0ms)  (pid 4680)
+Compiled application.css  (7ms)  (pid 4680)
+Completed 200 OK in 240ms (Views: 236.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /inputs.css - 200 OK (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:37:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (1.0ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (13.0ms)
+Rendered appointments/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 96ms (Views: 91.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /appointments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:38:31 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:38:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:38:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:38:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:38:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:38:32 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (1.0ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (12.0ms)
+Rendered appointments/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 99ms (Views: 95.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-02 13:39:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-02 13:39:04 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered D:/Tools/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)

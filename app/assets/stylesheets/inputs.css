@@ -86,7 +86,7 @@ a.delete, input.delete{
     background-position: -40px -90px;
 }
 a.logout, input.logout{
-    background-position: 0 0;
+    background-position: -40px 0;
 }
 
 a.edit:hover, input.edit:hover{
