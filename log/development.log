@@ -49001,3 +49001,1658 @@ ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/h
   
 
 Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:48:34 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (4.5ms)
+Rendered user_sessions/new.html.erb within layouts/application (58.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (18.9ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:48:35.677030', "perishable_token" = 'lBcrU2t9SMluhL81az', "updated_at" = '2011-12-03 13:48:35.677726' WHERE "users"."id" = 1
+Completed 200 OK in 1096ms (Views: 729.4ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /appointments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /inputs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /groups.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /table.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /user_sessions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /jquery.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+Served asset /appointments.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+Served asset /user_sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:48:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 14:48:44 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1[0m
+  [1m[35m (110.0ms)[0m  UPDATE "users" SET "login_count" = 11, "last_login_at" = '2011-12-03 00:04:01.499129', "current_login_at" = '2011-12-03 13:48:44.401730', "last_request_at" = '2011-12-03 13:48:44.402098', "perishable_token" = 'uBQEKFAbx6QOpmluP2', "updated_at" = '2011-12-03 13:48:44.402816' WHERE "users"."id" = 1
+Redirected to 
+Completed 500 Internal Server Error in 178ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/user_sessions_controller.rb:21:in `block (2 levels) in create'
+  app/controllers/user_sessions_controller.rb:19:in `create'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:48:55 +0100
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:48:55.232377', "perishable_token" = 'urpL5nJCA0X3Sy5FxwPw', "updated_at" = '2011-12-03 13:48:55.233204' WHERE "users"."id" = 1
+Redirected to 
+Completed 500 Internal Server Error in 74ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/user_sessions_controller.rb:37:in `block (2 levels) in destroy'
+  app/controllers/user_sessions_controller.rb:36:in `destroy'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:52:02 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:41: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:52:04 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:41: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:52:07 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:41: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (5.4ms)
+Rendered appointments/index.html.erb within layouts/application (51.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 13:52:13.579033', "perishable_token" = 'mMUOthg4zTt6XCrGuv7', "updated_at" = '2011-12-03 13:52:13.579557' WHERE "users"."id" = 1[0m
+Completed 200 OK in 344ms (Views: 342.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /user_sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:52:13 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-03 14:52:16 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:52:17.081587', "perishable_token" = 'ynkI4vJ0FzYZXPGCBRfy', "updated_at" = '2011-12-03 13:52:17.082081' WHERE "users"."id" = 1
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:52:17 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-12-03 14:52:29 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:41: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-12-03 14:53:26 +0100
+  Processing by UserSessionsController#index as HTML
+Rendered user_sessions/index.html.erb within layouts/application (61.7ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    9:     <th></th>
+    10:   </tr>
+    11: 
+    12: <% @user_sessions.each do |user_session| %>
+    13:   <tr>
+    14:     <td><%= user_session.login %></td>
+    15:     <td><%= user_session.password_salt %></td>
+  app/views/user_sessions/index.html.erb:12:in `_app_views_user_sessions_index_html_erb___2587525270909127898_2162361540'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.3ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:53:30.581282', "perishable_token" = 'p8qHAPtsKWJf2NC4QUJ', "updated_at" = '2011-12-03 13:53:30.581844' WHERE "users"."id" = 1
+Completed 200 OK in 77ms (Views: 56.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:53:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:53:33 +0100
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:53:33.467440', "perishable_token" = 'Hn6nYC5OKC1CUSFscYO', "updated_at" = '2011-12-03 13:53:33.467927' WHERE "users"."id" = 1
+Redirected to 
+Completed 500 Internal Server Error in 64ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/user_sessions_controller.rb:38:in `block (2 levels) in destroy'
+  app/controllers/user_sessions_controller.rb:37:in `destroy'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:54:25 +0100
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:54:25.884919', "perishable_token" = 'qGkKvH5t86zOfPKj7WeB', "updated_at" = '2011-12-03 13:54:25.885390' WHERE "users"."id" = 1
+Redirected to http://0.0.0.0:3000/appointments
+Completed 302 Found in 65ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 14:54:25 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (4.6ms)
+Rendered appointments/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:54:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.0ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:54:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:54:41 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:54:41 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 14:54:48 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "login_count" = 12, "last_login_at" = '2011-12-03 13:48:44.401730', "current_login_at" = '2011-12-03 13:54:48.483521', "last_request_at" = '2011-12-03 13:54:48.483821', "perishable_token" = 'igoeTDWG1WWOBf3yFF', "updated_at" = '2011-12-03 13:54:48.484582' WHERE "users"."id" = 1[0m
+Redirected to 
+Completed 500 Internal Server Error in 38ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/user_sessions_controller.rb:21:in `block (2 levels) in create'
+  app/controllers/user_sessions_controller.rb:19:in `create'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-12-03 14:55:57 +0100
+  Processing by UserSessionsController#index as HTML
+Rendered user_sessions/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    9:     <th></th>
+    10:   </tr>
+    11: 
+    12: <% @user_sessions.each do |user_session| %>
+    13:   <tr>
+    14:     <td><%= user_session.login %></td>
+    15:     <td><%= user_session.password_salt %></td>
+  app/views/user_sessions/index.html.erb:12:in `_app_views_user_sessions_index_html_erb___2587525270909127898_2162361540'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:56:09 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.1ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 33ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:09 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:09 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:09 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:09 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:56:10 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "login_count" = 13, "last_login_at" = '2011-12-03 13:54:48.483521', "current_login_at" = '2011-12-03 13:56:20.530824', "last_request_at" = '2011-12-03 13:56:20.531130', "perishable_token" = 'wvOFYcKLJroxpDUbnz', "updated_at" = '2011-12-03 13:56:20.531961' WHERE "users"."id" = 1[0m
+Redirected to http://0.0.0.0:3000/appointments
+Completed 302 Found in 66ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (4.4ms)
+Rendered appointments/index.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:56:20.652419', "perishable_token" = 'NLkvghqpY2FiQpq6xs', "updated_at" = '2011-12-03 13:56:20.652979' WHERE "users"."id" = 1
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:56:20 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 13:56:23.170132', "perishable_token" = '45H1D6G70RpwAuFcX1', "updated_at" = '2011-12-03 13:56:23.170641' WHERE "users"."id" = 1
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 39ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 60ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:56:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:57:14 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+... redirect_to (appointments_url, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...rl, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:57:49 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+...ml { redirect_to (:appointment, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...nt, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.4ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:58:01 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+...l { redirect_to (:appointments, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...ts, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:58:10 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+...redirect_to (:appointments_url, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...rl, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:58:16 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+... redirect_to (:appointment_url, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...rl, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:58:27 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ',', expecting ')'
+...ml { redirect_to (@appointment, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:21: syntax error, unexpected ')', expecting '}'
+...nt, notice: 'Login Successful') }
+...                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:23: syntax error, unexpected keyword_else, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:27: syntax error, unexpected keyword_end, expecting '}'
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:58:59 +0100
+
+SyntaxError (/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ',', expecting ')'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                        ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:38: syntax error, unexpected ')', expecting '}'
+      format.html { redirect_to (:login, :notice => 'Goodbye!') }
+                                                               ^
+/Users/maiky/github/Terminplaner/app/controllers/user_sessions_controller.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.4ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 61ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 14:59:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.8ms)
+Rendered user_sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 61ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:04:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "login_count" = 14, "last_login_at" = '2011-12-03 13:56:20.530824', "current_login_at" = '2011-12-03 14:04:08.750396', "last_request_at" = '2011-12-03 14:04:08.750698', "perishable_token" = '6UMUIpVe2I9QlbwZqvo', "updated_at" = '2011-12-03 14:04:08.751482' WHERE "users"."id" = 1
+Redirected to http://0.0.0.0:3000/appointments
+Completed 302 Found in 83ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (30.5ms)
+Rendered appointments/index.html.erb within layouts/application (46.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:04:08.884631', "perishable_token" = 'iSyMX5zxSlCFItNk2BqA', "updated_at" = '2011-12-03 14:04:08.885226' WHERE "users"."id" = 1[0m
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:04:09 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+  Processing by UserSessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:04:30.223329', "perishable_token" = 'pIY0dJqTTABd4TkkCijy', "updated_at" = '2011-12-03 14:04:30.223884' WHERE "users"."id" = 1[0m
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 67ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.4ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 14.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /inputs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /table.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:04:30 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

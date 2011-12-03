@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(:users, :notice => 'Login Successful') }  #redirection von appointment hier
+        format.html { redirect_to(:appointments, :notice => 'Login Successful') }  #redirection von appointment hier
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else
         format.html { render :action => "new" }
@@ -34,7 +34,7 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 
     respond_to do |format|
-      format.html { redirect_to(:users, :notice => 'Goodbye!') }
+      format.html { redirect_to(:login, :notice => 'Goodbye!') }
       format.xml  { head :ok }
     end
   end
