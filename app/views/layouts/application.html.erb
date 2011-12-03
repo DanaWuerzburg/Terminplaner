@@ -21,7 +21,8 @@
 
    <div id="nav">
         <% if current_user %>
-        <%#= label "Hello '#{current_user}'!" %>
+        <!-- Username ist gespeichert in @user.login -->
+        <p>Hello <%= current_user.id  %></p>
         <%= link_to " My Account ",  user_path(current_user.id) %>
         <%= link_to " Logout ", :logout%>
         <% else %>
