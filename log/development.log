@@ -50656,3 +50656,704 @@ ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/h
   
 
 Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 15:15:24 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (4.6ms)
+Rendered user_sessions/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 774ms (Views: 499.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /appointments.css - 200 OK (2ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /groups.css - 200 OK (2ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /inputs.css - 200 OK (4ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /main.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /table.css - 200 OK (2ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /user_sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /jquery.js - 200 OK (72ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /appointments.js - 200 OK (2ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /user_sessions.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /users.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:15:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:15:26 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1[0m
+  [1m[35m (26.2ms)[0m  UPDATE "users" SET "login_count" = 15, "last_login_at" = '2011-12-03 14:04:08.750396', "current_login_at" = '2011-12-03 14:15:34.696967', "last_request_at" = '2011-12-03 14:15:34.697299', "perishable_token" = 'xQlMLvXnHKJcCbrz5Mwu', "updated_at" = '2011-12-03 14:15:34.698127' WHERE "users"."id" = 1
+Redirected to http://0.0.0.0:3000/appointments
+Completed 302 Found in 64ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (5.4ms)
+Rendered appointments/index.html.erb within layouts/application (21.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:15:34.905399', "perishable_token" = 'uM7ABaZYmpvZ8L0Md5GU', "updated_at" = '2011-12-03 14:15:34.905961' WHERE "users"."id" = 1[0m
+Completed 200 OK in 133ms (Views: 130.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:15:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (4.7ms)
+Rendered appointments/index.html.erb within layouts/application (44.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 14:15:53.546907', "perishable_token" = 'nhCYPS83JspC0triCieT', "updated_at" = '2011-12-03 14:15:53.547452' WHERE "users"."id" = 1
+Completed 200 OK in 117ms (Views: 115.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /appointments.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/inputs.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /inputs.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /table.css - 200 OK (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /user_sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /appointments.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /user_sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:15:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 15:15:56 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments" ORDER BY date desc[0m
+Rendered appointments/_form.html.erb (4.3ms)
+Rendered appointments/index.html.erb within layouts/application (46.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:15:56.993005', "perishable_token" = 'lmIFIyPtOYvsq8eX7S', "updated_at" = '2011-12-03 14:15:56.993506' WHERE "users"."id" = 1[0m
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:15:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:15:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:15:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:15:57 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-03 15:15:59 +0100
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered users/_form.html.erb (40.6ms)
+Rendered users/edit.html.erb within layouts/application (42.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 14:15:59.111080', "perishable_token" = 'REijhl6ppd03Pu8M6', "updated_at" = '2011-12-03 14:15:59.111541' WHERE "users"."id" = 1
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:15:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:15:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:15:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:15:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-03 15:16:14 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (38.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:16:14.550142', "perishable_token" = 'DInezPGv56oub2sQM7tI', "updated_at" = '2011-12-03 14:16:14.550589' WHERE "users"."id" = 1[0m
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:16:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:16:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:16:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:16:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-03 15:16:34 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (39.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 14:16:34.914441', "perishable_token" = 'srcgVlJCzaKXwFCZy8l', "updated_at" = '2011-12-03 14:16:34.914878' WHERE "users"."id" = 1
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:16:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:16:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:16:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:16:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-03 15:16:38 +0100
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (14.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:16:38.502299', "perishable_token" = 'wQpoPzkZmAqAE1PCtHYT', "updated_at" = '2011-12-03 14:16:38.502731' WHERE "users"."id" = 1[0m
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:16:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:16:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:16:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:16:38 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 15:19:50 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.2ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:19:50.888242', "perishable_token" = 'U5uZ0p5nfHVGSavys1Ra', "updated_at" = '2011-12-03 14:19:50.888953' WHERE "users"."id" = 1[0m
+Completed 200 OK in 75ms (Views: 29.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:19:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:19:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:19:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:19:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/user_sessions" for 127.0.0.1 at 2011-12-03 15:19:56 +0100
+  Processing by UserSessionsController#index as HTML
+Rendered user_sessions/index.html.erb within layouts/application (43.0ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    9:     <th></th>
+    10:   </tr>
+    11: 
+    12: <% @user_sessions.each do |user_session| %>
+    13:   <tr>
+    14:     <td><%= user_session.login %></td>
+    15:     <td><%= user_session.password_salt %></td>
+  app/views/user_sessions/index.html.erb:12:in `_app_views_user_sessions_index_html_erb__3729652016525970806_2164836220'
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 15:21:14 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.0ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:21:14.504605', "perishable_token" = '0X6r5bSVRqFiggd368d2', "updated_at" = '2011-12-03 14:21:14.505139' WHERE "users"."id" = 1[0m
+Completed 200 OK in 74ms (Views: 55.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:21:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:21:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:21:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:21:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-03 15:30:49 +0100
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/_form.html.erb (3.4ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:30:49.668658', "perishable_token" = 'or9QAUpWIuMnhTpQg3v', "updated_at" = '2011-12-03 14:30:49.669179' WHERE "users"."id" = 1[0m
+Completed 200 OK in 74ms (Views: 55.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:30:49 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:30:49 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:30:49 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:30:49 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 15:30:54 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "failed_login_count" = 1, "perishable_token" = 'jfjKFagrUmdl8R9rs6E', "updated_at" = '2011-12-03 14:30:54.963382' WHERE "users"."id" = 1[0m
+Rendered user_sessions/_form.html.erb (3.8ms)
+Rendered user_sessions/new.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2011-12-03 14:30:54.980438', "perishable_token" = '0V1BBxFVKWSi6BtjjqCe', "updated_at" = '2011-12-03 14:30:54.981013' WHERE "users"."id" = 1[0m
+Completed 200 OK in 77ms (Views: 17.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:30:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:30:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:30:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:30:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejRi71vXFxrhyF2d1TcJiReC5kPsBlhitv29o85QJ8A=", "user_session"=>{"login"=>"asdf", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users".login LIKE 'asdf') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "login_count" = 16, "failed_login_count" = 0, "last_login_at" = '2011-12-03 14:15:34.696967', "current_login_at" = '2011-12-03 14:31:12.200226', "last_request_at" = '2011-12-03 14:31:12.200503', "perishable_token" = 'DFYbNIBk02PB9dCxY7Y', "updated_at" = '2011-12-03 14:31:12.201212' WHERE "users"."id" = 1[0m
+Redirected to http://0.0.0.0:3000/appointments
+Completed 302 Found in 63ms
+
+
+Started GET "/appointments" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+  Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT "appointments".* FROM "appointments" ORDER BY date desc
+Rendered appointments/_form.html.erb (4.3ms)
+Rendered appointments/index.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2011-12-03 14:31:12.318679', "perishable_token" = '57LyJVpChIq0z9a4FD', "updated_at" = '2011-12-03 14:31:12.319179' WHERE "users"."id" = 1
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/js/modernizr-1.5.min.js" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+
+ActionController::RoutingError (No route matches [GET] "/js/modernizr-1.5.min.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/webforms2/webforms2-p.js" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+
+ActionController::RoutingError (No route matches [GET] "/webforms2/webforms2-p.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.js" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/HTML5-Crossbrowser/js/html5forms.fallback.js" for 127.0.0.1 at 2011-12-03 15:31:12 +0100
+
+ActionController::RoutingError (No route matches [GET] "/HTML5-Crossbrowser/js/html5forms.fallback.js"):
+  
+
+Rendered /Users/maiky/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
