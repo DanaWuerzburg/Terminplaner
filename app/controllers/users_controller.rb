@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  before_filter :require_no_user, :only => [:new, :create]
+  before_filter :require_user, :only => [:show, :edit, :update]
+
+
   # GET /users
   # GET /users.json
   def index
@@ -35,6 +40,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+
   end
 
   # POST /users
@@ -44,7 +50,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(:users, :notice => 'Registration successfull.') }
+        format.html { redirect_to(:appointments, :notice => 'Registration successfull.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -62,7 +68,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to :appointments, notice: 'User was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

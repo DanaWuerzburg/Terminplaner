@@ -1,7 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h1> My Account</h1>
+
+<p> Here you can see into your account data.    <br>
+    If you wish to edit your data or change your <br>
+    password, click the Edit button on the bottom <br>
+    of this page
+</p>
+<br>
+
 <p>
-  <b>Login:</b>
+  <b>Username:</b>
   <%= @user.login %>
 </p>
 
@@ -10,66 +19,71 @@
   <%= @user.email %>
 </p>
 
+<br>
+
+
+<!--
 <p>
   <b>Persistence token:</b>
-  <%= @user.persistence_token %>
+  <%#= @user.persistence_token %>
 </p>
 
 <p>
   <b>Crypted password:</b>
-  <%= @user.crypted_password %>
+  <%#= @user.crypted_password %>
 </p>
 
 <p>
   <b>Password salt:</b>
-  <%= @user.password_salt %>
+  <%#= @user.password_salt %>
 </p>
 
 <p>
   <b>Single access token:</b>
-  <%= @user.single_access_token %>
+  <%#= @user.single_access_token %>
 </p>
 
 <p>
   <b>Perishable token:</b>
-  <%= @user.perishable_token %>
+  <%#= @user.perishable_token %>
 </p>
 
 <p>
   <b>Login count:</b>
-  <%= @user.login_count %>
+  <%#= @user.login_count %>
 </p>
 
 <p>
   <b>Failed login count:</b>
-  <%= @user.failed_login_count %>
+  <%#= @user.failed_login_count %>
 </p>
 
 <p>
   <b>Last request at:</b>
-  <%= @user.last_request_at %>
+  <%#= @user.last_request_at %>
 </p>
 
 <p>
   <b>Current login at:</b>
-  <%= @user.current_login_at %>
+  <%#= @user.current_login_at %>
 </p>
 
 <p>
   <b>Last login at:</b>
-  <%= @user.last_login_at %>
+  <%#= @user.last_login_at %>
 </p>
 
 <p>
   <b>Current login ip:</b>
-  <%= @user.current_login_ip %>
+  <%#= @user.current_login_ip %>
 </p>
 
 <p>
   <b>Last login ip:</b>
-  <%= @user.last_login_ip %>
+  <%#= @user.last_login_ip %>
 </p>
+-->
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'Edit your data', edit_user_path(@user) %> |
+<%= link_to 'Back to Agenda', appointments_path %>
