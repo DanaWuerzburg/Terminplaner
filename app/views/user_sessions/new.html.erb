@@ -1,8 +1,18 @@
-<h1>Welcome to your Online Appointments Manager</h1>
+<%= render 'nav' %>
+<div id="cont">
 
-<p>Feel free to log in to your account and check out your newest Dates.</p>
+  <section class="newappointment">
 
-<%= render 'form' %>
+    <h1>Welcome to your Online Appointments Manager</h1>
+        <div class="formular">
+            <p>Feel free to log in to your account and check out your newest Dates.</p>
 
-<p>If u haven't your own OAM yet, please do register <%= link_to "here", new_user_path%> ! </p>
+            <%= render 'form' %>
+            <p>If u haven't your own OAM yet, please do register <%= link_to "here", new_user_path%> ! </p>
+        </div>
 
+  </section>
+</div>
+<footer>
+
+</footer>

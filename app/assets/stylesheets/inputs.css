@@ -75,19 +75,42 @@ a.right, input.right {
 .textarea{
     background:  #fff;
 }
-
 a.edit, input.edit{
     background-position: -40px -60px;
-}
-a.create, input.create{
-    background-position: -40px -120px;
 }
 a.delete, input.delete{
     background-position: -40px -90px;
 }
-a.logout, input.logout{
-    background-position: -40px 0;
+a.create, input.create{
+    background-position: -40px -120px;
 }
+a.back, input.back{
+    background-position: -40px -150px;
+}
+a.useradd, input.useradd{
+    background-position: -40px -180px;
+}
+a.userremove, input.userremove{
+    background-position: -40px -210px;
+}
+a.useredit, input.useredit{
+    background-position: -40px -240px;
+}
+a.userinfo, input.userinfo{
+    background-position: -40px -270px;
+}
+a.settings, input.settings{
+    background-position: -40px -300px;
+}
+a.login, input.login{
+    background-position: -40px -330px;
+}
+a.logout, input.logout{
+    background-position: -40px 360px;
+}
+
+
+
 
 a.edit:hover, input.edit:hover{
     background-position: 0 -60px;
@@ -98,6 +121,27 @@ a.create:hover, input.create:hover{
 a.delete:hover, input.delete:hover{
     background-position: 0 -90px;
 }
+a.back:hover, input.back:hover{
+    background-position: -40px -150px;
+}
+a.useradd:hover, input.useradd:hover{
+    background-position: -40px -180px;
+}
+a.userremove:hover, input.userremove:hover{
+    background-position: -40px -210px;
+}
+a.useredit:hover, input.useredit:hover{
+    background-position: -40px -240px;
+}
+a.userinfo:hover, input.userinfo:hover{
+    background-position: -40px -270px;
+}
+a.settings:hover, input.settings:hover{
+    background-position: -40px -300px;
+}
+a.login:hover, input.login:hover{
+    background-position: -40px -330px;
+}
 a.logout:hover, input.logout:hover{
-    background-position: 0 0;
+    background-position: -40px 360px;
 }

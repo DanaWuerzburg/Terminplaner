@@ -1,15 +1,4 @@
-
-<header>
-  <div id="navbar">
-    <ul>
-
-
-      <li><input type='button' class="button logout" onclick="" name="Logout" title="Logout" /></li>
-      <li>Today is <%= Time.now.strftime("%A")%> the  <%= Time.now.strftime('%d.%m.%y')%></li>
-      <li>Hello  <%= current_user.login %>   !    <br>            </li>     <!-- Username ist gespeichert in @user.login -->
-    </ul>
-  </div>
-</header>
+<%= render 'appointments/nav' %>
 <div id="cont">
 <section class="appointments">
    <h1>Agenda   </h1>

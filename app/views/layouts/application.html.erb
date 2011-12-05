@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terminplaner -Login </title>
+  <title>Terminplaner</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -18,22 +18,8 @@
 
 </head>
 <body>
-  <div id="wrap" >
-   <div id="nav">
-        <% if current_user %>
-        <!-- Username ist gespeichert in @user.login -->
-        <p>Hello <%= current_user.login%></p>
-        <%= link_to " My Account ",  user_path(current_user.id) %>
-        <%= link_to " Logout ", :logout%>
-        <% else %>
-        <%= link_to " Register ", new_user_path%> |
-        <%= link_to " Login ", :login %>
-        <% end %>
+    <div id="wrap" >
+        <%= yield %>
     </div>
-
-
-
-<%= yield %>
-</div>
 </body>
 </html>

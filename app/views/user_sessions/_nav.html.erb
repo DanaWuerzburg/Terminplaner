@@ -1,0 +1,20 @@
+<header>
+
+  <div id="navbar">
+    <ul>
+
+        <li><% if current_user %>
+        <!-- Username ist gespeichert in @user.login -->
+        Hello <%= current_user.login%></li>
+        <li><%= link_to '',  user_path(current_user.id), :class=> 'button account', :alt => 'My Account', :title => 'My Account' %></li>
+        <li><%= link_to '', :logout, :class=> 'button logout', :alt => 'Logout', :title => 'Logout'%>
+        <% else %>
+        <%= link_to "", new_user_path, :class=> 'button useradd', :alt => 'Register', :title => 'Register'%> |
+        <%= link_to "", :login, :class=> 'button login', :alt => 'Login', :title => 'Login' %>
+        <% end %></li>
+
+
+      <li>Today is <%= Time.now.strftime("%A")%> the  <%= Time.now.strftime('%d.%m.%y')%></li>
+    </ul>
+  </div>
+</header>
