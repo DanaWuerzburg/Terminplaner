@@ -21,8 +21,10 @@
   </div>
 
   <div class="field">
-    <%= link_to '', edit_user_path(@user), :class=>"button useredit" %>
-    <%= link_to '', appointments_path, :class=> "button back" %>
+    <%= link_to '', edit_user_path(@user), :class=>"button useredit", :title=>"Edit Account" %>
+    <script language="Javascript">
+            document.writeln("<a href='Javascript:history.back()' name='Back' class='button back' title='Previous Page'></a>");
+        </script>
   </div>
 
 </section>
@@ -30,17 +32,6 @@
 <footer>
 
 </footer>
-
-
-
-
-
-
-
-
-<h1> My Account</h1>
-
-
 
 
 <!--
