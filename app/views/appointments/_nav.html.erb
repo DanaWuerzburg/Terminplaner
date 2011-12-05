@@ -1,0 +1,24 @@
+<header>
+
+  <div id="navbar">
+    <ul class='info'>
+
+        <li><% if current_user %>Hello  <%= current_user.login %>!</li>
+        <li>Today is <%= Time.now.strftime("%A")%> the  <%= Time.now.strftime('%d.%m.%y')%></li>
+    </ul>
+    <ul>
+        <li><input type='button' class='button settings'/></li>
+        <li><%= link_to '',  user_path(current_user.id), :class=> 'button userinfo left', :alt => 'My Account', :title => 'My Account' %></li>
+        <li><%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
+          <% else %>
+
+        <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%> |
+        <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
+        <% end %></li>
+
+
+
+
+    </ul>
+  </div>
+</header>

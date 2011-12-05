@@ -1,27 +1,26 @@
-
 a.button, input.button {
     background: url("/images/sprite.png") no-repeat #f3f3f3;
     color: #6e6e6e;
     font: bold 12px Helvetica, Arial, sans-serif;
     text-decoration: none;
-
+    border:  1px solid #dcdcdc;
     position: relative;
     display: inline-block;
     text-shadow: 0 1px 0 #fff;
     transition: border-color .218s;
-    border: solid 1px #dcdcdc;
     border-radius: 2px;
     margin-right: 10px;
     cursor: pointer;
     float: left;
-    min-height: 30px;
-    min-width: 40px;
+    min-height: 28px;
+    min-width: 38px;
 }
 
-input .button{
-    width: 16px;
-    height: 16px;
-    margin: 7px 12px;
+input.button{
+    width: 40px;
+    height: 30px;
+}
+a.button{
 }
 a.button:hover, input.button:hover {
     color: #333;
@@ -106,7 +105,7 @@ a.login, input.login{
     background-position: -40px -330px;
 }
 a.logout, input.logout{
-    background-position: -40px 360px;
+    background-position: -40px -360px;
 }
 
 
@@ -122,26 +121,26 @@ a.delete:hover, input.delete:hover{
     background-position: 0 -90px;
 }
 a.back:hover, input.back:hover{
-    background-position: -40px -150px;
+    background-position: 0 -150px;
 }
 a.useradd:hover, input.useradd:hover{
-    background-position: -40px -180px;
+    background-position: 0 -180px;
 }
 a.userremove:hover, input.userremove:hover{
-    background-position: -40px -210px;
+    background-position: 0 -210px;
 }
 a.useredit:hover, input.useredit:hover{
-    background-position: -40px -240px;
+    background-position: 0 -240px;
 }
 a.userinfo:hover, input.userinfo:hover{
-    background-position: -40px -270px;
+    background-position: 0 -270px;
 }
 a.settings:hover, input.settings:hover{
-    background-position: -40px -300px;
+    background-position: 0 -300px;
 }
 a.login:hover, input.login:hover{
-    background-position: -40px -330px;
+    background-position: 0 -330px;
 }
 a.logout:hover, input.logout:hover{
-    background-position: -40px 360px;
+    background-position: 0 -360px;
 }

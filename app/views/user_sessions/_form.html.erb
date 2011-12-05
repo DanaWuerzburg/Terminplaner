@@ -12,14 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "Username" %><br />
-    <%= f.text_field :login %>
+    <%= f.label "Username", class: 'label' %><br />
+    <%= f.text_field :login, class: 'textarea' %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
+    <%= f.label :password, class: 'label' %><br />
+    <%= f.text_field :password, class: 'textarea' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create login left', :title=>'Login'  %>
+    <%= link_to "", new_user_path, :class=> 'button useradd right', :alt => 'Register', :title => 'Register'%>
   </div>
 <% end %>

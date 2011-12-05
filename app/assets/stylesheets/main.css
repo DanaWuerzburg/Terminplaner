@@ -53,11 +53,16 @@
         #navbar{
             height: 30px;
             background:  #adafba;
-            text-align: right;
             padding: 5px 15px;
         }
+        #navbar ul{
+            float:right;
+        }
+        #navbar ul.info{
+            float:left;
+        }
         #navbar ul li{
-            float: right;
+            float: left;
             text-align: right;
         }
     #cont{
