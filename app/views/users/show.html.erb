@@ -1,25 +1,46 @@
-<p id="notice"><%= notice %></p>
+<%= render 'appointments/nav' %>
+
+<div id="cont">
+  <section class="appointments">
+    <h1><%= current_user.login %>'s Account</h1>
+  <section class="notify">
+    <%= flash[:notice] %>
+  </section>
+
+<p> Here you can see into your account data. If you wish to edit your data or change your password, click the Edit button on the bottom of this page</p>
+
+
+
+  <div class="field">
+    <label class='label'>Username</label></br>
+    <%= @user.login%>
+  </div>
+  <div class="field">
+    <label class="label">Email</label></br>
+    <%= @user.email %>
+  </div>
+
+  <div class="field">
+    <%= link_to '', edit_user_path(@user), :class=>"button useredit" %>
+    <%= link_to '', appointments_path, :class=> "button back" %>
+  </div>
+
+</section>
+</div>
+<footer>
+
+</footer>
+
+
+
+
+
+
+
 
 <h1> My Account</h1>
 
-<p> Here you can see into your account data.    <br>
-    If you wish to edit your data or change your <br>
-    password, click the Edit button on the bottom <br>
-    of this page
-</p>
-<br>
 
-<p>
-  <b>Username:</b>
-  <%= @user.login %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<br>
 
 
 <!--
@@ -83,7 +104,3 @@
   <%#= @user.last_login_ip %>
 </p>
 -->
-
-
-<%= link_to 'Edit your data', edit_user_path(@user) %> |
-<%= link_to 'Back to Agenda', appointments_path %>

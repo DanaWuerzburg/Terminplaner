@@ -2,7 +2,6 @@
 
   <div id="navbar">
     <ul class='info'>
-
         <li><% if current_user %>Hello  <%= current_user.login %>!</li>
         <li>Today is <%= Time.now.strftime("%A")%> the  <%= Time.now.strftime('%d.%m.%y')%></li>
     </ul>
