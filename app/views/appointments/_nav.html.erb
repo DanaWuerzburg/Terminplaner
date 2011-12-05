@@ -2,11 +2,11 @@
 
   <div id="navbar">
     <ul class='info'>
-        <li><% if current_user %>Hello  <%= current_user.login %>!</li>
-        <li>Today is <%= Time.now.strftime("%A")%> the  <%= Time.now.strftime('%d.%m.%y')%></li>
+        <li>Today: <%= Time.now.strftime('%A, %d. %B %Y')%></li>
     </ul>
     <ul>
         <li><input type='button' class='button settings'/></li>
+        <% if current_user %>
         <li><%= link_to '',  user_path(current_user.id), :class=> 'button userinfo left', :alt => 'My Account', :title => 'My Account' %></li>
         <li><%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
           <% else %>

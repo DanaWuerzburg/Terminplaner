@@ -20,7 +20,7 @@
 		}
 
 	h1, h2, h3 {
-        font-size: 16px;
+        font-size: 16pt;
 		color: #5C1F54;
 	}
 	h4, h5, h6 {
@@ -67,6 +67,10 @@
         }
         #navbar ul.info{
             float:left;
+        }
+        #navbar ul.info li{
+            font-size: 16pt;
+            color: #f3f3f3;
         }
         #navbar ul li{
             float: left;

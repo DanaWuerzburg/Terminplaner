@@ -1,7 +1,7 @@
 <%= render 'appointments/nav' %>
 <div id="cont">
 <section class="appointments">
-   <h1>Agenda   </h1>
+   <h1><%= current_user.login %>'s Agenda</h1>
   <section class="notify">
   <%= flash[:notice] %>
     </section>
