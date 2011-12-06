@@ -1,6 +1,8 @@
 <%= render 'appointments/nav' %>
 <div id="settings">
   <div id="groups">
+
+<%= render :partial => "groups/form" %>
     <!--
        <table>
   <tr>
@@ -36,7 +38,7 @@
                  <td> <br> &nbsp; &nbsp; &nbsp; Appointments for today:</td>
                  <td><% String s =  appointment.note %></td>
                  <%= link_to "", appointment, :class=> 'button left add', :popup=> true, :title=>"Show more" %>
-                 <td class="group <%=appointment.group  %>"></td>
+
                  <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%=  appointment.date.strftime('%d.%m') %></td>
                  <td> &nbsp; &nbsp; &nbsp; <%=  s[0..30] + "..." %>  <br></td>
               </tr>
@@ -56,7 +58,7 @@
 <% @appointments.each do |appointment| %>
 
     <tr>
-    <td class="group <%=appointment.group  %>"></td>
+   <!--- <td class="group <#%=#appointment.group  %>"></td> -->
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>

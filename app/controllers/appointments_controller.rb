@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
 
   before_filter :require_user, :only  => [:edit, :index, :new , :show , :destroy]
+
   # GET /appointments
   # GET /appointments.json
 
@@ -9,6 +10,8 @@ class AppointmentsController < ApplicationController
   def index
    # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
     # .order("date DESC")   zum ordnen der inhalte nach datum
+    @groups = Group.all
+    @group = Group.new
     @appointments = Appointment.order(sort_column + " " + sort_direction)
    # @appointments= Appointment.all
     @appointment = Appointment.new
