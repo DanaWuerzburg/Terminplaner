@@ -19,6 +19,10 @@ class AppointmentsController < ApplicationController
     end
   end
 
+
+  def zeit
+    puts "HEYHOHELLO"
+  end
   # GET /appointments/1
   # GET /appointments/1.json
   def show
@@ -39,7 +43,7 @@ class AppointmentsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @appointment, :notice => 'Appointment in new' }
     end
-    render 'erstellt'
+
   end
 
   # GET /appointments/1/edit

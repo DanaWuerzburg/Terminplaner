@@ -26,6 +26,7 @@
     </section>
   <br>
     <section class="reminder">
+      <div id="zeit"> <%= "{#:method=>'zeit'}" %> </div>
       <% @appointments.each do |appointment| %>
       <% String st = appointment.date.strftime('%d.%m.%y') %>
             <% if st == Time.now.strftime('%d.%m.%y') %>
