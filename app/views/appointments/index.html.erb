@@ -30,9 +30,11 @@
       <% String st = appointment.date.strftime('%d.%m.%y') %>
             <% if st == Time.now.strftime('%d.%m.%y') %>
 
-              <tr>  Reminder! <br> &nbsp; &nbsp; &nbsp; Appointments for today, click:
-                 <% String s =  appointment.note %>
-                 <%= link_to "show", appointment, :class=> 'button left', :popup=> true %>
+              <tr>
+
+                 <td>Reminder! </br> &nbsp; &nbsp; &nbsp; Appointments for today, click:</td>
+                 <td><% String s =  appointment.note %></td>
+                 <%= link_to "", appointment, :class=> 'button left add', :popup=> true, :title=>"Show more" %>
                  <td class="group <%=appointment.group  %>"></td>
                  <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%=  appointment.date.strftime('%d.%m') %></td>
                  <td>  &nbsp; &nbsp; &nbsp; <%=  s[0..30] + "..." %></td>

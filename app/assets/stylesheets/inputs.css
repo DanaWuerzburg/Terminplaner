@@ -74,6 +74,9 @@ a.right, input.right {
 .textarea{
     background:  #fff;
 }
+a.add, input.add{
+    background-position: -40px -30px;
+}
 a.edit, input.edit{
     background-position: -40px -60px;
 }
@@ -111,6 +114,9 @@ a.logout, input.logout{
 
 
 
+a.add:hover, input.add:hover{
+    background-position: 0 -30px;
+}
 a.edit:hover, input.edit:hover{
     background-position: 0 -60px;
 }
