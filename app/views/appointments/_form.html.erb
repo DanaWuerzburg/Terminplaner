@@ -12,24 +12,21 @@
   <% end %>
 
   <div class="field">
-    <label for="date" class="label">Date</label></br>
+    <label for="date" class="label">Date</label>
     <%= f.datetime_select :date, {:order => [:day, :month, :year], :default => 24.hours.from_now, :minute_step => 15}, {:class => 'drop'}%>
   </div>
   <div class="field">
-    <label for="note" class="label">Note</label></br>
+    <label for="note" class="label">Note</label>
     <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
   </div>
   <div class="field">
-    <label for="priority_number" class="label">Priority</label></br>
+    <label for="priority_number" class="label">Priority</label>
     <input type="range" id="priority_number" max="5" min="1" name="appointment[priority_number]" size="50" value="3" />
     <!--<%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>-->
   </div>
   <div class="field">
-    <label class="label">Group</label></br>
-
-    <%=
-    collection_select(:group, :name, @groups, :id, :name, options ={}, :class => "drop" )
-    %>
+    <label class="label">Group</label>
+    <%= f.collection_select(:id, @groups, :id, :name, options={}, :class=> 'drop') %>
 
   </div>
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create', :title=>'Save Appointment' %>

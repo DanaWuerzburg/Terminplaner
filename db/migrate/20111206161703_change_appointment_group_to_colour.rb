@@ -7,7 +7,7 @@ class ChangeAppointmentGroupToColour < ActiveRecord::Migration
 
   def change
   change_table :appointments do |t|
-  t.rename :group, :colour
+    t.add_column :grouptype, :group
   end
   end
 end
