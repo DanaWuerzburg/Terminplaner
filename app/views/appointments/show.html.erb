@@ -1,15 +1,27 @@
-<p id="notice"><%= notice %></p>
 
+<%= render 'appointments/nav' %>
+<div id="cont">
+  <section class="appointments">
+
+
+    <div class="formular">
 <p>
-  <b>Date:</b>
-  <%= @appointment.date %>
+
+    <b> <label for="date" class="label">Date</label></b>
+    <%= @appointment.date %>
+
 </p>
 
 <p>
-  <b>Note:</b>
+  <b> <label for="note" class="label">Note:</label></b>
   <%= @appointment.note %>
 </p>
+       <script language="Javascript">
+            document.writeln("<a href='Javascript:history.back()' name='Back' class='button back' title='Previous Page'></a>");
+        </script>
 
-
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+      </div>
+  </section>
+</div>
+<footer>
+</footer>
