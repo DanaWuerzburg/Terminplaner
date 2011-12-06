@@ -1,4 +1,6 @@
 Terminplaner::Application.routes.draw do
+  resources :groups
+
   resources :user_sessions
 
   resources :users

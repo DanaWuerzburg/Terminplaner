@@ -1,5 +1,17 @@
 <%= render 'appointments/nav' %>
-<div id="settings"></div>
+<div id="settings">
+  <div id="groups">
+    <%= form_for(@appointment) do |f| %>
+
+        <input type="checkbox" name="group" value="Geburtstag"/>Geburtstag</br>
+        <input type="checkbox" name="group" value="Freizeit"/>Freizeit</br>
+        <input type="checkbox" name="group" value="Arzt"/>Arzt</br>
+
+        <input type="textbox" name="group" class="textarea" />
+    <% end %>
+  </div>
+
+</div>
 <div id="cont">
 <section class="appointments">
    <h1><%= current_user.login %>'s Agenda</h1>
