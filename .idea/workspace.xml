@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fe949672-e734-434a-af33-743ad0a06f70" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/inputs.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/inputs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appointments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
     </list>
     <ignored path="Terminplaner.iws" />
@@ -31,28 +33,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groups/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="170" selection-end="200" vertical-scroll-proportion="-8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_nav.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/appointments/_nav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="4" column="19" selection-start="71" selection-end="111" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.61981565">
+            <state line="35" column="71" selection-start="886" selection-end="886" vertical-scroll-proportion="-7.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="9" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appointments_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scaffolds.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="20" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="22" selection-start="720" selection-end="720" vertical-scroll-proportion="0.5543478">
               <folding />
             </state>
           </provider>
@@ -61,7 +90,7 @@
       <file leaf-file-name="inputs.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/inputs.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="26" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,15 +100,6 @@
         <entry file="file://$PROJECT_DIR$/public/images/sprite_icons.png">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groups/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="200" selection-start="340" selection-end="340" vertical-scroll-proportion="-7.1923075">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -115,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/appointments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/user_sessions/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/user_sessions/_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/navi.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/settings.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/divVisibility.js" />
-        <option value="$PROJECT_DIR$/app/views/appointments/_nav.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20111206023448_create_groups.rb" />
+        <option value="$PROJECT_DIR$/app/views/appointments/_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/inputs.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/appointments_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/appointments/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css" />
       </list>
     </option>
   </component>
@@ -907,34 +927,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/groups.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="130" selection-end="136" vertical-scroll-proportion="0.45033112">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/groups.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/users.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/user_sessions.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -984,13 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appointments/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="56" selection-start="398" selection-end="447" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/sprite_icons.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -998,21 +983,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/inputs.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="26" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="19" selection-start="71" selection-end="111" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/appointments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="9" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appointments/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="56" selection-start="398" selection-end="447" vertical-scroll-proportion="-9.153846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/appointments/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="17" selection-start="823" selection-end="823" vertical-scroll-proportion="0.61981565">
+        <state line="35" column="71" selection-start="886" selection-end="886" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="22" selection-start="720" selection-end="720" vertical-scroll-proportion="0.5543478">
           <folding />
         </state>
       </provider>

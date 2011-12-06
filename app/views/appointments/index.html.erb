@@ -23,27 +23,21 @@
 <div id="cont">
 <section class="appointments">
    <h1><%= current_user.login %>'s Agenda</h1>
-  <section class="notify">
-  <%= flash[:notice] %>
-    </section>
-  <br>
-    <section class="reminder">
-      <div id="zeit"> <%= "{#:method=>'zeit'}" %> </div>
+   <section class="notify">
+   <%= flash[:notice] %>
+   </section>
+   <section class="reminder">
+      <!--<div id="zeit"> <#%= "{#:method=>'zeit'}" %> </div>-->
+      <h4>Appointments for today: <%= Time.now.strftime('%d. %B %Y') %></h4>
+      <ul>
       <% @appointments.each do |appointment| %>
       <% String st = appointment.date.strftime('%d.%m.%y') %>
-            <% if st == Time.now.strftime('%d.%m.%y') %>
-
-              <tr>
-
-                 <td> <br> &nbsp; &nbsp; &nbsp; Appointments for today:</td>
-                 <td><% String s =  appointment.note %></td>
-                 <%= link_to "", appointment, :class=> 'button left add', :popup=> true, :title=>"Show more" %>
-
-                 <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%=  appointment.date.strftime('%d.%m') %></td>
-                 <td> &nbsp; &nbsp; &nbsp; <%=  s[0..30] + "..." %>  <br></td>
-              </tr>
-              <% end %>
-       <% end %>
+          <% if st == Time.now.strftime('%d.%m.%y') %>
+            <% String s = truncate(appointment.note.to_s, :length => 40, :separator => ' ') %>
+            <li><%= link_to s , appointment, :popup=> true, :title=>"Show more" %></li>
+          <% end %>
+      <% end %>
+      </ul>
   </section>
 <table class="pretty">
   <thead>
