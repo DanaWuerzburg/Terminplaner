@@ -51,7 +51,7 @@
 <% @appointments.each do |appointment| %>
 
     <tr>
-   <!--- <td class="group <#%=#appointment.group  %>"></td> -->
+    <td class="group <%= @appointment.group %>"></td>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
