@@ -25,8 +25,14 @@
     <!--<%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>-->
   </div>
   <div class="field">
-    <label for="priority_number" class="label">Group</label></br>
-    <%= f.select(:group, options_for_select([["Keine Gruppe","none"],["Geburtstag","group1"],["Freizeit","group2"],["Arzt","group3"]]), {}, {:class => "drop"}) %>
+    <label class="label">Group</label></br>
+
+    <% @groups.each do |group| %>
+    <%end %>
+    <%=
+    collection_select(:group, :name, @groups, :id, :name, options ={}, :class => "drop" )
+    %>
+
   </div>
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create', :title=>'Save Appointment' %>
    <%# <%= render 'erstellt' %>

@@ -5,13 +5,15 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
 
+
   helper_method :sort_column, :sort_direction
 
   def index
-   # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
-    # .order("date DESC")   zum ordnen der inhalte nach datum
     @groups = Group.all
     @group = Group.new
+
+   # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
+    # .order("date DESC")   zum ordnen der inhalte nach datum
     @appointments = Appointment.order(sort_column + " " + sort_direction)
    # @appointments= Appointment.all
     @appointment = Appointment.new
@@ -20,7 +22,7 @@ class AppointmentsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @appointments, :notice => 'Appointment in index.' }
     end
-  end
+    end
 
 
   def zeit
