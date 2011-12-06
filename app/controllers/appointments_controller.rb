@@ -53,6 +53,8 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+    @groups = Group.all
+    @group = Group.new
     @appointment = Appointment.find(params[:id])
   end
 

@@ -5,20 +5,15 @@
 
 
     <div class="formular">
-<p>
+        <label for="date" class="label">Date</label>
+        <p><%= @appointment.date %></p>
 
-    <b> <label for="date" class="label">Date</label></b>
-    <%= @appointment.date %>
+      <label for="note" class="label">Note:</label>
+      <p><%= @appointment.note %></p>
 
-</p>
-
-<p>
-  <b> <label for="note" class="label">Note:</label></b>
-  <%= @appointment.note %>
-</p>
-       <script language="Javascript">
-            document.writeln("<a href='Javascript:history.back()' name='Back' class='button back' title='Previous Page'></a>");
-        </script>
+           <script language="Javascript">
+                document.writeln("<a href='Javascript:history.back()' name='Back' class='button back' title='Previous Page'></a>");
+            </script>
 
       </div>
   </section>

@@ -33,8 +33,7 @@
       <% @appointments.each do |appointment| %>
       <% String st = appointment.date.strftime('%d.%m.%y') %>
           <% if st == Time.now.strftime('%d.%m.%y') %>
-            <% String s = truncate(appointment.note.to_s, :length => 40, :separator => ' ') %>
-            <li><%= link_to s , appointment, :popup=> true, :title=>"Show more" %></li>
+            <li><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
           <% end %>
       <% end %>
       </ul>

@@ -27,8 +27,6 @@
   <div class="field">
     <label class="label">Group</label></br>
 
-    <% @groups.each do |group| %>
-    <%end %>
     <%=
     collection_select(:group, :name, @groups, :id, :name, options ={}, :class => "drop" )
     %>
