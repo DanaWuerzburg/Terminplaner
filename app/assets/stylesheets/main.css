@@ -48,36 +48,8 @@
         height: auto;
     }
     header{
-        margin-bottom: 10px;
-         height: 50px;
     }
-        #navbar{
-            height: 30px;
-            width: 100%;
-            background:  #adafba;
-            padding: 5px 15px;
-            position: fixed;
-            top:0;
-            left: 0;
-            z-index: 2000;
-        }
-        #navbar ul{
-            float:right;
-            padding-right: 20px;
-        }
-        #navbar ul.info{
-            float:left;
-        }
-        #navbar ul.info li{
-            font-size: 16pt;
-            color: #f3f3f3;
-        }
-        #navbar ul li{
-            float: left;
-            text-align: right;
-        }
     #cont{
-
     }
         section{
             float: left;
