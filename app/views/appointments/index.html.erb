@@ -18,6 +18,22 @@
   <section class="notify">
   <%= flash[:notice] %>
     </section>
+  <br>
+    <section class="reminder">
+      <% @appointments.each do |appointment| %>
+      <% String st = appointment.date.strftime('%d.%m.%y') %>
+            <% if st == Time.now.strftime('%d.%m.%y') %>
+
+              <tr>  Reminder! <br> &nbsp; &nbsp; &nbsp; Appointments for today, click:
+                 <% String s =  appointment.note %>
+                 <%= link_to "show", appointment, :class=> 'button left', :popup=> true %>
+                 <td class="group <%=appointment.group  %>"></td>
+                 <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%=  appointment.date.strftime('%d.%m') %></td>
+                 <td>  &nbsp; &nbsp; &nbsp; <%=  s[0..30] + "..." %></td>
+              </tr>
+              <% end %>
+       <% end %>
+  </section>
 <table class="pretty">
   <thead>
     <th></th>

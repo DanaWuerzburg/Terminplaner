@@ -68,6 +68,14 @@
                 color: #ff0000;
                 max-width: 640px;
             }
+             .reminder{
+                position:relative;
+                top: 10px;
+                font-size: 19px;
+                color: #009999;
+                max-width: 640px;
+            }
+
             .newappointment{
             }
                 .field, .actions{
