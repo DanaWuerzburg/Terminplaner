@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   helper_method	:current_user_session,	:current_user
 
 
-
   private
 
   def current_user_session
@@ -41,5 +40,15 @@ class ApplicationController < ActionController::Base
       session[:return_to] = request.fullpath
 
     end
+
+   def require_admin
+    # raise User::NotAuthorized unless current_user.admin?
+     unless current_user.admin
+        store_location
+        flash[:notice] = "You are not authorized to access this page"
+        redirect_to appointments_url
+        return false
+      end
+  end
 
 end

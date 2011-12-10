@@ -3,18 +3,20 @@
 <table>
   <tr>
     <th>Login</th>
+    <th>ID</th>
     <th>Password salt</th>
     <th></th>
     <th></th>
-    <th></th>
+
   </tr>
 
 <% @user_sessions.each do |user_session| %>
   <tr>
     <td><%= user_session.login %></td>
+    <td><%= user_session.id %></td>
     <td><%= user_session.password_salt %></td>
+
     <td><%= link_to 'Show', user_session %></td>
-    <td><%= link_to 'Edit', edit_user_session_path(user_session) %></td>
     <td><%= link_to 'Destroy', user_session, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

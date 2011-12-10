@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  before_filter :require_user, :only  => [:edit, :index, :new , :show , :destroy]
+
+
   # GET /groups
   # GET /groups.json
   def index
