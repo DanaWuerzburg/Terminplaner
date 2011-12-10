@@ -49,6 +49,8 @@ class ApplicationController < ActionController::Base
         redirect_to appointments_url
         return false
       end
-  end
+   end
+
+
 
 end

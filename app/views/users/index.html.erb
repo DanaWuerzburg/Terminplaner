@@ -4,6 +4,7 @@
 <p id="notice"><%= notice %></p>
 <table>
   <tr>
+    <th>ID</th>
     <th>Username</th>
     <th>Email</th>
     <th>Admin</th>
@@ -28,6 +29,7 @@
   <tr>
 
     <% # comments %>
+    <td><%= user.id %></td>
     <td><%= user.login %></td>
     <td><%= user.email %></td>
     <td><%= user.admin? %></td>

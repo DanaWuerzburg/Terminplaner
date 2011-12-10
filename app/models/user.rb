@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :appointment
+  has_many :groups
 
   acts_as_authentic do |config|
     #	Add	custom	conﬁgura'on	op'ons	here
