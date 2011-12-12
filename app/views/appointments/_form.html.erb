@@ -26,12 +26,12 @@
   </div>
   <div class="field">
     <label class="label">Group</label>
-    <%= f.collection_select(:id, @groups, :id, :name, options={}, :class=> 'drop') %>
+    <%= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
 
   </div>
 
 
-   <div class="filed">
+   <div class="field">
         <!-- klappt nich
      <%#= f.hidden_field :user_id, current_user.id  %>
 

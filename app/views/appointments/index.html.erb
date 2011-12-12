@@ -1,22 +1,16 @@
 <%= render 'appointments/nav' %>
 <div id="settings">
   <div id="groups">
+    <div class="field">
+        <% @groups.each do |group| %>
+        <div>
+            <input type="button" class="picker" style="background-color: <%= group.colour %>;" />
+            <label class="colorlabel"><%= group.name %></label>
+        </div>
+        <% end %>
+    </div>
 
-<%= render :partial => "groups/form" %>
-    <!--
-       <table>
-  <tr>
-    <th>Name</th>
-    <th>Id</th>
-    <th>Description</th>
-    <th>Colour</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-
-</table> -->
+  <%= render :partial => "groups/form" %>
   </div>
 
 </div>
@@ -40,25 +34,24 @@
   </section>
 <table class="pretty">
   <thead>
-    <th></th>
+    <th class="group"></th>
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
-    <th>ID</th>
-    <th>User-ID</th>
+    <th><%= sortable "ID", "ID"%></th>
+    <th><%= sortable "User-ID","User"%></th>
 
   </thead>
   <tbody>
 <% @appointments.each do |appointment| %>
 
     <tr>
-    <td><%= @appointment.colour %></td>
-    <td class="group <%= @appointment.colour %>"></td>
+    <td class="group" style="background-color: <%= appointment.colour %>;"></td>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
     <td><%= appointment.id %></td>
-    <td><%= appointment.user_id %></td>
+    <td></td>
     <td class="tdtools">
       <%= link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
       <%= link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>

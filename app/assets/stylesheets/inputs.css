@@ -58,6 +58,7 @@ a.right, input.right {
 
 .drop, .textarea{
     margin-top: 10px;
+    padding-left: 4px;
     color: #669;
     transition: border-color .218s;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));

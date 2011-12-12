@@ -12,15 +12,15 @@
 
 
   <div class="field">
-    <label class='label'>Username</label></br>
-    <%= @user.login%>
+    <label class='label'>Username</label>
+    <input type=text class="textarea" value="<%= @user.login%>" disabled="disabled"/>
   </div>
   <div class="field">
-    <label class="label">Email</label></br>
-    <%= @user.email %>
+    <label class="label">Email</label>
+    <input type=text class="textarea" value="<%= @user.email %>" disabled="disabled"/>
   </div>
 
-  <div class="field">
+  <div >
     <%= link_to '', edit_user_path(@user), :class=>"button useredit", :title=>"Edit Account" %>
     <script language="Javascript">
             document.writeln("<a href='Javascript:history.back()' name='Back' class='button back' title='Previous Page'></a>");

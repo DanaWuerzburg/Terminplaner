@@ -13,18 +13,18 @@
   <% end %>
 
   <div class="field">
-   <label class="label" >Username</label></br>
+   <label class="label" >Username</label>
     <%= f.text_field :login, :class=>"textarea" %>
   </div>
   <div class="field">
-   <label class="label" >Email</label></br>
+   <label class="label" >Email</label>
     <%= f.text_field :email, :class=>"textarea" %>
   </div>
 
     <!-- ADMINFIELD  -->
     <% if current_user.admin? %>
       <div class="field">
-       <label class="label" >Admin</label></br>
+       <label class="label" >Admin</label>
         <%=  f.text_field :admin, :class=>"textarea" %>
       </div>
     <% end %>
@@ -32,11 +32,11 @@
      <!-- Adminfield ende -->
 
   <div class="field">
-    <label class="label" >Password</label></br>
+    <label class="label" >Password</label>
     <%= f.password_field :password, :class=>"textarea" %>
   </div>
   <div class="field">
-      <label class="label" >Password (confirm)</label></br>
+      <label class="label" >Password (confirm)</label>
       <%= f.password_field :password_confirmation, :class=>"textarea" %>
     </div>
   <div class="actions">
