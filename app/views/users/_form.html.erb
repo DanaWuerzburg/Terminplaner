@@ -20,6 +20,17 @@
    <label class="label" >Email</label></br>
     <%= f.text_field :email, :class=>"textarea" %>
   </div>
+
+    <!-- ADMINFIELD  -->
+    <% if current_user.admin? %>
+      <div class="field">
+       <label class="label" >Admin</label></br>
+        <%=  f.text_field :admin, :class=>"textarea" %>
+      </div>
+    <% end %>
+
+     <!-- Adminfield ende -->
+
   <div class="field">
     <label class="label" >Password</label></br>
     <%= f.password_field :password, :class=>"textarea" %>

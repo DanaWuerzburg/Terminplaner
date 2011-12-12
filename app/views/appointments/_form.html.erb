@@ -29,6 +29,20 @@
     <%= f.collection_select(:id, @groups, :id, :name, options={}, :class=> 'drop') %>
 
   </div>
+
+
+   <div class="filed">
+        <!-- klappt nich
+     <%#= f.hidden_field :user_id, current_user.id  %>
+
+     <%#=  @appointment.user_id = current_user.id %>
+     <label for=":user_id" class="label">User ID der Note: <%#= @appointment.user_id%></label>       -->
+
+
+  </div>
+
+
+
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create', :title=>'Save Appointment' %>
    <%# <%= render 'erstellt' %>
 

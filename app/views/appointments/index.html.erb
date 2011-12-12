@@ -44,7 +44,8 @@
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
-    <th></th>
+    <th>ID</th>
+    <th>User-ID</th>
 
   </thead>
   <tbody>
@@ -56,6 +57,8 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
+    <td><%= appointment.id %></td>
+    <td><%= appointment.user_id %></td>
     <td class="tdtools">
       <%= link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
       <%= link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>

@@ -43,7 +43,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new.json
   def new
     @appointment = Appointment.new
-
+    @appointment.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @appointment, :notice => 'Appointment in new' }
@@ -61,13 +61,14 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-      @appointment = Appointment.new(params[:appointment])
+      #@appointment = Appointment.new(params[:appointment])
+      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user)) #user id mit user verknüpfen
       if @appointment.save
         flash[:notice] = 'Der Termin wurde hinzugefuegt '
         redirect_to :action => :index and return
       end
     else
-    render :text => "MIST"
+    render :text => "MIST"    #HAHAHA das hatt ich grad aufm screen und mich gewundert >.<
     end
 
   # PUT /appointments/1
