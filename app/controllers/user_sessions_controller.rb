@@ -2,7 +2,9 @@ class UserSessionsController < ApplicationController
 
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => :destroy
- before_filter :require_admin    ,:only =>   [:index,:show,:new]
+
+  before_filter :require_admin    ,:only =>   [:index,:show]
+
 
   # GET /user_sessions/new
   # GET /user_sessions/new.xml

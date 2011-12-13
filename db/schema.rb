@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20111210223405) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "priority_number"
-    t.string   "group"
+    t.string   "colour"
     t.integer  "user_id"
     t.integer  "group_id"
   end

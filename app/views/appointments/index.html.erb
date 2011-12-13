@@ -38,6 +38,7 @@
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
+    <th>Group ID</th>
 
         <!-- ADMINFIELD  -->
     <% if current_user.admin? %>
@@ -52,11 +53,19 @@
 <% @appointments.each do |appointment| %>
 
     <tr>
-    <td class="group" style="background-color: <%= appointment.colour %>;"></td>
+    <td class="group" style="background-color: <%= appointment.colour %>"></td>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-    <td><%= appointment.id %></td>
+     <td><%= appointment.group_id %></td>
+              <!-- ADMINFIELD  -->
+    <% if current_user.admin? %>
+        <td><%= appointment.id %></td>
+        <td><%= appointment.user_id %></td>
+    <% end %>
+
+     <!-- Adminfield ende -->
+
     <td></td>
     <td class="tdtools">
       <!-- # User kann nur seine eigenen appointments editieren #-->
