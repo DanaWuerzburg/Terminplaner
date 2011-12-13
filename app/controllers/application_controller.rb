@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
 
    def require_admin
     # raise User::NotAuthorized unless current_user.admin?
-     unless current_user.admin
+     unless current_user.admin?
         store_location
         flash[:notice] = "You are not authorized to access this page"
         redirect_to appointments_url

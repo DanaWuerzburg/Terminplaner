@@ -18,6 +18,15 @@ class AppointmentsController < ApplicationController
    # @appointments= Appointment.all
     @appointment = Appointment.new
 
+      ##### Admin rechte verwalten
+    if current_user.admin?
+      #admin darf alle termine sehen und verwalten und nach user sortieren
+    else
+      #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
+      @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
+    end
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @appointments, :notice => 'Appointment in index.' }
@@ -43,7 +52,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new.json
   def new
     @appointment = Appointment.new
-    @appointment.user_id = current_user.id
+    #@appointment.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @appointment, :notice => 'Appointment in new' }

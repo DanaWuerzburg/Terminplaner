@@ -7,6 +7,9 @@
     <ul>
         <li><input type='submit' id="settingsButton" class='button settings' title='Settings' name="group" value="" onclick="javascript:DivEinAusblenden('settings');"/></li>
         <% if current_user %>
+           <% if current_user.admin? %>
+              <li><%= link_to '',  users_path, :class=> 'button userinfo left', :alt => 'Users', :title => 'Users' %></li>
+           <% end %>
         <li><%= link_to '',  user_path(current_user.id), :class=> 'button userinfo left', :alt => 'My Account', :title => 'My Account' %></li>
         <li><%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
           <% else %>
