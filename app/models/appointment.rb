@@ -3,6 +3,5 @@ class Appointment < ActiveRecord::Base
      has_one :group
 
   validates :user_id, :presence => true
-  attr_accessor :colour
 
 end
