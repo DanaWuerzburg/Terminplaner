@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Id</th>
+    <th>User_Id</th>
     <th>Description</th>
     <th>Colour</th>
     <th></th>
@@ -15,11 +16,18 @@
   <tr>
     <td><%= group.name %></td>
     <td><%= group.id %></td>
+    <td><%= group.user_id %></td>
     <td><%= group.description %></td>
     <td><%= group.colour %></td>
     <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
+
+
+    <% if current_user.id == group.user_id %>
+        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
+    <% end%>
+
+
   </tr>
 <% end %>
 </table>

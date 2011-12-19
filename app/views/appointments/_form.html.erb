@@ -26,7 +26,10 @@
   </div>
   <div class="field">
     <label class="label">Group</label>
-    <%= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
+    <%#= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
+
+    <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
+
   </div>
 
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create', :title=>'Save Appointment' %>

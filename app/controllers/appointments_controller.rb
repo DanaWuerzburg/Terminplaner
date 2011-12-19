@@ -12,6 +12,8 @@ class AppointmentsController < ApplicationController
     @groups = Group.all
     @group = Group.new
 
+    #@groups = Group.find(:all, :conditions => {:user_id => current_user})
+
    # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
     # .order("date DESC")   zum ordnen der inhalte nach datum
     @appointments = Appointment.order(sort_column + " " + sort_direction)
@@ -21,9 +23,13 @@ class AppointmentsController < ApplicationController
       ##### Admin rechte verwalten
     if current_user.admin?
       #admin darf alle termine sehen und verwalten und nach user sortieren
+
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
+      #@appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
       @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
+
+
     end
 
 
@@ -62,23 +68,29 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
-    @groups = Group.all
-    @group = Group.new
+    #@groups = Group.all
+    #@group = Group.new
     @appointment = Appointment.find(params[:id])
   end
 
   # POST /appointments
   # POST /appointments.json
   def create
+      #@groups = Group.all
       #@appointment = Appointment.new(params[:appointment])
-      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user)) #user id mit user verknüpfen
+
+      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+
+
       if @appointment.save
         flash[:notice] = 'Der Termin wurde hinzugefuegt '
         redirect_to :action => :index and return
-      end
+
     else
-    render :text => "MIST"    #HAHAHA das hatt ich grad aufm screen und mich gewundert >.<
+    #render :text => "MIST"    #HAHAHA das hatt ich grad aufm screen und mich gewundert >.<
+     render json: @appointment.errors, status: :unprocessable_entity
     end
+  end
 
   # PUT /appointments/1
   # PUT /appointments/1.json
