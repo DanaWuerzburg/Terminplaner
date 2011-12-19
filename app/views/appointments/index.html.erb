@@ -4,8 +4,9 @@
     <div class="field">
         <% @groups.each do |group| %>
         <div>
-            <input type="button" class="picker" style="background-color: <%= group.colour %>;" />
-            <label class="colorlabel"><%= group.name %></label>
+            <input class="picker color {valueElement:'<%= group.name %>'}" />
+            <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
+            <a class="colorlabel" href><%= group.name %></a>
         </div>
         <% end %>
     </div>
