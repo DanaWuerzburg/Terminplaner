@@ -18,17 +18,14 @@
 <div id="cont">
 <section class="appointments">
    <h1><%= current_user.login %>'s Agenda</h1>
-   <section class="notify">
-   <%= flash[:notice] %>
-   </section>
+
    <section class="reminder">
       <!--<div id="zeit"> <#%= "{#:method=>'zeit'}" %> </div>-->
       <h4>Appointments for today: <%= Time.now.strftime('%d. %B %Y') %></h4>
       <ul>
-      <% @appointments.each do |appointment| %>
-      <% String st = appointment.date.strftime('%d.%m.%y') %>
-          <% if st == Time.now.strftime('%d.%m.%y') %>
-            <li><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+      <% @appointments.reverse.each do |appointment| %>
+          <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
+            <li><%= appointment.date.strftime('%H:%M') + ": " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
           <% end %>
       <% end %>
       </ul>
@@ -39,13 +36,13 @@
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
-    <th>Group ID</th>
+    <!--<th>Group ID</th>
 
-        <!-- ADMINFIELD  -->
-    <% if current_user.admin? %>
-        <th><%= sortable "ID", "ID"%></th>
-        <th><%= sortable "user_id","User ID" %></th>
-    <% end %>
+        ADMINFIELD
+    <%# if current_user.admin? %>
+        <th><%#= sortable "ID", "ID"%></th>
+        <th><%#= sortable "user_id","User ID" %></th>
+    <%# end %>     -->
 
      <!-- Adminfield ende -->
 
@@ -59,12 +56,12 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-     <td><%= appointment.group_id%></td>
-              <!-- ADMINFIELD  -->
-    <% if current_user.admin? %>
-        <td><%= appointment.id %></td>
-        <td><%= appointment.user_id %></td>
-    <% end %>
+    <!--<td><%#= appointment.group_id%></td>
+
+    <%# if current_user.admin? %>
+        <td><%#= appointment.id %></td>
+        <td><%#= appointment.user_id %></td>
+    <%# end %>-->
 
      <!-- Adminfield ende -->
 
@@ -93,7 +90,11 @@
 
         <%= render 'form' %>
 </div>
+    <section class="notify">
+        <%= flash[:notice] %>
+    </section>
 </section>
+
 </div>
 <footer>
 
