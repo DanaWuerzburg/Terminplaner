@@ -151,3 +151,13 @@ a.login:hover, input.login:hover{
 a.logout:hover, input.logout:hover{
     background-position: 0 -360px;
 }
+
+.displaynone{
+    display:none;
+}
+
+.smalltextarea{
+    max-width: 100px;
+    height: 18px;
+    margin:  0 !important;
+}

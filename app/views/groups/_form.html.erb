@@ -11,15 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name, :class => "label" %>
-    <%= f.text_field :name, :class => "textarea" %>
-    <%= f.label :description, :class => "label" %>
-    <%= f.text_field :description, :class => "textarea" %>
-    <%= f.label :colour, :class => "label" %>
-    <div id="myStyle" class="picker"></div>
-    <%= f.text_field :colour, :class => "textarea small color {styleElement:'myStyle', hash:true}" %>
-  </div>
+    <input class="picker color {valueElement:'tfcolour'}" />
+    <%= f.text_field :name, :class => "smalltextarea textarea" %>
+
+
+    <%= f.text_field :colour, :id => "tfcolour", :class => "displaynone textarea small {hash:true}" %>
+
   <div class="actions">
     <%= f.submit '', :class=> 'button create', :title=>'New Group' %>
   </div>

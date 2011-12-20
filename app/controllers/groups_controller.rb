@@ -58,7 +58,7 @@ class GroupsController < ApplicationController
     @group = Group.new(params[:group].merge(:user_id =>current_user.id)) #user id mit user verknüpfen
     respond_to do |format|
       if @group.save
-        format.html { redirect_to @group, notice: 'Group was successfully created.' }
+        format.html { redirect_to :action => :index, :controller => :appointments }
         format.json { render json: @group, status: :created, location: @group }
       else
         format.html { render action: "new" }
