@@ -54,11 +54,12 @@
 <% @appointments.each do |appointment| %>
 
     <tr>
-    <td class="group" style="background-color: <%#= appointment.colour %>"></td>
+
+    <td class="group" style="background-color: <%= appointment.group.colour %>"></td>
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-     <td><%= appointment.group_id %></td>
+     <td><%= appointment.group_id%></td>
               <!-- ADMINFIELD  -->
     <% if current_user.admin? %>
         <td><%= appointment.id %></td>

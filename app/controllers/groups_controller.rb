@@ -8,8 +8,15 @@ class GroupsController < ApplicationController
     @groups = Group.all
     @group = Group.new
 
-    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+     if current_user.admin?
+      #admin darf alle Gruppen sehen und verwalten und nach user sortieren
 
+    else
+      #wenn der User kein Admin ist, werden nur com user angelegte Gruppen gezeigt
+      @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
+
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -47,8 +54,8 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-   # @group = Group.new(params[:group])
-    @group = Group.new(params[:group].merge(:user =>current_user)) #user id mit user verknüpfen
+    @group = Group.new(params[:group])
+    @group = Group.new(params[:group].merge(:user_id =>current_user.id)) #user id mit user verknüpfen
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }

@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
     @groups = Group.all
     @group = Group.new
 
-    #@groups = Group.find(:all, :conditions => {:user_id => current_user})
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
    # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
     # .order("date DESC")   zum ordnen der inhalte nach datum
@@ -57,6 +57,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   # GET /appointments/new.json
   def new
+    @groups = Group.all
+    @group = Group.new
     @appointment = Appointment.new
     #@appointment.user_id = current_user.id
     respond_to do |format|
@@ -68,8 +70,8 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
-    #@groups = Group.all
-    #@group = Group.new
+    @groups = Group.all
+    @group = Group.new
     @appointment = Appointment.find(params[:id])
   end
 
@@ -80,6 +82,7 @@ class AppointmentsController < ApplicationController
       #@appointment = Appointment.new(params[:appointment])
 
       @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+      #@appointment = Appointment.new(params[:appointment].merge(:user =>current_user , :group_id => current_group.id)) #user id mit user verknüpfen
 
 
       if @appointment.save
