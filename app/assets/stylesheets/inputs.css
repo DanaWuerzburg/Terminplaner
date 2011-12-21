@@ -111,7 +111,9 @@ a.login, input.login{
 a.logout, input.logout{
     background-position: -40px -360px;
 }
-
+a.users, input.users{
+    background-position: -40px -390px;
+}
 
 
 
@@ -151,7 +153,9 @@ a.login:hover, input.login:hover{
 a.logout:hover, input.logout:hover{
     background-position: 0 -360px;
 }
-
+a.users:hover, input.users:hover{
+    background-position: 0 -390px;
+}
 .displaynone{
     display:none;
 }
