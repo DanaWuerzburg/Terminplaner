@@ -25,3 +25,8 @@
         float: left;
         text-align: right;
     }
+ .logo {
+     width: 32px;
+     height: 32px;
+     padding-right: 10px;
+ }
