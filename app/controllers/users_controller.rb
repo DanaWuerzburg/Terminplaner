@@ -49,6 +49,7 @@ class UsersController < ApplicationController
   # new create method:
   def create
     @user = User.new(params[:user])
+    user.groups.new(:name => "keine Gruppe",:colour=>"0xFFFFFF" )
 
     # Saving without session maintenance to skip
     # auto-login which can't happen here because
@@ -73,6 +74,7 @@ class UsersController < ApplicationController
       @user.send_activation_confirmation!
       redirect_to account_url
     else
+
       render :action => :new
     end
   end
