@@ -12,6 +12,10 @@ Terminplaner::Application.routes.draw do
     match 'login' => 'user_sessions#new', :as => :login
     match 'logout' => 'user_sessions#destroy', :as => :logout
 
+  # User Activation
+  match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
+  match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
+
 
 
 
