@@ -49,7 +49,6 @@ class UsersController < ApplicationController
   # new create method:
   def create
     @user = User.new(params[:user])
-    user.group.new(:name => "keine Gruppe",:colour=>"0xFFFFFF" )
 
     # Saving without session maintenance to skip
     # auto-login which can't happen here because

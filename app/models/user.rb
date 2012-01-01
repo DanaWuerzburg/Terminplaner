@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   end
 
   def email_address_with_name
-    "#{self.name} <#{self.email}>"
+    "#{self.login} <#{self.email}>"
   end
 
 end
