@@ -71,7 +71,8 @@ class UsersController < ApplicationController
     if @user.activate!
       UserSession.create(@user, false)
       @user.send_activation_confirmation!
-      redirect_to account_url
+      flash[:notice] = "Your account has been activated. Please check your e-mail for your account activation instructions!"
+      redirect_to root_url
     else
 
       render :action => :new

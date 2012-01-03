@@ -14,8 +14,12 @@ class AppointmentsController < ApplicationController
 
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
-   # @appointments = Appointment.order("date DESC").all        # model alle einträge der datenbank
-    # .order("date DESC")   zum ordnen der inhalte nach datum
+    #TODO Die Gruppe "keine gruppe" sollte bei jedem frisch generierten user existieren
+    @group = Group.new(:name=>"No Group",:description=>"",:colour=>"#ffffff")
+
+    #TODO Appointments nach Groupid anzeigen lassen können
+
+   #ordnet inhalte je nach spalte
     @appointments = Appointment.order(sort_column + " " + sort_direction)
    # @appointments= Appointment.all
     @appointment = Appointment.new
@@ -26,7 +30,6 @@ class AppointmentsController < ApplicationController
 
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
-      #@appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
       @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
 
 
