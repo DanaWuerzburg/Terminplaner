@@ -44,4 +44,27 @@ class UserSessionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def forgot_password
+    if current_user
+      redirect_to user_path(current_user.id)
+    else
+      @user_session = UserSession.new()
+    end
+  end
+
+  def forgot_password_lookup_email
+    if current_user
+      redirect_to user_path(current_user.id)
+    else
+      user = User.find_by_email(params[:user_session][:email])
+      if user
+        user.send_forgot_password!
+        flash[:notice] = "A link to reset your password has been mailed to you."
+      else
+        flash[:notice] = "Email #{params[:user_session][:email]} wasn't found.  Perhaps you used a different one?  Or never registered or something?"
+        render :action => :forgot_password
+      end
+    end
+end
 end

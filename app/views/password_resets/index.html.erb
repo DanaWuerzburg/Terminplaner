@@ -1,0 +1,21 @@
+<h1>Listing password_resets</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @password_resets.each do |password_reset| %>
+  <tr>
+    <td><%= link_to 'Show', password_reset %></td>
+    <td><%= link_to 'Edit', edit_password_reset_path(password_reset) %></td>
+    <td><%= link_to 'Destroy', password_reset, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Password reset', new_password_reset_path %>

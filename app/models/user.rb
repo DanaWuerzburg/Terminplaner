@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
     config.crypto_provider = Authlogic::CryptoProviders::MD5
   end
 
+  def self.find_by_login_or_email(login)
+   find_by_login(login) || find_by_email(login)
+  end
+
   def admin?
     return admin || (id == 1)
   end
@@ -41,6 +45,11 @@ class User < ActiveRecord::Base
     #TODO  Alle Adressen werden zur RUBY Test adresse geschickt,
     # ehemaliger befehl: self.login}  <#{self.email}>
     "#{self.login} <#{"rubyprojekt@googlemail.com"}>" #
+  end
+
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    Notifier.deliver_password_reset_instructions(self)
   end
 
 end
