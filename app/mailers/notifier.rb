@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "s0524073@htw-berlin.de"
+  default from: "rubyprojekt@googlemail.com"
 
   def activation_instructions(user)
     from          "Binary Logic Notifier <noreply@binarylogic.com>"
@@ -27,30 +27,23 @@ class Notifier < ActionMailer::Base
     end
   end
 
-  # forgot passwort 1.
-  def forgot_password(user)
+
+  #forgot password 2.
+  default_url_options[:host] = "0.0.0.0:3000"
+
+  def password_reset_instructions(user)
     from          "Binary Logic Notifier <noreply@binarylogic.com>"
 
-    @reset_password_link = reset_password_url(user.perishable_token)
+    @reset_password_link = edit_password_reset_url(user.perishable_token)
 
     mail(:to => user.email_address_with_name,
-         :subject => "Password Reset",
+         :subject => "Password Reset Instructions",
          :from => from,
          :fail_to => from
     ) do |format|
       format.text
     end
-  end
 
-  #forgot password 2.
-  default_url_options[:host] = "authlogic_example.binarylogic.com"
-
-  def password_reset_instructions(user)
-    subject       "Password Reset Instructions"
-    from          "Binary Logic Notifier "
-    recipients    user.email
-    sent_on       Time.now
-    body          :edit_password_reset_url => edit_password_reset_url(user.perishable_token)
   end
 
 end

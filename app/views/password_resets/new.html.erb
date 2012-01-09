@@ -5,36 +5,42 @@
 <%= render 'nav' %>
 <div id="cont">
 
-  <section class="forgotPassword">
+  <section class="passwordReset">
 
 
         <h1>Forgot Password</h1>
 
+           <section class="notify">
+            <%= flash[:notice] %>
+          </section>
+
 
         <p>
-          <% if !flash[:notice].nil? %>
-            <%= flash[:notice] %>
-          <% else %>
-            Please enter the email address you used to register.
-          <% end %>
+              <br />
+
+
             <br />
           Fill out the form below and instructions to reset your password will be emailed to you:<br />
         <br />
         </p>
 
-
-        <%  form_for(@password_resets) do |f| %>
-          <div class="field">
-           <label class="label" >Email</label>
-            <%= f.text_field :email, :class=>"textarea" %>
-          </div>
-          <br />
-          <%= submit_tag "Reset my password" %>
-        <% end %>
+    <%= form_tag password_resets_path do %>
     <div class="field">
-    <label class="label">Email</label>
-    <input type=text class="textarea" value="<%= @user.email %>" disabled="disabled"/>
-  </div>
+      <label class="label"> <%= label_tag(:email, "")+ "Email:"  %> </label>
+
+        <%= email_field_tag(:email) %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag"",:class=> 'button create', :title=>'Send Password Reset Link' %>
+      <%= link_to "", new_user_session_path, :class=> 'button back', :alt => 'Back', :title => 'Back'%>
+    </div>
+
+
+
+<% end %>
+
+
 
 
   </section>

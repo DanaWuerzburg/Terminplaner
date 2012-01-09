@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   acts_as_authentic do |config|
     #	Add	custom	conﬁgura'on	op'ons	here
-    config.crypto_provider = Authlogic::CryptoProviders::MD5
+    #config.crypto_provider = Authlogic::CryptoProviders::MD5
   end
 
   def self.find_by_login_or_email(login)
@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
 
   def deliver_password_reset_instructions!
     reset_perishable_token!
-    Notifier.deliver_password_reset_instructions(self)
+    Notifier.password_reset_instructions(self).deliver
   end
 
 end
