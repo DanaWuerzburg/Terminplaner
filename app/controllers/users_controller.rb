@@ -54,9 +54,10 @@ class UsersController < ApplicationController
     # auto-login which can't happen here because
     # the User has not yet been activated
     if @user.save_without_session_maintenance
+      @user.create_no_group
       @user.send_activation_instructions!      # new method in the User model
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
-      redirect_to root_url
+      redirect_to new_user_session_url
     else
       flash[:notice] = "There was a problem creating the user"
       render :action => :new
@@ -71,7 +72,7 @@ class UsersController < ApplicationController
     if @user.activate!
       UserSession.create(@user, false)
       @user.send_activation_confirmation!
-      flash[:notice] = "Your account has been activated. Please check your e-mail for your account activation instructions!"
+      flash[:notice] = "Your account has been activated."
       redirect_to root_url
     else
 

@@ -16,8 +16,8 @@ class PasswordResetsController < ApplicationController
       redirect_to new_user_session_url
     else
       flash[:notice] = "No user was found with that email address"
-      #render :action => :new
-      redirect_to new_password_reset_url
+      render :action => :new
+      #redirect_to new_password_reset_url
     end
   end
 
@@ -36,8 +36,8 @@ class PasswordResetsController < ApplicationController
       redirect_to new_user_session_url
     else
       flash[:notice] = "There was a problem updating your password"
-      #render :action => :edit
-      redirect_to edit_password_reset_url
+      render :action => :edit
+      #redirect_to edit_password_reset_url
     end
   end
 
@@ -49,7 +49,7 @@ class PasswordResetsController < ApplicationController
       "If you are having issues try copying and pasting the URL " +
       "from your email into your browser or restarting the " +
       "reset password process."
-      redirect_to root_url
+      redirect_to new_user_session_url
     end
   end
 end

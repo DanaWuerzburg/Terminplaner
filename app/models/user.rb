@@ -53,4 +53,12 @@ class User < ActiveRecord::Base
     Notifier.password_reset_instructions(self).deliver
   end
 
+  def create_no_group
+    gr = Group.create \
+                  :name => 'No Group',
+                  :description => '',
+                  :colour => '#ffffff',
+                  :user_id => self.id
+  end
+
 end
