@@ -1,12 +1,55 @@
-<h1>Change My Password</h1>
+<%= render 'nav' %>
+<div id="cont">
 
-<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %><br />
-  <br />
-  <%= f.submit "Update my password and log me in" %>
+  <section class="passwordReset">
+
+    <h1>Change <%= @user.login %>'s Password</h1>
+
+    <section class="notify">
+       <%= flash[:notice] %>
+    </section>
+
+
+    <p>
+       <br /><br />
+       Fill out the form below and instructions to reset your password will be emailed to you:<br />
+       <br />
+    </p>
+
+
+
+     <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label class="label" >Password</label>
+    <%= f.password_field :password, :class=>"textarea" %>
+  </div>
+  <div class="field">
+      <label class="label" >Password (confirm)</label>
+      <%= f.password_field :password_confirmation, :class=>"textarea" %>
+    </div>
+  <div class="actions">
+    <%= f.submit '', :class=> 'button create', :title=>'Save new Password' %>
+  </div>
 <% end %>
+
+
+
+
+
+  </section>
+</div>
+<footer>
+
+</footer>
