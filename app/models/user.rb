@@ -43,7 +43,8 @@ class User < ActiveRecord::Base
 
   def email_address_with_name
     #TODO  Alle Adressen werden zur RUBY Test adresse geschickt,
-    # ehemaliger befehl: self.login}  <#{self.email}>
+    # ehemaliger befehl:
+    #"#{self.login}  <#{self.email}>"
     "#{self.login} <#{"rubyprojekt@googlemail.com"}>" #
   end
 

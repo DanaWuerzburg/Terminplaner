@@ -21,14 +21,11 @@ Terminplaner::Application.routes.draw do
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
 
-  # User Forgot Password
-  match 'forgot_password' => 'user_sessions#forgot_password', :as => :forgot_password, :via => :get
-  match 'forgot_password' => 'user_sessions#forgot_password_lookup_email', :as => :forgot_password, :via => :post
 
   resources :password_resets
 
-  put 'password_reset/:password_reset_code' => 'users#password_reset_submit', :as => :password_reset, :via => :put
-  get 'password_reset/:password_reset_code' => 'users#password_reset', :as => :password_resetx, :via => :get
+  #put 'password_reset/:password_reset_code' => 'users#password_reset', :as => :password_reset, :via => :put
+  #get 'password_reset/:password_reset_code' => 'users#password_reset', :as => :password_reset, :via => :get
 
 
   # The priority is based upon order of creation:
@@ -83,8 +80,8 @@ Terminplaner::Application.routes.draw do
   # root :to => 'welcome#index'
 
   #            rm public/index.html # in der console
-  #root :to => 'appointments#index'
-  root :to => 'user_sessions#new'
+  root :to => 'appointments#index'
+  #root :to => 'user_sessions#new'
 
   # See how all your routes lay out with "rake routes"
 

@@ -4,6 +4,10 @@
   <section class="newappointment">
 
     <h1>Welcome to your Agenda</h1>
+         <section class="notify">
+           <%= flash[:notice] %>
+         </section>
+
         <div class="formular">
 
             <%= render 'form' %>
