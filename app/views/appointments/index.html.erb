@@ -23,8 +23,19 @@
    <h1><%= current_user.login %>'s Agenda</h1>
 
    <section class="reminder">
+
+
+
+
+
+
       <!--<div id="zeit"> <#%= "{#:method=>'zeit'}" %> </div>-->
-      <h4>Appointments for today: <%= Time.now.strftime('%d. %B %Y') %></h4>
+      <h4>Appointments for today: <%= Time.now.strftime('%d. %B %Y') %>
+
+
+      </h4>
+
+
       <ul>
       <% @appointments.reverse.each do |appointment| %>
           <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
@@ -51,6 +62,7 @@
 
   </thead>
   <tbody>
+
 <% @appointments.each do |appointment| %>
 
     <tr>

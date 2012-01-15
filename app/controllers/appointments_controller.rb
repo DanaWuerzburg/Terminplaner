@@ -8,6 +8,7 @@ class AppointmentsController < ApplicationController
 
   helper_method :sort_column, :sort_direction
 
+
   def index
     @groups = Group.all
     @group = Group.new
@@ -17,12 +18,15 @@ class AppointmentsController < ApplicationController
     #TODO Die Gruppe "keine gruppe" sollte bei jedem frisch generierten user existieren
     @group = Group.new(:name=>"No Group",:description=>"",:colour=>"#ffffff")
 
+
     #TODO Appointments nach Groupid anzeigen lassen können
 
    #ordnet inhalte je nach spalte
     @appointments = Appointment.order(sort_column + " " + sort_direction)
    # @appointments= Appointment.all
     @appointment = Appointment.new
+
+
 
       ##### Admin rechte verwalten
     if current_user.admin?
@@ -35,13 +39,18 @@ class AppointmentsController < ApplicationController
 
     end
 
-
+    @appointments = Appointment.search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @appointments, :notice => 'Appointment in index.' }
     end
     end
 
+ # def search
+ #  @appointments = Appointment.search params[:search]
+ #  flash[:notice] = 'gesucht'
+
+ # end
 
   def zeit
     puts "HEYHOHELLO"
@@ -50,6 +59,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1.json
   def show
     @appointment = Appointment.find(params[:id])
+
 
     respond_to do |format|
       format.html # show.html.erb
