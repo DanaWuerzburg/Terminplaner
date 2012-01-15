@@ -3,6 +3,8 @@ Terminplaner::Application.routes.draw do
 
   resources :user_sessions
 
+
+
   resources :users
 
   resource :user, :as => 'account'  # a convenience route
@@ -15,6 +17,11 @@ Terminplaner::Application.routes.draw do
 
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
+
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
 
 
   # User Activation
@@ -30,6 +37,7 @@ Terminplaner::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

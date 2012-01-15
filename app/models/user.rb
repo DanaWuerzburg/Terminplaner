@@ -61,4 +61,5 @@ class User < ActiveRecord::Base
                   :user_id => self.id
   end
 
+
 end

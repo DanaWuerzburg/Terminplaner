@@ -7,13 +7,15 @@ gem 'rails', '3.1.3'
 
 gem 'activesupport', '3.1.3'
 gem 'railties', '3.1.3'
-#group :production, :staging do
-#  gem "pg"
-#end
 
-#group :development, :test do  
- # gem "sqlite3"
-#end
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem "sqlite3"
+end
+
 gem 'pg'
 
 # Gems used only for assets and not required

@@ -26,17 +26,13 @@ class AppointmentsController < ApplicationController
    # @appointments= Appointment.all
     @appointment = Appointment.new
 
-
-
-      ##### Admin rechte verwalten
+    ##### Admin rechte verwalten
     if current_user.admin?
       #admin darf alle termine sehen und verwalten und nach user sortieren
 
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
       @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
-
-
     end
 
     @appointments = Appointment.search(params[:search])
@@ -47,11 +43,7 @@ class AppointmentsController < ApplicationController
     end
     end
 
- # def search
- #  @appointments = Appointment.search params[:search]
- #  flash[:notice] = 'gesucht'
 
- # end
 
   def zeit
     puts "HEYHOHELLO"
