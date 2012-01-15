@@ -40,6 +40,7 @@ class AppointmentsController < ApplicationController
     end
 
     @appointments = Appointment.search(params[:search])
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @appointments, :notice => 'Appointment in index.' }
