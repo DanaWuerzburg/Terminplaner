@@ -99,6 +99,10 @@
                 list-style: none;
                 font-size: 11pt;
             }
+            .searchright{
+                float: right;
+                margin-right:35px;
+            }
             .newappointment{
             }
                 .field, .actions{

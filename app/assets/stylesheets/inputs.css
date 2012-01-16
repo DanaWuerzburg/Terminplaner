@@ -79,7 +79,7 @@ a.right, input.right {
 .searcharea{
     margin-top: 0;
     padding: 2px 0;
-    border-right: 1px solid #ffffff;
+    border-right: none;
 }
 
 a.add, input.add{

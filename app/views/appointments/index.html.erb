@@ -38,8 +38,11 @@
           <% end %>
       <% end %>
       </ul>
-  </section>
-<table class="pretty">
+    </section>
+    <section class="searchright">
+        <%= render :partial => 'appointments/search' %>
+    </section>
+    <table class="pretty">
   <thead>
     <th class="group"></th>
     <th><%= sortable "date" %></th>
