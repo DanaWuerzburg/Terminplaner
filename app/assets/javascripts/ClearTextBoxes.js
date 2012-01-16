@@ -1,4 +1,4 @@
-        function ClearTextboxes()
+        function ClearTextboxes(m)
         {
-            document.getElementById('search_field').value = ''
+            document.getElementById(m).value = ''
         }
