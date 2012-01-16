@@ -11,7 +11,6 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     }
     #navbar ul{
-        float:right;
         padding-right: 20px;
     }
     #navbar ul.info{
@@ -30,3 +29,11 @@
      height: 32px;
      padding-right: 10px;
  }
+
+.left{
+    float: left;
+}
+.right{
+    float:right;
+    margin-right: 15px;
+}

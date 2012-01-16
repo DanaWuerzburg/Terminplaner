@@ -11,11 +11,11 @@
 <body>
     <div id="wrap" >
         <%= yield %>
-
+        <footer>
+         <%= link_to "MOBILE SITE", :controller => "application", :action => "set_layout", :mobile => "1" %>
+        </footer>
     </div>
-<footer>
- <%= link_to "MOBILE SITE", :controller => "application", :action => "set_layout", :mobile => "1" %>
-</footer>
+
 </body>
 
 </html>

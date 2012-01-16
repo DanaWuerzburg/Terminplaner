@@ -84,7 +84,7 @@
                 color: #ff0000;
             }
              .reminder{
-                border: 2pt solid #FF9575;
+
                 width: 600px;
                 padding: 5px 10px;
                 margin: 10px 0 0 45px;
@@ -96,6 +96,8 @@
             }
             .reminder ul li{
                 color: #FF9575;
+                list-style: none;
+                font-size: 11pt;
             }
             .newappointment{
             }

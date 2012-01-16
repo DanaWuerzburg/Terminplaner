@@ -1,7 +1,7 @@
  <%= form_tag appointments_path, :method => 'get', :action => 'search' do %>
-            <p>
-             <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-             <%= submit_tag "Search", :name => nil %>
-             <%= link_to_function "Clear", "$('search_field').value = ''"  %>
-     </p>
+
+              <%= text_field_tag :search, params[:search], :id => 'search_field', :class => 'textarea searcharea left' %>
+              <%= link_to_function "", "$('search_field').value = ''", :class=> 'button clear middle', :alt => 'Clear', :title => 'Clear', :name => 'Clear' %>
+              <%= submit_tag "", :name => nil, :class => 'button search right', :title => 'Search' %>
+
  <% end %>
