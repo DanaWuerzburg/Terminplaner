@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:index, :edit, :update ,:show]
+  #before_filter :require_user, :only => [:index, :edit, :update ,:show]
   before_filter :require_admin    ,:only =>   [:index]
 
 
@@ -54,9 +54,10 @@ class UsersController < ApplicationController
     # auto-login which can't happen here because
     # the User has not yet been activated
     if @user.save_without_session_maintenance
+      @user.create_no_group
       @user.send_activation_instructions!      # new method in the User model
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
-      redirect_to root_url
+      redirect_to new_user_session_url
     else
       flash[:notice] = "There was a problem creating the user"
       render :action => :new
@@ -71,7 +72,7 @@ class UsersController < ApplicationController
     if @user.activate!
       UserSession.create(@user, false)
       @user.send_activation_confirmation!
-      flash[:notice] = "Your account has been activated. Please check your e-mail for your account activation instructions!"
+      flash[:notice] = "Your account has been activated."
       redirect_to root_url
     else
 
@@ -106,22 +107,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :ok }
-    end
-  end
-
-  def reset_password
-    @user = User.find_using_perishable_token(params[:reset_password_code], 1.week) || (raise Exception)
-  end
-
-  def reset_password_submit
-    @user = User.find_using_perishable_token(params[:reset_password_code], 1.week) || (raise Exception)
-    @user.active = true
-    if @user.update_attributes(params[:user].merge({:active => true}))
-      flash[:notice] = "Successfully reset password."
-      redirect_to @user
-    else
-      flash[:notice] = "There was a problem resetting your password."
-      render :action => :reset_password
     end
   end
 

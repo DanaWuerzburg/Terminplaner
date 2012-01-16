@@ -5,6 +5,7 @@ class Notifier < ActionMailer::Base
     from          "Binary Logic Notifier <noreply@binarylogic.com>"
 
     @account_activation_url = activate_account_url(user.perishable_token)
+    @user_link = user.login
 
     mail(:to => user.email_address_with_name,
          :subject => "Activation Instructions",
@@ -17,6 +18,7 @@ class Notifier < ActionMailer::Base
 
   def activation_confirmation(user)
     from          "Binary Logic Notifier <noreply@binarylogic.com>"
+    @user_link = user.login
 
     mail(:to => user.email_address_with_name,
          :subject => "Activation Complete",
@@ -35,6 +37,7 @@ class Notifier < ActionMailer::Base
     from          "Binary Logic Notifier <noreply@binarylogic.com>"
 
     @reset_password_link = edit_password_reset_url(user.perishable_token)
+    @user_link = user.login
 
     mail(:to => user.email_address_with_name,
          :subject => "Password Reset Instructions",

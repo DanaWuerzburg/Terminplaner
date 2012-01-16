@@ -1,0 +1,7 @@
+<ul>
+    <% @appointments.each do |appointment| %>
+    <li><%= link_to appointment.note,
+        :action => 'show', :id => appointment.id  %>
+    </li>
+     <% end %>
+ </ul>

@@ -9,6 +9,7 @@
     <th>Email</th>
     <th>Admin</th>
     <th>Activated</th>
+    <th>Last Login</th>
   <!--  <th>Persistence token</th>
     <th>Crypted password</th>
     <th>Password salt</th>
@@ -35,6 +36,7 @@
     <td><%= user.email %></td>
     <td><%= user.admin? %></td>
     <td><%= user.active? %></td>
+    <td><%= user.last_login_at %></td>
     <!--
     <td><%#= user.persistence_token %></td>
     <td><%#= user.crypted_password %></td>

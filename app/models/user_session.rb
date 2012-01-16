@@ -10,4 +10,5 @@ class UserSession < Authlogic::Session::Base
     false
   end
 
+
 end

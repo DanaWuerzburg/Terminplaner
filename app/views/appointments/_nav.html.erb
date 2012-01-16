@@ -6,10 +6,17 @@
       <li><%= link_to ( image_tag('/images/calendar.png')), appointments_path, :class => 'logo' %></li>
       <li>Today: <%= Time.now.strftime('%A, %d. %B %Y')%></li>
 
-    </ul>
+
+   </ul>
+
     <ul>
-        <li><input type='submit' id="settingsButton" class='button settings' title='Settings' name="group" value="" onclick="javascript:DivEinAusblenden('settings');"/></li>
+         <li>  <%= render :partial => 'appointments/search' %> </li>
+        <li>
+
+          <input type='submit' id="settingsButton" class='button settings' title='Settings' name="group" value="" onclick="javascript:DivEinAusblenden('settings');"/></li>
+
         <% if current_user %>
+
            <% if current_user.admin? %>
               <li><%= link_to '',  users_path, :class=> 'button users left', :alt => 'Users', :title => 'Users' %></li>
            <% end %>

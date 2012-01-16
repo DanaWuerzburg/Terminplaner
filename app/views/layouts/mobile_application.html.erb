@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Terminplaner</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "mobile" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/javascripts/jscolor/jscolor.js"></script>
@@ -16,6 +16,7 @@
 
 </body>
 <footer>
- <%= link_to "MOBILE SITE", :controller => "application", :action => "set_layout", :mobile => "1" %>
+  <%= link_to "REGULAR SITE", :controller => "home", :action => "set_layout", :mobile => "0" %>
+
 </footer>
 </html>

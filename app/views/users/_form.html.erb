@@ -35,6 +35,7 @@
                <label class="label" >Activated</label>
                 <%=  f.text_field :active, :class=>"textarea" %>
               </div>
+
           <% end %>
     <% end %>
 
@@ -47,7 +48,7 @@
   <div class="field">
       <label class="label" >Password (confirm)</label>
       <%= f.password_field :password_confirmation, :class=>"textarea" %>
-    </div>
+  </div>
   <div class="actions">
     <%= f.submit '', :class=> 'button create', :title=>'Save Account' %>
     <script language="Javascript">

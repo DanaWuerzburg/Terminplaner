@@ -43,7 +43,8 @@ class User < ActiveRecord::Base
 
   def email_address_with_name
     #TODO  Alle Adressen werden zur RUBY Test adresse geschickt,
-    # ehemaliger befehl: self.login}  <#{self.email}>
+    # ehemaliger befehl:
+    #"#{self.login}  <#{self.email}>"
     "#{self.login} <#{"rubyprojekt@googlemail.com"}>" #
   end
 
@@ -51,5 +52,14 @@ class User < ActiveRecord::Base
     reset_perishable_token!
     Notifier.password_reset_instructions(self).deliver
   end
+
+  def create_no_group
+    gr = Group.create \
+                  :name => 'No Group',
+                  :description => '',
+                  :colour => '#ffffff',
+                  :user_id => self.id
+  end
+
 
 end

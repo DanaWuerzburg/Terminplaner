@@ -17,6 +17,10 @@ class UserSessionsController < ApplicationController
     end
   end
 
+
+
+
+
   # POST /user_sessions
   # POST /user_sessions.xml
   def create
@@ -66,5 +70,10 @@ class UserSessionsController < ApplicationController
         render :action => :forgot_password
       end
     end
-end
+  end
+
+   def set_layout
+   session["layout"] = (params[:mobile] == "1" ? "mobile" : "normal")
+   redirect_to :action => "index"
+  end
 end

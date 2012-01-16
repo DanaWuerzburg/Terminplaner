@@ -1,11 +1,36 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  helper :all
+  layout :detect_browser
 
   helper_method	:current_user_session,	:current_user  , :current_group
 
 
   private
+
+  MOBILE_BROWSERS = ["android", "ipod", "opera mini", "blackberry", "palm","hiptop","avantgo","plucker", "xiino","blazer","elaine", "windows ce; ppc;", "windows ce; smartphone;","windows ce; iemobile", "up.browser","up.link","mmp","symbian","smartphone", "midp","wap","vodafone","o2","pocket","kindle", "mobile","pda","psp","treo"]
+
+  def detect_browser
+    agent = request.headers["HTTP_USER_AGENT"].downcase
+    MOBILE_BROWSERS.each do |m|
+      return "mobile_application" if agent.match(m)
+    end
+    return "application"
+  end
+
+  def selected_layout
+    session.inspect # force session load
+    if session.has_key? "layout"
+      return (session["layout"] == "mobile") ?
+        "mobile_application" : "application"
+    end
+    return nil
+  end
+
+  def set_layout
+   session["layout"] = (params[:mobile] == "1" ? "mobile" : "normal")
+   redirect_to :action => "index"
+  end
 
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
