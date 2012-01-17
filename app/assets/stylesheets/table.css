@@ -5,7 +5,6 @@ table{
 	width: 640px;
 	border-collapse: collapse;
 	text-align: left;
-
 }
     /*table header*/
     thead{
@@ -46,7 +45,7 @@ table{
     }
     tbody tr:hover td{
         color: #666699;
-        background:  #E5E5FF;
+        background:  #CCCCCC;
     }
     tbody tr:nth-child(odd){
         background: #F6F6F2;

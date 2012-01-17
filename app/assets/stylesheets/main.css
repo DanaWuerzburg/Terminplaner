@@ -21,34 +21,35 @@
 
 	h1, h2, h3 {
         font-size: 16pt;
-		color: #5C1F54;
+		color: #8C0303;
 	}
 	h4, h5, h6 {
 
 		font-size: 16px;
-		color: #009999;
+		color: #A63232;
     }
 
 	p{}
 
     a{
          font-size: 14px;
-         color: #FF9575;
+         color: #E58A8A;
     }
     a:visited{
-         color: #FF9575;
+         color: #E58A8A;
     }
     a:focus{
-        color: #ff0000;
+        color: #E58A8A;
     }
     a:hover{
-        color: #ff0000;
+        color: #E58A8A;
     }
 
 
 	ul, ol{
 		list-style-type: none;
         list-style-position: inside;
+        color: #E58A8A;
 	}
 	img{
 		border-style: none;
@@ -95,7 +96,7 @@
 
             }
             .reminder ul li{
-                color: #FF9575;
+                color: #E58A8A;
                 list-style: none;
                 font-size: 11pt;
             }

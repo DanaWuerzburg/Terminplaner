@@ -34,7 +34,7 @@
       <ul>
       <% @appointments.reverse.each do |appointment| %>
           <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
-            <li><%= appointment.date.strftime('%H:%M') + ": " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+            <li><%= appointment.date.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
           <% end %>
       <% end %>
       </ul>
