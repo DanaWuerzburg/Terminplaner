@@ -4,7 +4,7 @@
     <div class="field">
         <% @groups.each do |group| %>
         <div>
-            <input class="picker color {valueElement:'<%= group.name %>'}" />
+            <input class="picker color{valueElement:'<%= group.name %>'}" />
             <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
             <a class="colorlabel" href><%= group.name %></a>
         </div>
@@ -19,30 +19,29 @@
 
 </div>
 <div id="cont">
-<section class="appointments">
-   <h1><%= current_user.login %>'s Agenda</h1>
+	<section class="appointments">
+		<h1><%= current_user.login %>'s Agenda</h1>
 
-   <section class="reminder">
+	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
+		   <div id="reminder"  class="reminder floatleft" src="hideNote" type="text/javascript" language="JavaScript" >
+				<ul>
+					<% @appointments.reverse.each do |appointment| %>
+						<% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
+						<li><%= appointment.date.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+						<% end %>
+					<% end %>
+				</ul>
 
-      <!--<div id="zeit"> <#%= "{#:method=>'zeit'}" %> </div>-->
-      <h4>Today: <%= Time.now.strftime('%d. %B %Y') %>
+			</div>
+			<div>
+				<a class="button add naviright" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#"></a>
+			</div>
+			<div class="searchright">
+				<%= render :partial => 'appointments/search' %>
+			</div>
+			
+  <table class="pretty">
 
-
-      </h4>
-
-
-      <ul>
-      <% @appointments.reverse.each do |appointment| %>
-          <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
-            <li><%= appointment.date.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
-          <% end %>
-      <% end %>
-      </ul>
-    </section>
-    <section class="searchright">
-        <%= render :partial => 'appointments/search' %>
-    </section>
-    <table class="pretty">
   <thead>
     <th class="group"></th>
     <th><%= sortable "date" %></th>
