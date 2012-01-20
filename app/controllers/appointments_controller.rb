@@ -15,11 +15,6 @@ class AppointmentsController < ApplicationController
 
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
-    #TODO Die Gruppe "keine gruppe" sollte bei jedem frisch generierten user existieren
-    @group = Group.new(:name=>"No Group",:description=>"",:colour=>"#ffffff")
-
-
-    #TODO Appointments nach Groupid anzeigen lassen können
 
    #ordnet inhalte je nach spalte
     @appointments = Appointment.order(sort_column + " " + sort_direction)

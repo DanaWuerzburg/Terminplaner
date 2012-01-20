@@ -1,4 +1,6 @@
 Terminplaner::Application.routes.draw do
+  resources :friendships
+
   resources :groups
 
   resources :user_sessions
@@ -7,7 +9,8 @@ Terminplaner::Application.routes.draw do
 
   resources :users
 
-  resource :user, :as => 'account'  # a convenience route
+  #resource :user, :as => 'account'  # a convenience route
+  resource :user, :as => :friend
 
   match 'signup' => 'users#new', :as => :signup
 
