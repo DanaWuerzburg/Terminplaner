@@ -27,6 +27,30 @@
         </script>
   </div>
 
+  <!-- Friends -->
+    <p> </p>
+    <br>    <br> <br> <br> <br>
+
+
+    <h2>Your Friends</h2>
+    <ul>
+      <% for friendship in @user.friendships %>
+      <li>
+        <%= h friendship.friend.login %>
+        (<%= link_to "remove", friendship, :method => :delete %>)
+      </li>
+      <% end %>
+    </ul>
+    <p><%= link_to "Find Friends", friendships_path %></p>
+      <br> <br>
+    <h2>Users Who Have Befriended You</h2>
+    <ul>
+      <% for user in @user.inverse_friends %>
+      <li><%= h user.login %></li>
+      <% end %>
+    </ul>
+
+
 </section>
 </div>
 <footer>

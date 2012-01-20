@@ -1,4 +1,4 @@
-<h1>Listing friendships</h1>
+<h1>My Friends</h1>
 
 <table>
   <tr>
@@ -25,3 +25,13 @@
 <br />
 
 <%= link_to 'New Friendship', new_friendship_path %>
+
+<% for user in @users %>
+  <div class="user">
+    <p>
+      <strong><%=h user.login %></strong>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <div class="clear"></div>
+    </p>
+  </div>
+<% end %>
