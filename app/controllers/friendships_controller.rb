@@ -15,11 +15,13 @@ class FriendshipsController < ApplicationController
   # GET /friendships/1
   # GET /friendships/1.json
   def show
-    @friendship = Friendship.find(params[:id])
-    redirect_to  root_path
-    ###### redirect to appointments      ######
+   # redirect_to user_path(current_user)
+   # @friendship1 = Friendship.find(params[:id])
+    @friend = User.find(params[:id])
+    @users = User.all
+   # ###### redirect to appointments      ######
     respond_to do |format|
-      format.html { redirect_to :appointments, notice: 'User was successfully updated.' }
+      format.html
       format.json { render json: @friendship }
     end
   end
@@ -41,14 +43,30 @@ class FriendshipsController < ApplicationController
   # POST /friendships
   # POST /friendships.json
   def create
-    @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
-  if @friendship.save
-    flash[:notice] = "Added friend."
-    redirect_to root_url
-  else
-    flash[:error] = "Unable to add friend."
-    redirect_to root_url
-  end
+    #@friendship = current_user.friendships.build(:friend_id => params[:friend_id])
+
+    @user = User.find(current_user)
+    @friend = User.find(params[:friend_id])
+    params[:friendship1] = {:user_id => @user.id, :friend_id => @friend.id, :status => 'requested'}
+    params[:friendship2] = {:user_id => @friend.id, :friend_id => @user.id, :status => 'pending'}
+    @friendship1 = Friendship.create(params[:friendship1])
+    @friendship2 = Friendship.create(params[:friendship2])
+
+    if @friendship1.save && @friendship2.save
+      flash[:notice] = "Added friend."
+      redirect_to friendships_path
+    else
+      flash[:error] = "Unable to add friend."
+      redirect_to friendships_path
+    end
+
+    #if @friendship.save
+    #  flash[:notice] = "Added friend."
+    #  redirect_to root_url
+    #else
+    #  flash[:error] = "Unable to add friend."
+    #  redirect_to root_url
+    #end
 
    # @friendship = Friendship.new(params[:friendship])
    #
@@ -75,9 +93,9 @@ class FriendshipsController < ApplicationController
 
     if @friendship1.update_attributes(params[:friendship1]) && @friendship2.update_attributes(params[:friendship2])
       flash[:notice] = 'Friend sucessfully accepted!'
-      redirect_to user_friends_path(current_user)
+      redirect_to friendships_path
     else
-      redirect_to user_path(current_user)
+      redirect_to friendships_path
     end
     #@friendship = Friendship.find(params[:id])
     #
@@ -95,10 +113,17 @@ class FriendshipsController < ApplicationController
   # DELETE /friendships/1
   # DELETE /friendships/1.json
   def destroy
-    @friendship = current_user.friendships.find(params[:id])
-    @friendship.destroy
-    flash[:notice] = "Removed friendship."
-    redirect_to current_user
+
+    @user = User.find(current_user)
+    @friend = User.find(params[:id])
+    @friendship1 = @user.friendships.find_by_friend_id(params[:id]).destroy
+    @friendship2 = @friend.friendships.find_by_user_id(params[:id]).destroy
+    redirect_to friendships_path
+
+    #@friendship = current_user.friendships.find(params[:id])
+    #@friendship.destroy
+    #flash[:notice] = "Removed friendship."
+    #redirect_to current_user
 
     #@friendship = Friendship.find(params[:id])
     #@friendship.destroy
@@ -107,5 +132,6 @@ class FriendshipsController < ApplicationController
     #  format.html { redirect_to friendships_url }
     #  format.json { head :ok }
     #end
+
   end
 end

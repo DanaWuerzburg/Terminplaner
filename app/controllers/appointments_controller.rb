@@ -18,19 +18,22 @@ class AppointmentsController < ApplicationController
 
    #ordnet inhalte je nach spalte
     @appointments = Appointment.order(sort_column + " " + sort_direction)
-   # @appointments= Appointment.all
+
     @appointment = Appointment.new
+
 
     ##### Admin rechte verwalten
     if current_user.admin?
       #admin darf alle termine sehen und verwalten und nach user sortieren
-
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
       @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
     end
-
+    #################
+    # Diese Zeile verursacht, dass jeder User die Termine aller anderenuser sehen kann
+    # Wenn man diese zeile nach oben verschiebt funktioniert sie allerdings nicht mehr =((
     @appointments = Appointment.search(params[:search])
+    #################
 
     respond_to do |format|
       format.html # index.html.erb
