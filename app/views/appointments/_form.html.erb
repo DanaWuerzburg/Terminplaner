@@ -13,7 +13,8 @@
 
   <div class="field">
     <label for="date" class="label">Date</label>
-    <%= f.datetime_select :date, {:order => [:day, :month, :year], :default => 24.hours.from_now, :minute_step => 15}, {:class => 'drop'}%>
+    <%= f.text_field :date, class: 'textarea' %>
+    <%= f.time_select :time, {:minute_step => 15}, {:class => 'drop'}%>
 
     <label for="note" class="label">Note</label>
     <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
