@@ -140,7 +140,7 @@ a.more, input.more{
     margin: 0;
     cursor: pointer;
     float: left;
-    background-position: -40px -480px;
+    background-position: -40px -485px;
 }
 
 
@@ -194,7 +194,7 @@ a.clear:hover, input.clear:hover{
     box-shadow: none;
 }
 a.more:hover, input.more:hover{
-    background-position: 0 -480px;
+    background-position: 0 -485px;
     background-color: transparent;
     box-shadow: none;
 }

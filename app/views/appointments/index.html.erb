@@ -20,7 +20,7 @@
 </div>
 <div id="cont">
 	<section class="appointments">
-		<h1><%= current_user.login %>'s Agenda</h1>
+
 
 	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
 		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
@@ -34,7 +34,7 @@
 
 			</div>
 			<div class="reminderFader">
-				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#"></a></div>
+				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#" title="Today's Appointments"></a></div>
 			</div>
 			<div class="searchright">
 				<%= render :partial => 'appointments/search' %>
@@ -99,7 +99,7 @@
 
 
 <section class="newappointment">
-<h1>New Appointment</h1>
+<h4>New Appointment</h4>
    <div class="formular">
 
         <%= render 'form' %>

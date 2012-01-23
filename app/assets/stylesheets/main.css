@@ -104,6 +104,9 @@
             .reminderFader {
                 width: 640px;
                 height: 16px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                margin-bottom: 5px;
             }
             .reminderFader:hover {
                 background-color: #F2F2F2;
