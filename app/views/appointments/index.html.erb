@@ -23,7 +23,7 @@
 		<h1><%= current_user.login %>'s Agenda</h1>
 
 	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
-		   <div id="reminder"  class="reminder floatleft" src="hideNote" type="text/javascript" language="JavaScript" >
+		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
 				<ul>
 					<% @appointments.reverse.each do |appointment| %>
 						<% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
@@ -33,8 +33,8 @@
 				</ul>
 
 			</div>
-			<div>
-				<a class="button add naviright" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#"></a>
+			<div class="reminderFader">
+				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#"></a></div>
 			</div>
 			<div class="searchright">
 				<%= render :partial => 'appointments/search' %>

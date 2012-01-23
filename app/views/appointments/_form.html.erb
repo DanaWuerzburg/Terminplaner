@@ -19,7 +19,8 @@
     <%= f.text_area :note, class: 'textarea', :cols => "50", :rows => "5" %>
 
     <label for="priority_number" class="label">Priority</label>
-    <input type="range" id="priority_number" max="5" min="1" name="appointment[priority_number]" size="50" value="3" />
+
+    <div id="priority_number" name="appointment[priority_number]"></div>
     <!--<#%= f.select(:priority_number, options_for_select([[0,0],[1,1],[2,2],[3,3]]), {}, {:class => "drop"}) %>-->
 
     <label class="label">Group</label>

@@ -14,10 +14,17 @@
 
 				// Datetimepicker
 
-                $('#appointment_date').datetimepicker({dateFormat: 'dd.mm.yy',
+                $('#appointment_date').datetimepicker(
+                {firstDay: 1,
+                dateFormat: 'dd.mm.yy',
 	            timeFormat: 'hh:mm',
 	            stepMinute: 15});
 
+                $( "#priority_number" ).slider(
+                {max: 5,
+                min: 1,
+                animate: true,
+                value: 3});
 
 			});
 		</script>

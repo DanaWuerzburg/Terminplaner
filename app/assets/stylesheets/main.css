@@ -12,7 +12,7 @@
 		padding:0;
 		text-decoration: none;
 		font-family: "Kozuka Gothic Pro","Myriad Pro","Estrangelo Edessa", "Arial", sans-serif;
-		font-size: 12px;
+		font-size: 12pt;
 		line-height: 18pt;
         color: #000000;
 		border-style: none;
@@ -101,6 +101,23 @@
                 list-style: none;
                 font-size: 11pt;
             }
+            .reminderFader {
+                width: 640px;
+                height: 16px;
+            }
+            .reminderFader:hover {
+                background-color: #F2F2F2;
+                cursor:pointer;
+            }
+            .reminderFader div {
+                position:relative;
+                left: 300px;
+            }
+            .reminderFader div:hover {
+                position:relative;
+                left: 300px;
+
+            }
             .searchright{
                 float: right;
                 margin-right:35px;
@@ -124,6 +141,10 @@
                     clear: both;
                     display:block;
                 }
+    #priority_number{
+        margin-left: 0;
+        width: 200px;
+    }
 
     footer{
         height:30px;

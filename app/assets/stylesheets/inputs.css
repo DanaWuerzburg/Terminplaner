@@ -125,9 +125,22 @@ a.search, input.search{
     background-position: -40px -420px;
 }
 a.clear, input.clear{
-    background-position: -40px -450px;
+    background-position: -40px -570px;
     background-color: #ffffff;
     border-left: none;
+}
+a.more, input.more{
+    width:16px;
+    height:16px;
+    background-color: transparent;
+    text-decoration: none;
+    border:  none;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    background-position: -40px -480px;
 }
 
 
@@ -178,6 +191,11 @@ a.clear:hover, input.clear:hover{
     border-color: #dcdcdc;
     border-left: none;
     background-color: #fff;
+    box-shadow: none;
+}
+a.more:hover, input.more:hover{
+    background-position: 0 -480px;
+    background-color: transparent;
     box-shadow: none;
 }
 .displaynone{
