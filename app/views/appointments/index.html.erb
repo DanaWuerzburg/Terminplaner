@@ -47,13 +47,12 @@
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
-    <!--<th>Group ID</th>
-
-        ADMINFIELD
-    <%# if current_user.admin? %>
-        <th><%#= sortable "ID", "ID"%></th>
-        <th><%#= sortable "user_id","User ID" %></th>
-    <%# end %>     -->
+    <!--ADMINFIELD -->
+    <% if current_user.admin? %>
+        <th>Group ID</th>
+        <th><%= sortable "ID", "ID"%></th>
+        <th><%= sortable "user_id","User ID" %></th>
+    <% end %>
 
      <!-- Adminfield ende -->
 
@@ -68,12 +67,12 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-    <!--
-    <%# if current_user.admin? %>
-        <td><%#= appointment.group_id%></td>
-        <td><%#= appointment.id %></td>
-        <td><%#= appointment.user_id %></td>
-    <%# end %>-->
+    <!---->
+    <% if current_user.admin? %>
+        <td><%= appointment.group_id%></td>
+        <td><%= appointment.id %></td>
+        <td><%= appointment.user_id %></td>
+    <% end %>
 
      <!-- Adminfield ende -->
 
