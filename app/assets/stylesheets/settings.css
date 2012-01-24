@@ -1,8 +1,6 @@
 #settings{
     width: 100%;
     min-height: 100px;
-    background: #F2F2F2;
-    opacity: 0.7;
     padding: 5px 15px;
     position: fixed;
     top:40px;
@@ -13,7 +11,14 @@
     z-index: 2000;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-
+#settingsbg{
+    width: 100%;
+    min-height: 100px;
+}
+.opac{
+    background: #F2F2F2;
+    opacity: 0.7;
+}
 .visible{
     display: block !important;
 }

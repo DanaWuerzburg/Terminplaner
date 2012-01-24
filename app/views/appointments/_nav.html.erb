@@ -9,7 +9,7 @@
         </ul>
     </div>
     <div class="navright">
-    <input type='submit' id="settingsButton" class='button settings' title='Settings' name="group" value="" onclick="javascript:DivEinAusblenden('settings');"/>
+        <a class='button settings' src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('settingsPanel'); return true;" href="#" title="Settings"><a/>
 
         <% if current_user %>
 
@@ -22,10 +22,33 @@
             <%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
         <% else %>
 
-        <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%>
-        <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
+            <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%>
+            <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
         <% end %>
     </div>
 
+  </div>
+  <div id="settingsPanel">
+    <div class="opac settings">
+    </div>
+    <div id="settings">
+      <div id="groups">
+        <div class="field">
+            <% @groups.each do |group| %>
+            <div>
+                <input class="picker color{valueElement:'<%= group.name %>'}" />
+                <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
+                <a class="colorlabel" href><%= group.name %></a>
+            </div>
+            <% end %>
+
+
+
+
+            <%= render :partial => "groups/form" %>
+        </div>
+      </div>
+
+    </div>
   </div>
 </header>
