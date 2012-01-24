@@ -9,8 +9,7 @@
         </ul>
     </div>
     <div class="navright">
-        <a class='button settings' src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('settingsPanel'); return true;" href="#" title="Settings"><a/>
-
+        <a id="btSettings" class='button settings' src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('settingsPanel'); return true;" href="#" title="Settings"></a>
         <% if current_user %>
 
             <% if current_user.admin? %>
@@ -26,29 +25,20 @@
             <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
         <% end %>
     </div>
-
   </div>
-  <div id="settingsPanel">
-    <div class="opac settings">
-    </div>
-    <div id="settings">
-      <div id="groups">
-        <div class="field">
-            <% @groups.each do |group| %>
+    <div id="Settings">
+        <% @groups.each do |group| %>
             <div>
                 <input class="picker color{valueElement:'<%= group.name %>'}" />
                 <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
                 <a class="colorlabel" href><%= group.name %></a>
             </div>
-            <% end %>
+        <% end %>
 
 
+	    <%= render :partial => "groups/form" %><div id="groups">
 
-
-            <%= render :partial => "groups/form" %>
-        </div>
-      </div>
 
     </div>
-  </div>
+</div>
 </header>
