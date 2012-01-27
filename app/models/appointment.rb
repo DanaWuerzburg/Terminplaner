@@ -1,4 +1,5 @@
 class Appointment < ActiveRecord::Base
+  has_event_calendar
   belongs_to :user
   belongs_to :group
 
