@@ -8,8 +8,8 @@
 		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
 				<ul>
 					<% @appointments.reverse.each do |appointment| %>
-						<% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
-						<li><%= appointment.date.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+						<% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H') > Time.now.strftime('%H')%>
+						<li><%= appointment.start_at.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
 						<% end %>
 					<% end %>
 				</ul>
@@ -25,12 +25,17 @@
 
 
 
-
-  <table class="pretty">
+  <div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">List</a></li>
+		<li><a href="#tabs-2">Calendar</a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="pretty">
 
   <thead>
     <th class="group"></th>
-    <th><%= sortable "date" %></th>
+    <th><%= sortable "start_at" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
     <!--ADMINFIELD -->
@@ -49,7 +54,7 @@
     <tr>
 
     <td class="group" style="background-color: <%= appointment.group.colour %>"></td>
-    <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    <td><%= appointment.start_at.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
     <!---->
@@ -73,12 +78,13 @@
 <% end %>
     </tbody>
 </table>
+    </div>
+	<div id="tabs-2">
+        <!--<#%= render :partial => 'calendar/index' %>-->
+    </div>
+</div>
+
 </section>
-
-
-
-
-
 
 <section class="newappointment">
 <h4>New Appointment</h4>

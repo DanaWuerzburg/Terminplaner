@@ -14,7 +14,7 @@
 
 				// Datetimepicker
 
-                $('#appointment_date').datetimepicker(
+                $('#appointment_start_at').datetimepicker(
                 {firstDay: 1,
                 dateFormat: 'dd.mm.yy',
 	            timeFormat: 'hh:mm',
@@ -48,6 +48,8 @@
 			.click(function() {
 				$( "#Settings" ).dialog( "open" );
 			});
+
+		$( "#tabs" ).tabs();
 
         });
 		</script>
