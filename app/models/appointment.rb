@@ -2,6 +2,19 @@ class Appointment < ActiveRecord::Base
   belongs_to :user
   belongs_to :group
 
+
+  has_many   :friends , :through => :friendships, :conditions => "status = 'accepted'"
+  has_many   :friends , :through => :users
+  belongs_to :friend, :class_name => 'User'
+  has_many :friendships, :dependent => :destroy
+
+  #next try
+  has_many :shared_friends, :through => :friendship_appointments
+  belongs_to :shared_friend, :class_name => 'User', :foreign_key =>'shared_friend_id'
+  has_many :friendship_appointments, :dependent => :destroy
+
+
+
   validates :user_id, :presence => true
   validates :group_id, :presence => true
 
@@ -14,10 +27,10 @@ class Appointment < ActiveRecord::Base
 
    # die einfachere Variante die auch nicht geht
   def self.search(search)
-  if search
-    find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
-  else
-    find(:all)
+    if search
+      find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
   end
-end
 end

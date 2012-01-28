@@ -4,15 +4,21 @@ class User < ActiveRecord::Base
   has_many :groups,     :through => :appointments
 
   has_many :friends, :through => :friendships, :conditions => "status = 'accepted'"
+  has_many :appointments,:through =>:friendships, :source => :friend, :conditions => "selected = 'true'"
+    #has_many :appointments,:through =>:friends
 
   has_many :requested_friends, :through => :friendships, :source => :friend, :conditions => "status = 'requested'", :order => :created_at
   has_many :pending_friends, :through => :friendships, :source => :friend, :conditions => "status = 'pending'", :order => :created_at
   has_many :friendships, :dependent => :destroy
 
-
+  #####
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
+  #next try
+  has_many :shared_friends, :through => :friendship_appointments
+  has_many :appointments,:through =>:friendship_appointments, :source => :shared_friends
+  has_many :friendship_appointments, :dependent => :destroy
 
 
   acts_as_authentic do |config|

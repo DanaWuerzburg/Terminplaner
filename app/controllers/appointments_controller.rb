@@ -6,14 +6,20 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
 
 
-  helper_method :sort_column, :sort_direction
+  helper_method :sort_column, :sort_direction, :selected_friend
 
+
+  attr_accessor :friends_array
 
   def index
     @groups = Group.all
     @group = Group.new
-
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
+    @users= User.all
+    @shared_friendships = FriendshipAppointment.all
+    @shared_friendship = FriendshipAppointment.new
+
 
 
    #ordnet inhalte je nach spalte
@@ -21,10 +27,10 @@ class AppointmentsController < ApplicationController
 
     @appointment = Appointment.new
 
-
     ##### Admin rechte verwalten
     if current_user.admin?
       #admin darf alle termine sehen und verwalten und nach user sortieren
+
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
       @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
@@ -49,6 +55,10 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @users= User.all
+    @shared_friendships = FriendshipAppointment.all
+    @shared_friendship = FriendshipAppointment.new
+
     @appointment = Appointment.find(params[:id])
 
 
@@ -63,6 +73,10 @@ class AppointmentsController < ApplicationController
   def new
     @groups = Group.all
     @group = Group.new
+
+    @shared_friendships = FriendshipAppointment.all
+    @shared_friendship = FriendshipAppointment.new
+
     @appointment = Appointment.new
     #@appointment.user_id = current_user.id
     respond_to do |format|
@@ -76,27 +90,29 @@ class AppointmentsController < ApplicationController
   def edit
     @groups = Group.all
     @group = Group.new
+    @shared_friendships = FriendshipAppointment.all
+    @shared_friendship = FriendshipAppointment.new
+
     @appointment = Appointment.find(params[:id])
   end
 
   # POST /appointments
   # POST /appointments.json
   def create
-      #@groups = Group.all
-      #@appointment = Appointment.new(params[:appointment])
 
       @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
-      #@appointment = Appointment.new(params[:appointment].merge(:user =>current_user , :group_id => current_group.id)) #user id mit user verknüpfen
 
 
       if @appointment.save
+        #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
         flash[:notice] = 'Der Termin wurde hinzugefuegt '
         redirect_to :action => :index and return
 
-    else
-    #render :text => "MIST"    #HAHAHA das hatt ich grad aufm screen und mich gewundert >.<
-     render json: @appointment.errors, status: :unprocessable_entity
-    end
+      else
+       render json: @appointment.errors, status: :unprocessable_entity
+      end
+      #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
+
   end
 
   # PUT /appointments/1
@@ -140,5 +156,16 @@ class AppointmentsController < ApplicationController
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
+
+  def selected_friends
+    current_user.friends.each do |friend|
+       if friend.selected
+         friends_array.push(friend)
+       end
+    end
+  end
+
+
+
 
 end

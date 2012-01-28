@@ -1,0 +1,27 @@
+<h1>Listing friendship_appointments</h1>
+
+<table>
+  <tr>
+    <th>User_id</th>
+    <th>Appointment_id</th>
+    <th>Friend_Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @friendship_appointments.each do |friendship_appointment| %>
+  <tr>
+    <td><%=friendship_appointment.user_id %></td>
+    <td><%=friendship_appointment.appointment_id %></td>
+    <td><%=friendship_appointment.shared_friend_id %></td>
+    <td><%= link_to 'Show', friendship_appointment %></td>
+    <td><%= link_to 'Edit', edit_friendship_appointment_path(friendship_appointment) %></td>
+    <td><%= link_to 'Destroy', friendship_appointment_path(:user_id => current_user, :id => friendship_appointment.shared_friend_id), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Friendship appointment', new_friendship_appointment_path %>

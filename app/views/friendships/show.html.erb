@@ -13,11 +13,11 @@
 <% @users.each do |user| %>
   <tr>
 
-    <% # comments %>
+    <% unless user== current_user %>
 
-    <td><%= user.login %></td>
-    <td><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>  </td>
-
+        <td><%= user.login %></td>
+        <td><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>  </td>
+    <%end%>
   </tr>
 <% end %>
 </table>

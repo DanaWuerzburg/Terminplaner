@@ -45,6 +45,7 @@
     <th><%= sortable "date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
+    <th>Friend</th>
     <!--ADMINFIELD -->
     <% if current_user.admin? %>
         <th>Group ID</th>
@@ -65,6 +66,7 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
+    <td><%= current_user.shared_friend_ids %><%#= current_user.shared_friend_ids %></td>
     <!---->
     <% if current_user.admin? %>
         <td><%= appointment.group_id%></td>

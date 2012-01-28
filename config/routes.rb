@@ -1,4 +1,6 @@
 Terminplaner::Application.routes.draw do
+  resources :friendship_appointments
+
   resources :friendships
 
   resources :groups

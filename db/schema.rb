@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120120110217) do
+ActiveRecord::Schema.define(:version => 20120125142922) do
 
   create_table "appointments", :force => true do |t|
     t.datetime "date"
@@ -23,10 +23,22 @@ ActiveRecord::Schema.define(:version => 20120120110217) do
     t.integer  "user_id"
     t.integer  "group_id"
     t.string   "colour"
+    t.integer  "friend_id"
+    t.integer  "shared_friend_id"
   end
 
+  add_index "appointments", ["friend_id"], :name => "index_appointments_on_friend_id"
   add_index "appointments", ["group_id"], :name => "index_appointments_on_group_id"
   add_index "appointments", ["user_id"], :name => "index_appointments_on_user_id"
+
+  create_table "friendship_appointments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.integer  "appointment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "shared_friend_id"
+  end
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +46,8 @@ ActiveRecord::Schema.define(:version => 20120120110217) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "appointment_id"
+    t.boolean  "selected",       :default => false
   end
 
   create_table "groups", :force => true do |t|

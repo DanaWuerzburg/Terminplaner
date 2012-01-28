@@ -3,12 +3,13 @@
 
         <% unless current_user.pending_friends.empty? %>
             <% current_user.pending_friends.each do |u| %>
-                <%= link_to u.login, user_path(u.id) %>
-                <!-- Since <%#= u.created_at.to_s(:long) %>  -->
+                <ul>
+                    <%= link_to u.login, user_path(u.id) %>
+                    <!-- Since <%#= u.created_at.to_s(:long) %>  -->
 
-                <%= link_to '[Accept]', friendship_path(:user_id => current_user, :id => u), :method => :put, :confirm => 'Accept friend request! Are you sure?' %> |
-                <%= link_to '[Reject]', friendship_path(:user_id => current_user, :id => u), :method => :delete, :confirm => 'Reject friend request! Are you sure?' %>
-
+                    <%= link_to '[Accept]', friendship_path(:user_id => current_user, :id => u), :method => :put, :confirm => 'Accept friend request! Are you sure?' %> |
+                    <%= link_to '[Reject]', friendship_path(:user_id => current_user, :id => u), :method => :delete, :confirm => 'Reject friend request! Are you sure?' %>
+                </ul>
             <% end %>
         <% else %>
             None

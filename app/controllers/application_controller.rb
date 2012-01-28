@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   helper :all
   layout :detect_browser
 
-  helper_method	:current_user_session,	:current_user  , :current_group
+  helper_method	:current_user_session,	:current_user  , :current_friend ,:current_appointment
+
 
 
   private
@@ -45,6 +46,10 @@ class ApplicationController < ActionController::Base
   def current_group
     return @current_group if defined?(@current_group)
     @current_group = Group.find
+  end
+  def current_appointment
+    return @current_appointment if defined?(@current_appointment)
+    @current_appointment = Appointment.where(:user_id => current_user).find(:last)
   end
 
    def current_colour
