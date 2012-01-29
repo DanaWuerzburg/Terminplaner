@@ -1,0 +1,17 @@
+<%#= form_tag friendship_appointments_path do %>
+<%#= form_for friendship_appointments_path do |fr| %>
+
+    <% unless current_user.shared_friends.empty? %>
+        <% current_user.shared_friends.each do |u| %>
+          <% if :appointment_id == fr.appointment_id  %>
+
+            <%= u.login %><%= u.login %>
+
+          <% end %>
+        <% end %>
+    <% else %>
+        None
+    <% end %>
+
+
+<%# end %>

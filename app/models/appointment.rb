@@ -6,7 +6,7 @@ class Appointment < ActiveRecord::Base
   has_many   :friends , :through => :friendships, :conditions => "status = 'accepted'"
   has_many   :friends , :through => :users
   belongs_to :friend, :class_name => 'User'
-  has_many :friendships, :dependent => :destroy
+  has_many :friendships #, :dependent => :destroy
 
   #next try
   has_many :shared_friends, :through => :friendship_appointments
@@ -33,4 +33,32 @@ class Appointment < ActiveRecord::Base
       find(:all)
     end
   end
+
+  def create_friendshare(friendShares)
+    x=[]
+    x=friendShares
+    unless x.nil?
+      #FriendshipAppointment.all
+      x.each do |fid|
+          fr1 = FriendshipAppointment.create! \
+                  :user_id => self.user_id,
+                  :appointment_id => self.id,
+                  :shared_friend_id => fid
+
+          fr2 = FriendshipAppointment.create! \
+                            :user_id => fid,
+                            :appointment_id => self.id,
+                            :shared_friend_id => self.user_id,
+
+
+      end
+    end
+  end
+
+  def update_friendshare
+
+  end
+
+
+
 end

@@ -27,14 +27,18 @@
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
 
      <label class="label">Share With Friends</label>
+    <%#= hidden_field_tag 'friendship_appointment[user_id]', current_user.id %>
 
     <% current_user.friends.each do |friend| %>
         <ul>
-            <%= check_box_tag 'appointment[shared_friend_ids][]', friend.id   %>    <%#current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
-            <%= friend.login -%>
+          <%= check_box_tag 'friendshare[]', friend.id   %>    <%#check_box_tag 'appointment[shared_friend_ids][]', friend.id, current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= hidden_field_tag 'friendship_appointment[user_id]', current_user.id %>
+          <%= friend.login -%>
         </ul>
       <% end %>
   </div>
+
 
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create', :title=>'Save Appointment' %>
    <%# <%= render 'erstellt' %>

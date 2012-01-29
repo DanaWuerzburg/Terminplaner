@@ -66,7 +66,26 @@
     <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
-    <td><%= current_user.shared_friend_ids %><%#= current_user.shared_friend_ids %></td>
+    <td><%#= current_user.shared_friends[1].login %>
+      <% unless appointment.friendship_appointments.empty? %>
+          <% appointment.friendship_appointments.each do |friend| %>
+              <% if friend.user_id == current_user.id  %>
+                <%#=  friend.shared_friend_id%>
+                  <%#= x%>
+                <% current_user.friends.each do |u| %>
+                  <% if u.id == friend.shared_friend_id  %>
+                      <%= u.login %>
+                  <% end %>
+                <% end %>
+
+              <% end %>
+        <% end %>
+      <% else %>
+          None
+      <% end %>
+    <%#= render :partial => 'appointments/friendshares', :locals => {:appointment_id => appointment.id} %>
+      <%#= Appointment.find_friendshares(appointment) %>
+    <%#= current_user.shared_friend_ids %></td>
     <!---->
     <% if current_user.admin? %>
         <td><%= appointment.group_id%></td>

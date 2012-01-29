@@ -19,6 +19,8 @@ class AppointmentsController < ApplicationController
     @users= User.all
     @shared_friendships = FriendshipAppointment.all
     @shared_friendship = FriendshipAppointment.new
+    @shared_friendships = FriendshipAppointment.find(:all, :conditions => {:user_id => current_user})
+
 
 
 
@@ -100,10 +102,12 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
 
-      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+      #@appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+      @appointment = Appointment.new(params[:appointment])
 
 
       if @appointment.save
+        @appointment.create_friendshare(params['friendshare'])
         #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
         flash[:notice] = 'Der Termin wurde hinzugefuegt '
         redirect_to :action => :index and return
