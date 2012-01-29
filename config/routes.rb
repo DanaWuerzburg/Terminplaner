@@ -1,9 +1,9 @@
 Terminplaner::Application.routes.draw do
-<<<<<<< HEAD
+
   resources :friendship_appointments
-=======
+
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
->>>>>>> aa8e1dbc3533bee80e98cf35aa26f760d747d50c
+
 
   resources :friendships
 

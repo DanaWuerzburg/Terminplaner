@@ -25,16 +25,17 @@
     <label class="label">Group</label>
     <%#= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
-
-     <label class="label">Share With Friends</label>
-    <%#= @appointment.id %>
-    <% current_user.friends.each do |friend| %>
-        <ul>
-          <%= check_box_tag 'friendshare[]', friend.id , @appointment.friend_clicked?(friend.id)   %>
-          <%#check_box_tag 'appointment[shared_friend_ids][]', friend.id,f.friendship_appointments.include?(friend.id), current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
-          <%= friend.login -%> <%#= friend.id -%>
-        </ul>
-      <% end %>
+    <% unless current_user.friends.blank?%>
+         <label class="label">Share With Friends</label>
+        <%#= @appointment.id %>
+        <% current_user.friends.each do |friend| %>
+            <ul>
+              <%= check_box_tag 'friendshare[]', friend.id , @appointment.friend_clicked?(friend.id)   %>
+              <%#check_box_tag 'appointment[shared_friend_ids][]', friend.id,f.friendship_appointments.include?(friend.id), current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
+              <%= friend.login -%> <%#= friend.id -%>
+            </ul>
+          <% end %>
+     <% end %>
   </div>
 
 
