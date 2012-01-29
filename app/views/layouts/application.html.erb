@@ -6,6 +6,53 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="/javascripts/jscolor/jscolor.js"></script>
+  <link type="text/css" href="css/smoothness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				// Datetimepicker
+
+                $('#appointment_start_at').datetimepicker(
+                {firstDay: 1,
+                dateFormat: 'dd.mm.yy',
+	            timeFormat: 'hh:mm',
+	            stepMinute: 15});
+
+                //slider
+                $( "#priority_number" ).slider(
+                {max: 5,
+                min: 1,
+                animate: true,
+                value: 3});
+
+                //autocomplete
+                var availableTags = [
+                ];
+                $( "#search_field" ).autocomplete({
+                    source: availableTags
+                });
+
+
+         //dialog
+		$( "#Settings" ).dialog({
+			autoOpen: false,
+			height: 300,
+			width: 350,
+			modal: true
+		});
+
+		$( "#btSettings" )
+			.button()
+			.click(function() {
+				$( "#Settings" ).dialog( "open" );
+			});
+
+		$( "#tabs" ).tabs();
+
+        });
+		</script>
 
 </head>
 <body>

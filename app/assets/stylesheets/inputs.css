@@ -1,5 +1,5 @@
 a.button, input.button {
-    background: url("/images/sprite_icons.png") no-repeat #f3f3f3;
+    background: url("/images/sprite_icons.png") no-repeat #F2F2F2;
     color: #6e6e6e;
     font: bold 12px Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -25,7 +25,7 @@ a.button{
 a.button:hover, input.button:hover {
     color: #333;
     border-color: #999;
-    background-color: #f3f3f3;
+    background-color: #F2F2F2;
     -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -41,7 +41,7 @@ a.left, input.left {
 }
 a.middle, input.middle {
     border-radius: 0;
-    border-left: solid 1px #f3f3f3;
+    border-left: solid 1px #F2F2F2;
     margin: 0;
 }
 a.middle:hover,
@@ -53,7 +53,7 @@ input.right:hover {
 a.right, input.right {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-left: solid 1px #f3f3f3;
+    border-left: solid 1px #F2F2F2;
     border-left: solid 1px rgba(255, 255, 255, 0);
 }
 
@@ -79,7 +79,7 @@ a.right, input.right {
 .searcharea{
     margin-top: 0;
     padding: 2px 0;
-    border-right: 1px solid #ffffff;
+    border-right: none;
 }
 
 a.add, input.add{
@@ -125,9 +125,22 @@ a.search, input.search{
     background-position: -40px -420px;
 }
 a.clear, input.clear{
-    background-position: -40px -450px;
+    background-position: -40px -570px;
     background-color: #ffffff;
     border-left: none;
+}
+a.more, input.more{
+    width:16px;
+    height:16px;
+    background-color: transparent;
+    text-decoration: none;
+    border:  none;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    background-position: -40px -485px;
 }
 
 
@@ -178,6 +191,11 @@ a.clear:hover, input.clear:hover{
     border-color: #dcdcdc;
     border-left: none;
     background-color: #fff;
+    box-shadow: none;
+}
+a.more:hover, input.more:hover{
+    background-position: 0 -485px;
+    background-color: transparent;
     box-shadow: none;
 }
 .displaynone{

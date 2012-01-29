@@ -12,7 +12,7 @@
 		padding:0;
 		text-decoration: none;
 		font-family: "Kozuka Gothic Pro","Myriad Pro","Estrangelo Edessa", "Arial", sans-serif;
-		font-size: 12px;
+		font-size: 12pt;
 		line-height: 18pt;
         color: #000000;
 		border-style: none;
@@ -21,34 +21,35 @@
 
 	h1, h2, h3 {
         font-size: 16pt;
-		color: #5C1F54;
+		color: #8C0303;
 	}
 	h4, h5, h6 {
 
 		font-size: 16px;
-		color: #009999;
+		color: #A63232;
     }
 
 	p{}
 
     a{
          font-size: 14px;
-         color: #FF9575;
+         color: #E58A8A;
     }
     a:visited{
-         color: #FF9575;
+         color: #E58A8A;
     }
     a:focus{
-        color: #ff0000;
+        color: #E58A8A;
     }
     a:hover{
-        color: #ff0000;
+        color: #E58A8A;
     }
 
 
 	ul, ol{
 		list-style-type: none;
         list-style-position: inside;
+        color: #E58A8A;
 	}
 	img{
 		border-style: none;
@@ -82,6 +83,7 @@
                 top: 20px;
                 font-size: 20px;
                 color: #ff0000;
+                max-width: 640px;
             }
              .reminder{
 
@@ -95,9 +97,33 @@
 
             }
             .reminder ul li{
-                color: #FF9575;
+                color: #E58A8A;
                 list-style: none;
                 font-size: 11pt;
+            }
+            .reminderFader {
+                width: 640px;
+                height: 16px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                margin-bottom: 5px;
+            }
+            .reminderFader:hover {
+                background-color: #F2F2F2;
+                cursor:pointer;
+            }
+            .reminderFader div {
+                position:relative;
+                left: 300px;
+            }
+            .reminderFader div:hover {
+                position:relative;
+                left: 300px;
+
+            }
+            .searchright{
+                float: right;
+                margin-right:35px;
             }
             .newappointment{
             }
@@ -118,6 +144,10 @@
                     clear: both;
                     display:block;
                 }
+    #priority_number{
+        margin-left: 0;
+        width: 200px;
+    }
 
     footer{
         height:30px;

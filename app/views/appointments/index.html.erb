@@ -1,48 +1,41 @@
 <%= render 'appointments/nav' %>
-<div id="settings">
-  <div id="groups">
-    <div class="field">
-        <% @groups.each do |group| %>
-        <div>
-            <input class="picker color{valueElement:'<%= group.name %>'}" />
-            <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
-            <a class="colorlabel" href><%= group.name %></a>
-        </div>
-        <% end %>
 
-
-
-
-        <%= render :partial => "groups/form" %>
-        </div>
-    </div>
-
-</div>
 <div id="cont">
-<section class="appointments">
-   <h1><%= current_user.login %>'s Agenda</h1>
-
-   <section class="reminder">
-
-      <!--<div id="zeit"> <#%= "{#:method=>'zeit'}" %> </div>-->
-      <h4>Today: <%= Time.now.strftime('%d. %B %Y') %>
+	<section class="appointments">
 
 
-      </h4>
+	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
+		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
+				<ul>
+					<% @appointments.reverse.each do |appointment| %>
+						<% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H') > Time.now.strftime('%H')%>
+						<li><%= appointment.start_at.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+						<% end %>
+					<% end %>
+				</ul>
+
+			</div>
+			<div class="reminderFader">
+				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#" title="Today's Appointments"></a></div>
+			</div>
+			<div class="searchright">
+				<%= render :partial => 'appointments/search' %>
+			</div>
 
 
-      <ul>
-      <% @appointments.reverse.each do |appointment| %>
-          <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
-            <li><%= appointment.date.strftime('%H:%M') + ": " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
-          <% end %>
-      <% end %>
-      </ul>
-  </section>
-<table class="pretty">
+
+
+  <div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">List</a></li>
+		<li><a href="#tabs-2">Calendar</a></li>
+	</ul>
+	<div id="tabs-1">
+		<table class="pretty">
+
   <thead>
     <th class="group"></th>
-    <th><%= sortable "date" %></th>
+    <th><%= sortable "start_at", "Date" %></th>
     <th><%= sortable "note","Note" %></th>
     <th><%= sortable "priority_number","Priority" %></th>
     <th>Friend</th>
@@ -57,13 +50,12 @@
 
   </thead>
   <tbody>
-
 <% @appointments.each do |appointment| %>
 
     <tr>
 
     <td class="group" style="background-color: <%= appointment.group.colour %>"></td>
-    <td><%= appointment.date.strftime('%d.%m.%y %H:%M') %></td>
+    <td><%= appointment.start_at.strftime('%d.%m.%y %H:%M') %></td>
     <td><%= appointment.note %></td>
     <td><%= appointment.priority_number %></td>
     <td><%= render :partial => 'appointments/friendshares', :locals => {:appointment => appointment} %></td>
@@ -88,15 +80,16 @@
 <% end %>
     </tbody>
 </table>
+    </div>
+	<div id="tabs-2">
+        <!--<#%= render :partial => 'calendar/index' %>-->
+    </div>
+</div>
+
 </section>
 
-
-
-
-
-
 <section class="newappointment">
-<h1>New Appointment</h1>
+<h4>New Appointment</h4>
    <div class="formular">
 
         <%= render 'form' %>

@@ -1,12 +1,10 @@
-
-<%= render 'appointments/nav' %>
 <div id="cont">
   <section class="appointments">
 
 
     <div class="formular">
         <label for="date" class="label">Date</label>
-        <p><%= @appointment.date %></p>
+        <p><%= @appointment.start_at %></p>
 
       <label for="note" class="label">Note:</label>
       <p><%= @appointment.note %></p>

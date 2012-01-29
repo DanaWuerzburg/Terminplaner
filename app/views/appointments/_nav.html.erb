@@ -4,15 +4,13 @@
 
     <div class="navleft">
         <ul class='info'>
-            <li><%= link_to ( image_tag('/images/calendar.png')), appointments_path, :class => 'logo' %></li>
+            <!--<li><%= link_to ( image_tag('/images/calendar.png')), appointments_path, :class => 'logo' %></li>-->
+            <li><h1>
+              <%= current_user.login %>'s Agenda</h1></li>
         </ul>
     </div>
-    <div class="navmid">
-        <%= render :partial => 'appointments/search' %>
-    </div>
     <div class="navright">
-    <input type='submit' id="settingsButton" class='button settings' title='Settings' name="group" value="" onclick="javascript:DivEinAusblenden('settings');"/>
-
+        <a id="btSettings" class='button settings' src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('settingsPanel'); return true;" href="#" title="Settings"></a>
         <% if current_user %>
 
             <% if current_user.admin? %>
@@ -24,10 +22,24 @@
             <%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
         <% else %>
 
-        <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%>
-        <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
+            <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%>
+            <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
         <% end %>
     </div>
-
   </div>
+    <div id="Settings">
+        <% @groups.each do |group| %>
+            <div>
+                <input class="picker color{valueElement:'<%= group.name %>'}" />
+                <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
+                <a class="colorlabel" href><%= group.name %></a>
+            </div>
+        <% end %>
+
+
+	    <%= render :partial => "groups/form" %><div id="groups">
+
+
+    </div>
+</div>
 </header>
