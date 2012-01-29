@@ -161,13 +161,7 @@ class AppointmentsController < ApplicationController
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 
-  def selected_friends
-    current_user.friends.each do |friend|
-       if friend.selected
-         friends_array.push(friend)
-       end
-    end
-  end
+
 
 
 

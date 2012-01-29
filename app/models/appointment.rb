@@ -59,6 +59,22 @@ class Appointment < ActiveRecord::Base
 
   end
 
+  def friend_clicked?(clicked_id)
+    unless self.friendship_appointments.empty?
+      self.friendship_appointments.each do |friend|
+          if friend.shared_friend_id == clicked_id
+              return true
+          else
+              false
+          end
+      end
+    else
+      return false
+    end
+
+
+  end
+
 
 
 end

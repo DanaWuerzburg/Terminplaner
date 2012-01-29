@@ -28,13 +28,13 @@
 
      <label class="label">Share With Friends</label>
     <%#= hidden_field_tag 'friendship_appointment[user_id]', current_user.id %>
-
+    <%#= @appointment.id %>
     <% current_user.friends.each do |friend| %>
         <ul>
-          <%= check_box_tag 'friendshare[]', friend.id   %>    <%#check_box_tag 'appointment[shared_friend_ids][]', friend.id, current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
-          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= check_box_tag 'friendshare[]', friend.id , @appointment.friend_clicked?(friend.id)   %>
+          <%#check_box_tag 'appointment[shared_friend_ids][]', friend.id,f.friendship_appointments.include?(friend.id), current_user.shared_friends.include?(friend), @appointment.friends.include?(friend),:name => 'appointment[friend_ids][]' %>
           <%= hidden_field_tag 'friendship_appointment[user_id]', current_user.id %>
-          <%= friend.login -%>
+          <%= friend.login -%> <%= friend.id -%>
         </ul>
       <% end %>
   </div>
