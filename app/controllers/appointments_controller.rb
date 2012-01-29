@@ -102,8 +102,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
 
-      #@appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
-      @appointment = Appointment.new(params[:appointment])
+      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+      #@appointment = Appointment.new(params[:appointment])
 
 
       if @appointment.save
@@ -126,6 +126,10 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
+
+        FriendshipAppointment.where(:appointment_id => @appointment.id).destroy_all
+        @appointment.create_friendshare(params['friendshare'])
+
         strg = "#{@appointment.note}"
         flash[:notice] = "Updated appointment:  " + strg[0..30] + "..."
         format.html { redirect_to :action => :index and return }
