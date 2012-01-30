@@ -45,7 +45,7 @@ class FriendshipAppointmentsController < ApplicationController
   def create
 
     @user = User.find(current_user)
-    @appointent = Appointment.find(current_appointment)
+    @appointment = Appointment.find(current_appointment)
        @shared_friend = User.find(params[:shared_friend_id])
        params[:friendship1] = {:user_id => current_user.id, :shared_friend_id => @shared_friend.id,:appointment_id => @appointment.id}
        params[:friendship2] = {:user_id => @shared_friend.id, :shared_friend_id => current_user.id,:appointment_id => @appointment.id,}

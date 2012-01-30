@@ -1,11 +1,7 @@
 Terminplaner::Application.routes.draw do
 
-  resources :friendship_appointments
-
-  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
 
-  resources :friendships
 
   resources :groups
 
@@ -36,6 +32,13 @@ Terminplaner::Application.routes.draw do
   # User Activation
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
+
+
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+
+  resources :friendships
+  resources :friendship_appointments
 
 
   resources :password_resets

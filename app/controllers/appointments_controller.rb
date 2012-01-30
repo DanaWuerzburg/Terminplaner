@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
 
-  before_filter :require_user, :only  => [:edit, :index, :new , :show , :destroy]
+  before_filter :require_user, :only  => [:edit,:index, :new , :show , :destroy]
 
   # GET /appointments
   # GET /appointments.json
