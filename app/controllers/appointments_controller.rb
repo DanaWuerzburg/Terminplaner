@@ -38,12 +38,6 @@ class AppointmentsController < ApplicationController
       #@appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
       @appointments = Appointment.search2(params[:search],current_user)
     end
-    #################
-    # Diese Zeile verursacht, dass jeder User die Termine aller anderenuser sehen kann
-    # Wenn man diese zeile nach oben verschiebt funktioniert sie allerdings nicht mehr =((
-    #@appointments = Appointment.search(params[:search])
-
-    #################
 
     respond_to do |format|
       format.html # index.html.erb

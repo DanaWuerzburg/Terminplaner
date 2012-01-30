@@ -30,13 +30,15 @@ class Appointment < ActiveRecord::Base
     end
   end
 
-  def self.search2(search,user)
+   def self.search2(search,user)
     if search
-      where(:user_id => user).find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
+      where("user_id = #{user.id}"+find_friends(user)).find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
     else
-      find(:all,:conditions => {:user_id => user})
+      where("user_id = #{user.id}"+find_friends(user)).find(:all)
     end
-  end
+   end
+
+
 
   def create_friendshare(friendShares)
     x=[]
@@ -71,6 +73,19 @@ class Appointment < ActiveRecord::Base
     end
 
     return checked
+  end
+
+  def self.find_friends(current_user)
+    friend_ids = []
+     friend_ids << " "
+    unless FriendshipAppointment.find_all_by_user_id(current_user).blank?
+      FriendshipAppointment.find_all_by_user_id(current_user).each do |friend|
+        #friend_ids.push(friend.appointment_id)
+        friend_ids << "id = #{friend.appointment_id}"
+      end
+    end
+      all_friend_ids =friend_ids.join(" OR ")
+      return all_friend_ids
   end
 
 

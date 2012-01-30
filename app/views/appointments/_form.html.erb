@@ -25,9 +25,16 @@
     <label class="label">Group</label>
     <%#= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
+
+
+    <label class="label">Friends</label>
+    <label class="label"><% @appointment.id %></label>
+    <%= Appointment.find_friends(current_user) %>
+
+    <!-- Shared Friends -->
     <% unless current_user.friends.blank?%>
          <label class="label">Share With Friends</label>
-
+        <% @appointment %>
         <% current_user.friends.each do |friend| %>
             <ul>
               <%= check_box_tag 'friendshare[]', friend.id , @appointment.friend_clicked?(friend.id)   %>
