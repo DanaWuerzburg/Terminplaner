@@ -27,7 +27,7 @@
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
     <% unless current_user.friends.blank?%>
          <label class="label">Share With Friends</label>
-        <%#= @appointment.id %>
+
         <% current_user.friends.each do |friend| %>
             <ul>
               <%= check_box_tag 'friendshare[]', friend.id , @appointment.friend_clicked?(friend.id)   %>
