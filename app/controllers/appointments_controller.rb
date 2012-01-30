@@ -32,15 +32,17 @@ class AppointmentsController < ApplicationController
     ##### Admin rechte verwalten
     if current_user.admin?
       #admin darf alle termine sehen und verwalten und nach user sortieren
-
+      @appointments = Appointment.search(params[:search])
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Termine gezeigt
-      @appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
+      #@appointments = Appointment.find(:all, :conditions => {:user_id => current_user})
+      @appointments = Appointment.search2(params[:search],current_user)
     end
     #################
     # Diese Zeile verursacht, dass jeder User die Termine aller anderenuser sehen kann
     # Wenn man diese zeile nach oben verschiebt funktioniert sie allerdings nicht mehr =((
-    @appointments = Appointment.search(params[:search])
+    #@appointments = Appointment.search(params[:search])
+
     #################
 
     respond_to do |format|

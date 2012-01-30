@@ -4,12 +4,7 @@ class Appointment < ActiveRecord::Base
   belongs_to :group
 
 
-  has_many   :friends , :through => :friendships, :conditions => "status = 'accepted'"
-  has_many   :friends , :through => :users
-  belongs_to :friend, :class_name => 'User'
-  has_many :friendships #, :dependent => :destroy
-
-  #next try
+  #friends
   has_many :shared_friends, :through => :friendship_appointments
   belongs_to :shared_friend, :class_name => 'User', :foreign_key =>'shared_friend_id'
   has_many :friendship_appointments, :dependent => :destroy
@@ -35,6 +30,14 @@ class Appointment < ActiveRecord::Base
     end
   end
 
+  def self.search2(search,user)
+    if search
+      where(:user_id => user).find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
+    else
+      find(:all,:conditions => {:user_id => user})
+    end
+  end
+
   def create_friendshare(friendShares)
     x=[]
     x=friendShares
@@ -56,24 +59,18 @@ class Appointment < ActiveRecord::Base
     end
   end
 
-  def update_friendshare
-
-  end
-
   def friend_clicked?(clicked_id)
-    blubb = false
+    checked = false
 
     unless self.friendship_appointments.empty?
       self.friendship_appointments.each do |friend|
           if friend.shared_friend_id == clicked_id
-              blubb = true
+              checked = true
           end
       end
     end
 
-    return blubb
-
-
+    return checked
   end
 
 

@@ -42,13 +42,7 @@
       <% end %>
     </ul>
     <p><%= link_to "Find Friends", friendships_path %></p>
-      <br> <br>
-    <h2>Users Who Have Befriended You</h2>
-    <ul>
-      <% for user in @user.inverse_friends %>
-      <li><%= h user.login %></li>
-      <% end %>
-    </ul>
+
 
 
 </section>
