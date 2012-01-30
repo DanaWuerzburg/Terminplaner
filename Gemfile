@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem 'haml-rails'
+
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,9 +10,13 @@ gem 'rails', '3.1.1'
 #group :production, :staging do
 #  gem "pg"
 #end
-
+ gem 'cucumber-rails'
+gem 'database_cleaner'
 group :development, :test do  
   gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+  gem 'rspec-rails'
+  gem 'capybara'
+
 end
 
 # Gems used only for assets and not required
@@ -39,4 +45,5 @@ gem "authlogic"
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  #gem 'capybara'  muss hier vielleicht noch hin
 end

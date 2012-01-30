@@ -1,26 +1,38 @@
 class AppointmentsController < ApplicationController
-
+  require "rexml/document"
+  include REXML
   before_filter :require_user, :only  => [:edit, :index, :new , :show , :destroy]
 
   # GET /appointments
   # GET /appointments.json
-
+    APPOINTMENTLIST = [
+    { :priority_number => 3, :date => "24.01.2012", :category => "singaporean", :dish_name => "Fish Head Curry", :group => "Little India" },
+    { :priority_number => 3, :date => "24.01.2012",:category => "singaporean", :dish_name => "Pig Organ Soup", :group => "Food Court" },
+    { :priority_number =>8, :date => "24.01.2012",:category => "indian", :dish_name => "Chicken Biryani", :group => "Al Ameen's" },
+    { :priority_number =>9, :date => "24.01.2012",:category => "german", :dish_name => "Pork Knuckle", :group => "Stammtisch Restaurant" },
+    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :dish_name => "Butter Chicken", :group => "Jaggi's Northern Indian Cuisine" },
+    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :dish_name => "Chicken Tikka", :group => "Jaggi's Northern Indian Cuisine" },
+    { :priority_number =>7,:date => "24.01.2012", :category => "singaporean", :dish_name => "Mutton Murtabak", :group => "Zam Zam Restaurant" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "singaporean", :dish_name => "Chicken Murtabak", :group => "Ah Mei Kaya Toast" },
+    { :priority_number =>9, :date => "24.01.2012",:category => "western", :dish_name => "Beef Cheek", :group => "Ember Restaurant" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "western", :dish_name => "Cowboy Burger", :group => "Brewerkz" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "mexican", :dish_name => "Pork Enchilada", :group => "Iguana Cafe" }
+  ]
 
   helper_method :sort_column, :sort_direction
 
+   APPOINTMENTS = [
+    { :note =>"testnote in hash", :date => "12.12.2012"},
+    { :note =>"testnote in hash", :date => "12.12.2012"},
 
+  ]
   def index
     @groups = Group.all
     @group = Group.new
-
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
-
-
    #ordnet inhalte je nach spalte
     @appointments = Appointment.order(sort_column + " " + sort_direction)
-
     @appointment = Appointment.new
-
 
     ##### Admin rechte verwalten
     if current_user.admin?
@@ -35,26 +47,41 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.search(params[:search])
     #################
 
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @appointments, :notice => 'Appointment in index.' }
+        format.xml {render :xml => @appointments}
+      end
+    end
+
+   #liefert fehler:
+  #Missing template appointments/show,
+  #application/show with
+  #{:handlers=>[:erb, :builder, :coffee], :formats=>[:xml], :locale=>[:en, :en]}.
+    def with_code
+
+    @appointment = Appointment.find_by_note(params[:note])
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @appointments, :notice => 'Appointment in index.' }
-    end
-    end
 
-
+      format.html { render :action => :show}
+      #format.json { render json: @appointments, :notice => 'Appointment in index.' }
+      format.xml { render :xml => @appointment }
+      end
+    end
 
   def zeit
     puts "HEYHOHELLO"
   end
+
   # GET /appointments/1
   # GET /appointments/1.json
   def show
     @appointment = Appointment.find(params[:id])
-
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @appointment }
+      format.xml {render :xml => @appointment, :status => :created, :location => @appoitnment }
+
     end
   end
 
@@ -68,37 +95,62 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @appointment, :notice => 'Appointment in new' }
+       format.xml {render :xml => @appointment}
     end
 
   end
+  def show_with_rexml
+    @appointment = Appointment.find(params[:id])
+    hijack_response_inline( generate_rexml )
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  #def getNote
+  #  s= String.new
+  #  @appointment = Appointment.find(params[:id])
+  #  s= @appointment.note.to_s
+  #  puts s
+   #return s
+ #end
 
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
   # GET /appointments/1/edit
   def edit
     @groups = Group.all
     @group = Group.new
     @appointment = Appointment.find(params[:id])
+    respond_to { |format|
+      format.html
+      format.xml { render :xml => @appointment } }
   end
 
+   # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
   # POST /appointments
   # POST /appointments.json
   def create
       #@groups = Group.all
       #@appointment = Appointment.new(params[:appointment])
-
       @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
       #@appointment = Appointment.new(params[:appointment].merge(:user =>current_user , :group_id => current_group.id)) #user id mit user verknüpfen
-
+      respond_to do |format|
 
       if @appointment.save
         flash[:notice] = 'Der Termin wurde hinzugefuegt '
-        redirect_to :action => :index and return
+        format.xml  { render :xml => @appointment, :status => :created, :location => @appointment }
 
-    else
+        redirect_to :action => "with_code" and return
+       else
     #render :text => "MIST"    #HAHAHA das hatt ich grad aufm screen und mich gewundert >.<
-     render json: @appointment.errors, status: :unprocessable_entity
-    end
+      render json: @appointment.errors, status: :unprocessable_entity
+      format.xml  { render :xml => @appointment.errors, :status => :unprocessable_entity }
+      end
+   end
   end
 
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
   # PUT /appointments/1
   # PUT /appointments/1.json
   def update
@@ -108,15 +160,23 @@ class AppointmentsController < ApplicationController
       if @appointment.update_attributes(params[:appointment])
         strg = "#{@appointment.note}"
         flash[:notice] = "Updated appointment:  " + strg[0..30] + "..."
+        format.xml {render :xml => @appointment}
         format.html { redirect_to :action => :index and return }
         format.json { head :ok }
+
       else
         format.html { render action: "edit" }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
+        format.xml { render :xml => @appointment }
       end
     end
   end
 
+   def about
+    render :action => "index", :layout => "mobile"
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
   # DELETE /appointments/1
   # DELETE /appointments/1.json
   def destroy
@@ -124,14 +184,105 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
 
     respond_to do |format|
-       flash[:notice] = 'Appointment was deleted'
+      flash[:notice] = 'Appointment was deleted'
       format.html { redirect_to appointments_url }
       format.json { head :ok }
     end
   end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+   def upload
+    uploaded_file = params[:xml_file]
+    data = uploaded_file.read if uploaded_file.respond_to? :read
+    if request.post? and data
+      case params[:commit]
+        when "Parse with REXML" then parse_with_rexml( data )
+        when "Parse with Hpricot" then parse_with_hpricot( data )
+        else parse_recursive( data )
+      end
+    else
+      redirect_to :action => 'index'
+    end
+  end
+
+
+
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def generate_with_rexml
+    hijack_response( generate_rexml )
+  end
+
+
 
   #########################
   private
+       # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+
+  # @param out_data [Object]
+    def hijack_response( out_data )
+
+    send_data( out_data, :type => "text/xml", :filename => "sample.xml")
+
+  end
+
+     def hijack_response_inline( out_data )
+
+    send_data( out_data, :type => "text/xml", :filename => "sample.xml", :disposition => "inline")
+
+  end
+
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def generate_rexml
+    doc = REXML::Document.new
+    root = doc.add_element( "Kalender" )
+    APPOINTMENTLIST.each{ |element_data|
+
+      appointmentlist_element = root.add_element( "Termin" )
+
+       appointmentlist_element.add_attribute( "Gruppe", element_data[:group] )
+       appointmentlist_element.add_attribute( "Prioritaet", element_data[:priority_number] )
+
+        appointmentlist_note_element = appointmentlist_element.add_element( "Notiz" )
+       appointmentlist_note_element.add_text( element_data[:dish_name] )
+
+      date_element = appointmentlist_element.add_element( "Date" )
+      date_element.add_text( element_data[:date] )
+    }
+    doc.write( out_string = "", 2 )
+    return out_string
+  end
+
+
+
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+
+  def parse_with_rexml( xml_data )
+    doc = REXML::Document.new( xml_data )
+    REXML::XPath.each( doc, "//AppointmentlistNote" ){ |appointmentlist_note_element|
+     if appointmentlist_note_element.text == "Fish Head Curry" or appointmentlist_note_element.text == "Pig Organ Soup"
+       parent = appointmentlist_note_element.parent
+       parent.attributes["priority_number"] = 6
+     end
+    }
+    doc.write( out_string = "", 2 )
+    hijack_response( out_string )
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+   # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def parse_recursive( xml_data )
+    doc = REXML::Document.new( xml_data )
+    root = doc.root
+    root.each_recursive{ |element|
+      logger.info "Element: #{element} !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    }
+    redirect_to :action => 'index'
+  end
 
   def sort_column
     Appointment.column_names.include?(params[:sort]) ? params[:sort] : "date"

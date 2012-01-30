@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   layout :detect_browser
 
   helper_method	:current_user_session,	:current_user  , :current_group
+   def set_layout
+   session["layout"] = (params[:mobile] == "1" ? "mobile" : "normal")
+   redirect_to :controller => "appointments", :action => "index"
+   end
+
 
 
   private
@@ -27,10 +32,7 @@ class ApplicationController < ActionController::Base
     return nil
   end
 
-  def set_layout
-   session["layout"] = (params[:mobile] == "1" ? "mobile" : "normal")
-   redirect_to :action => "index"
-  end
+
 
   def current_user_session
     return @current_user_session if defined?(@current_user_session)

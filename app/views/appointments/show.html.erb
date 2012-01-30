@@ -16,8 +16,51 @@
             </script>
 
       </div>
-  </section>
-</div>
-<footer>
 
-</footer>
+           <%  aFile = File.new("./datein/testfile", "a") %>
+           <%  aFile.puts "hallo"   %>
+           <%  aFile.close  %>
+           <%  file = File.new("./datein/testfile2", "a") %>
+           <%  aFile = File.new("./datein/testfile", "r") %>
+           <%  b=aFile.gets    %>
+           <%=  file.write(b)    %>
+           <%  aFile.close    %>
+           <%  file.close    %>
+
+
+   <div class="padded-body">
+     <h2>Generate and Download Sample XML Document</h2>
+
+            <%=link_to "Download as xml", :action => "generate_with_rexml" %>
+           <%=link_to "Show as xml", :action => "show_with_rexml" %>
+
+        </div>
+    </div>
+
+
+<div class="padded-body">
+  <h2>Upload the Sample XML Document, Parse and Manipulate</h2>
+
+  <p>
+    <% form_tag({:action => 'upload'}, :multipart => true )%>
+      <p>
+        <label for="file"> File:   </label> <br>
+        <%= file_field("appointment","xml_file") %><br>
+        <%= submit_tag("Parse with REXML") %>
+
+        </p>
+
+   <br><br><br><br>
+
+  <%= form_tag({:action => 'upload', :id => @appointment}, :multipart => true) %>
+  Fuer die zweite Implementierung noch eine Version <br>
+  Waehlen Sie eine Datei : <%= file_field("appointment", "report")  %>
+   <br>
+  <%= submit_tag("upload au dBuch")%>
+ fooooo </p>
+
+</div>
+
+
+      </section>
+</div>

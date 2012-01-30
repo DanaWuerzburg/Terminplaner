@@ -15,9 +15,18 @@ class Appointment < ActiveRecord::Base
    # die einfachere Variante die auch nicht geht
   def self.search(search)
   if search
-    find(:all, :conditions => ['note LIKE ?', "%#{search}%"])
+    @appointments =   find(:all, :conditions => ['note LIKE ? AND {:user_id => current_user}', "%#{search}%"  ])
+
   else
     find(:all)
   end
-end
+  end
+
+
+  def getNote
+    s = String.new
+    s=self.note.to_s
+    puts s
+    return s
+  end
 end

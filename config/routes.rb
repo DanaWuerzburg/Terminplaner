@@ -1,31 +1,31 @@
 Terminplaner::Application.routes.draw do
   resources :friendships
-
   resources :groups
-
   resources :user_sessions
-
-
-
   resources :users
-
   #resource :user, :as => 'account'  # a convenience route
   resource :user, :as => :friend
 
   match 'signup' => 'users#new', :as => :signup
 
   get "home/index"
+   #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
+ resources :application
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
 
   resources :appointments
 
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+  match ':controller(/:id(.:format)(/:action))'
+  match ':controller(/:action(/:id(.:format)))'
+  #map.connect '/appointment/generate_with_rexml', :controller => 'appointments', :action => 'generate_with_rexml'
 
-  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
 
-  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
-  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
 
+
+ resources :appointments, :collection => {:with_code => :get}
 
   # User Activation
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
@@ -98,7 +98,7 @@ Terminplaner::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+   #match ':controller(/:action(/:id(.:format)))'
 
 
 

@@ -9,10 +9,6 @@
             <a class="colorlabel" href><%= group.name %></a>
         </div>
         <% end %>
-
-
-
-
         <%= render :partial => "groups/form" %>
         </div>
     </div>
@@ -35,6 +31,7 @@
       <% @appointments.reverse.each do |appointment| %>
           <% if appointment.date.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.date.strftime('%H') > Time.now.strftime('%H')%>
             <li><%= appointment.date.strftime('%H:%M') + ": " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+
           <% end %>
       <% end %>
       </ul>
@@ -57,7 +54,7 @@
   </thead>
   <tbody>
 
-<% @appointments.each do |appointment| %>
+    <% @appointments.each do |appointment| %>
 
     <tr>
 
@@ -86,6 +83,35 @@
 <% end %>
     </tbody>
 </table>
+
+
+
+   <div class="padded-body">
+  <h2>Generate and Download Sample XML Document</h2>
+  <p>Clicking on one of these links will generate the sample XML file we're going to be
+    using for this tutorial. One link will generate the XML using REXML, and the other link
+    using Builder. I'll leave it as an exercise for the reader to figure out which link does what.</p>
+  <div style="text-align: center;">
+    <%=link_to "download as in index", :action => "generate_with_rexml" %>
+
+  </div>
+</div>
+
+
+<div class="padded-body">
+  <h2>Upload the Sample XML Document, Parse and Manipulate</h2>
+  <p>This form lets you upload the Sample XML document that we generated above and
+    parse its content with both REXML and Hpricot.</p>
+  <p>
+    <% form_tag( {:action => 'upload'}, {:multipart => true} ) do -%>
+         <p>
+        <label for="file">File:</label><%= file_field_tag "xml_file" %><br/>
+        <%= submit_tag "Parse with REXML", :action => "parse_with_rexml" %>
+        <%= submit_tag ("Parse with REXML recursively") %>
+        </p>
+     <% end -%>
+ </p>
+</div>
 </section>
 
 

@@ -73,7 +73,7 @@ class UserSessionsController < ApplicationController
   end
 
    def set_layout
-   session["layout"] = (params[:mobile] == "1" ? "mobile" : "normal")
+   session[:layout] = (params[:mobile] == "1" ? "mobile" : "normal")
    redirect_to :action => "index"
   end
 end
