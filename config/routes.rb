@@ -39,7 +39,7 @@ Terminplaner::Application.routes.draw do
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
 
-
+  # Calendar
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
 
