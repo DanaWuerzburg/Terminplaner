@@ -43,7 +43,7 @@ class Appointment < ActiveRecord::Base
   def create_friendshare(friendShares)
     x=[]
     x=friendShares
-    unless x.nil?
+    unless x.nil? then
       #FriendshipAppointment.all
       x.each do |fid|
           fr1 = FriendshipAppointment.create! \
@@ -54,9 +54,7 @@ class Appointment < ActiveRecord::Base
           fr2 = FriendshipAppointment.create! \
                             :user_id => fid,
                             :appointment_id => self.id,
-                            :shared_friend_id => self.user_id,
-
-
+                            :shared_friend_id => self.user_id
       end
     end
   end
@@ -64,9 +62,9 @@ class Appointment < ActiveRecord::Base
   def friend_clicked?(clicked_id)
     checked = false
 
-    unless self.friendship_appointments.empty?
+    unless self.friendship_appointments.empty? then
       self.friendship_appointments.each do |friend|
-          if friend.shared_friend_id == clicked_id
+          if friend.shared_friend_id == clicked_id then
               checked = true
           end
       end

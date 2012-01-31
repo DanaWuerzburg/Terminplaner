@@ -87,11 +87,11 @@
 <br />
 
  <!--ADMINFIELD-->
-    <%# if current_user %>
-        <%# if current_user.admin? %>
-            <%#= link_to 'New User', new_user_path %>
-        <%# end %>
-    <%# end %>
+    <% if current_user %>
+        <% if current_user.admin? %>
+            <%= link_to 'New User', new_user_path %>
+        <% end %>
+    <% end %>
 
      <!-- Adminfield ende -->
 

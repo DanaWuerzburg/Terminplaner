@@ -71,10 +71,19 @@
     <td></td>
     <td class="tdtools">
       <!-- # User kann nur seine eigenen appointments editieren #-->
-       <% if current_user.id == appointment.user_id || current_user.admin? %>
-          <%= link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
-          <%= link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>
-       <% end%>
+       <%#if current_user.id == appointment.user_id || current_user.admin? %>
+          <%# link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
+          <%# link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>
+       <%# end%>
+         <%# if current_user %>
+
+        <%# if current_user.admin? %>
+
+            <%#= link_to 'New User', new_user_path %>
+
+        <%# end %>
+
+    <%# end %>
     </td>
   </tr>
 <% end %>
