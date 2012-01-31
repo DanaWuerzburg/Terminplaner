@@ -18,15 +18,21 @@ Terminplaner::Application.routes.draw do
 
   get "home/index"
 
+  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
+  resources :application
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
+  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
+
+
   resources :appointments
 
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
-  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
+  match ':controller(/:id(.:format)(/:action))'
+  match ':controller(/:action(/:id(.:format)))'
+  resources :appointments, :collection => {:with_code => :get}
 
-  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
-  match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
 
 
   # User Activation

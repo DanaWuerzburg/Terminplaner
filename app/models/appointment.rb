@@ -86,6 +86,11 @@ class Appointment < ActiveRecord::Base
       return all_friend_ids
   end
 
-
+  def getNote
+    s = String.new
+    s=self.note.to_s
+    puts s
+    return s
+  end
 
 end

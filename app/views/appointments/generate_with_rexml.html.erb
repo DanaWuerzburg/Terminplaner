@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Ruby on Rails and XML Tutorial</title>
+	<%= stylesheet_link_tag "reset-fonts-grids.css" %>
+	<%= stylesheet_link_tag "style.css" %>
+	<%= javascript_include_tag :defaults %>
+</head>
+
+<body id="yahoo-com">
+<div id="doc" class="yui-t7">
+	<div id="hd">
+	  <h1>Ruby on Rails and XML Tutorial</h1>
+		<p>Ruby can do XML situps, too.</p>
+
+   <div class="padded-body">
+  <h2>Generate and Download Sample XML Document</h2>
+  <p>Clicking on one of these links will generate the sample XML file we're going to be
+    using for this tutorial. One link will generate the XML using REXML, and the other link
+    using Builder. I'll leave it as an exercise for the reader to figure out which link does what.</p>
+  <div style="text-align: center;">
+    <%=submit_tag "Generate Using REXML", @appointment, :action => "generate_with_rexml" %>
+
+  </div>
+</div>
+
+
+<div class="padded-body">
+  <h2>Upload the Sample XML Document, Parse and Manipulate</h2>
+  <p>This form lets you upload the Sample XML document that we generated above and
+    parse its content with both REXML and Hpricot.</p>
+   <div style="text-align: center;">
+  <p>
+    <% form_tag( {:action => 'upload'}, {:multipart => true} ) do -%>
+         <p>
+        <label for="file">File:</label><%= file_field_tag "xml_file" %><br/>
+        <%= submit_tag "Parse with REXML" %>
+        <%= submit_tag "Parse with REXML recursively" %>
+        </p>
+     <% end -%>
+ </p>
+      </div>
+</div>
+	</div>
+
+	<div id="bd">
+	  <%= yield %>
+	</div>
+
+	<div id="ft">&nbsp;</div>
+
+</div>
+</body>
+</html>
