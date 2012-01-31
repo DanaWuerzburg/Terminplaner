@@ -1,0 +1,14 @@
+<div>
+  <%= form_for(meinevariable) do |f| %>
+      <% variable = meinevariable.id.to_s %>
+      <input class="picker color {valueElement:'<%= variable %>',hash:true}" />
+      <%= f.text_field :name, :class => "smalltextarea textarea" %>
+
+      <!--hidden colortextfield-->
+      <%= f.text_field :colour, :id => meinevariable.id, :class => "displaynone textarea small {hash:true}" %>
+
+    <div class="actions">
+      <%= f.submit '', :class=> '', :title=>'New Group' %>
+    </div>
+  <% end %>
+</div>

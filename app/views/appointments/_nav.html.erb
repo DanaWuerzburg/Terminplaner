@@ -29,11 +29,11 @@
   </div>
     <div id="Settings">
         <% @groups.each do |group| %>
-            <div>
-                <input class="picker color{valueElement:'<%= group.name %>'}" />
-                <input id ="<%= group.name %>" style="display: none" value="<%= group.colour %>" onchange=""/>
-                <a class="colorlabel" href><%= group.name %></a>
-            </div>
+
+
+          <%= render :partial => 'groups/editallgroups', :locals => {:meinevariable => group} %>
+
+
         <% end %>
 
 

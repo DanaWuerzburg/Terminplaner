@@ -11,13 +11,15 @@
     </div>
   <% end %>
 
+
+
     <input class="picker color {valueElement:'tfcolour',hash:true}" />
     <%= f.text_field :name, :class => "smalltextarea textarea" %>
 
-
+    <!--hidden colortextfield-->
     <%= f.text_field :colour, :id => "tfcolour", :class => "displaynone textarea small {hash:true}" %>
 
   <div class="actions">
-    <%= f.submit '', :class=> 'button create', :title=>'New Group' %>
+    <%= f.submit '', :class=> '', :title=>'New Group' %>
   </div>
 <% end %>
