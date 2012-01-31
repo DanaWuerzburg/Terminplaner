@@ -26,11 +26,6 @@
     <%#= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
 
-
-    <label class="label">Friends</label>
-    <label class="label"><% @appointment.id %></label>
-    <%= Appointment.find_friends(current_user) %>
-
     <!-- Shared Friends -->
     <% unless current_user.friends.blank?%>
          <label class="label">Share With Friends</label>

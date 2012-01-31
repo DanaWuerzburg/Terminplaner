@@ -1,13 +1,21 @@
 
-
+ <%= render 'friendships/nav' %>
 <div id="cont">
+  <br />
   <section class="appointments">
     <h1><%= current_user.login %>'s Account</h1>
   <section class="notify">
     <%= flash[:notice] %>
   </section>
+    <br />
+    <div class="field">
+        <label class='label'>
+          Here you can see into your account data.
+          If you wish to edit your data or change your password,
+          click the Edit button on the bottom of this page
 
-<p> Here you can see into your account data. If you wish to edit your data or change your password, click the Edit button on the bottom of this page</p>
+        </label>
+    </div>
 
 
 
@@ -27,12 +35,13 @@
         </script>
   </div>
 
-  <!-- Friends -->
-    <p> </p>
-    <br>    <br> <br> <br> <br>
 
+</section>
+<section class="YourFriends">
+  <!-- Friends -->
 
     <h2>Your Friends</h2>
+  <br />
     <ul>
       <% for friendship in @user.friendships %>
       <li>
