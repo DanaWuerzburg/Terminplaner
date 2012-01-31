@@ -18,9 +18,7 @@
 			<div class="reminderFader">
 				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#" title="Today's Appointments"></a></div>
 			</div>
-			<div class="searchright">
-				<%= render :partial => 'appointments/search' %>
-			</div>
+
 
 
 
@@ -29,6 +27,7 @@
 	<ul>
 		<li><a href="#tabs-1">List</a></li>
 		<li><a href="#tabs-2">Calendar</a></li>
+        <li><%= render :partial => 'appointments/search' %></li>
 	</ul>
 	<div id="tabs-1">
 		<table class="pretty">
@@ -72,10 +71,10 @@
 
     <td class="tdtools">
       <!-- # User kann nur seine eigenen appointments editieren #-->
-       <%if current_user.id == appointment.user_id || current_user.admin? %>
-          <% link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
-          <% link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>
-       <% end%>
+       <%#if current_user.id == appointment.user_id || current_user.admin? %>
+          <%= link_to '', edit_appointment_path(appointment), class: 'button left edit', title: 'Edit Appointment'  %>
+          <%= link_to '', appointment, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete Appointment' %>
+       <%# end%>
     </td>
   </tr>
 <% end %>

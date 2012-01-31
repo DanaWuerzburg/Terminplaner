@@ -139,7 +139,7 @@ class AppointmentsController < ApplicationController
     @shared_friendship = FriendshipAppointment.new
     @appointment = Appointment.find(params[:id])
     respond_to { |format|
-      #format.html
+      format.html
       format.xml { render :xml => @appointment } }
   end
 
