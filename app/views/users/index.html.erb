@@ -7,8 +7,6 @@
   <thead>
 
     <th>Username</th>
-
-
     <!--ADMINFIELD-->
     <% if current_user %>
         <% if current_user.admin? %>
@@ -20,22 +18,7 @@
         <% end %>
     <% end %>
 
-     <!-- Adminfield ende -->
 
-  <!--  <th>Persistence token</th>
-    <th>Crypted password</th>
-    <th>Password salt</th>
-    <th>Single access token</th>
-    <th>Perishable token</th>
-    <th>Login count</th>
-    <th>Failed login count</th>
-    <th>Last request at</th>
-    <th>Current login at</th>
-    <th>Last login at</th>
-    <th>Current login ip</th>
-    <th>Last login ip</th>    -->
-    <th></th>
-    <th></th>
     <th></th>
     <th></th>
   </thead>
@@ -55,10 +38,9 @@
             <td><%= user.email %></td>
             <td><%= user.admin? %></td>
             <td><%= user.active? %></td>
-            <td><%= user.last_login_at %></td>
-            <td><%= link_to 'Show', user %></td>
-            <td><%= link_to 'Edit', edit_user_path(user) %></td>
-            <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+            <td><%= user.last_login_at.strftime('%d. %m. %Y') %></td>
+            <td><%= link_to '', edit_user_path(user), class: 'button left edit', title: 'Edit User' %>
+            <%= link_to '', user, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete User' %></td>
 
         <% end %>
     <% end %>
@@ -95,5 +77,4 @@
 
      <!-- Adminfield ende -->
 
-<%= link_to 'Back', appointments_path %>
 </section>
