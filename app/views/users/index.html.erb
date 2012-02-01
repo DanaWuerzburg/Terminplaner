@@ -38,7 +38,9 @@
             <td><%= user.email %></td>
             <td><%= user.admin? %></td>
             <td><%= user.active? %></td>
-            <td><%= user.last_login_at.strftime('%d. %m. %Y') %></td>
+            <td><% if user.last_login_at.eql?(nil) %><%= 'not yet'%>
+                <% else %><%= user.last_login_at.strftime('%d. %m. %Y') %>
+                <% end %></td>
             <td><%= link_to '', edit_user_path(user), class: 'button left edit', title: 'Edit User' %>
             <%= link_to '', user, confirm: 'Are you sure?', method: :delete, class: 'button right delete', title: 'Delete User' %></td>
 

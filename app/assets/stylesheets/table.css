@@ -1,4 +1,4 @@
-table{
+table.pretty{
 	font-size: 1em;
 	background: #fff;
 	margin: 45px;
@@ -7,46 +7,46 @@ table{
 	text-align: left;
 }
     /*table header*/
-    thead{
+    table.pretty > thead{
         border-bottom: 2px solid #6678b1;
     }
-    thead th{
+    table.pretty > thead th{
         font-size: 14px;
         font-weight: normal;
         color: #6678b1;
         padding: 10px 8px;
         text-align: center;
     }
-    thead th a{
+    table.pretty > thead th a{
         font-size: 14px;
         font-weight: normal;
         color: #6678b1;
     }
-    thead th a:visited{
+    table.pretty > thead th a:visited{
         color: #666699;
     }
-    thead th a:hover{
+    table.pretty > thead th a:hover{
         color: #666699;
         background: none;
     }
 
     /*table data*/
-    td{
+    table.pretty > tbody > tr > td{
        border-bottom: 1px solid #6678b1;
         color: #6678b1;
         padding: 6px 8px;
 
     }
-    td .tdnote{
+    table.pretty > tbody > tr > td.tdnote{
         text-align: justify;
     }
-    .tdtools{
-         width:150px;
+    table.pretty > tbody > tr > td.tdtools{
+         width: 150px;
     }
-    tbody tr:hover td{
+    table.pretty > tbody tr:hover td{
         color: #666699;
         background:  #CCCCCC;
     }
-    tbody tr:nth-child(odd){
+    table.pretty > tbody tr:nth-child(odd){
         background: #F6F6F2;
     }
