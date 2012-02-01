@@ -42,16 +42,29 @@ $(function(){
          //dialog
 		$( "#Settings" ).dialog({
 			autoOpen: false,
-			height: 300,
-			width: 350,
+			height: 400,
+			width: 400,
 			modal: true
 		});
 
 		$( "#btSettings" )
 			.button()
 			.click(function() {
-				$( "#Settings" ).dialog( "open" );
+				$( "#Settings" ).dialog("open");
 			});
+
+        $( "#AddNewAppointment" ).dialog({
+			autoOpen: false,
+            height: 400,
+			width: 400,
+			modal: true
+		});
+
+		$( "#btAddNewAppointment" )
+			.button()
+			.click(function() {
+				$( "#AddNewAppointment" ).dialog("open");
+		});
 
 		$( "#tabs" ).tabs();
 

@@ -14,7 +14,7 @@
     <div class="navright">
 
         <% if current_user %>
-            <a id="btSettings" class='button settings' src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('settingsPanel'); return true;" href="#" title="Settings"></a>
+            <a id="btSettings" class='button settings' href="#" title="Settings"></a>
             <% if current_user.admin? %>
               <%= link_to '',  users_path, :class=> 'button users', :alt => 'Users', :title => 'Users' %>
             <% end %>

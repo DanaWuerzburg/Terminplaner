@@ -59,6 +59,7 @@ a.right, input.right {
 }
 
 .drop, .textarea{
+    max-width: 200px;
     margin-top: 10px;
     padding: 2px 0 2px 4px;
     color: #669;
