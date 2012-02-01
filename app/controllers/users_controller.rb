@@ -5,9 +5,14 @@ class UsersController < ApplicationController
   before_filter :require_admin    ,:only =>   [:index]
 
 
+
+
   # GET /users
   # GET /users.json
   def index
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
     @users = User.all
 
     respond_to do |format|
@@ -19,6 +24,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -40,6 +48,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
     @user = User.find(params[:id])
 
   end

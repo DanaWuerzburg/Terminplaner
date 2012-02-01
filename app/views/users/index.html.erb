@@ -1,10 +1,10 @@
-<%= render 'friendships/nav' %>
+<section>
 <h1>Users List</h1>
 
 
 <p id="notice"><%= notice %></p>
-<table>
-  <tr>
+<table class ="pretty">
+  <thead>
 
     <th>Username</th>
 
@@ -38,10 +38,10 @@
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+  </thead>
 
 <% @users.each do |user| %>
-  <tr>
+  <tbody>
 
     <% # comments %>
 
@@ -81,7 +81,7 @@
     <td><%#= user.last_login_ip %></td>     -->
 
 
-  </tr>
+  </tbody>
 <% end %>
 </table>
 
@@ -96,3 +96,4 @@
      <!-- Adminfield ende -->
 
 <%= link_to 'Back', appointments_path %>
+</section>

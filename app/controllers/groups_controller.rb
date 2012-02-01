@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
     @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
      if current_user.admin?
       #admin darf alle Gruppen sehen und verwalten und nach user sortieren
