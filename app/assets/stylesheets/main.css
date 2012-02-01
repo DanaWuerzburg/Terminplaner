@@ -59,7 +59,6 @@
 	body{
 		}
     #wrap{
-	    margin:0;
 	    position:relative;
         width: 100%;
         height: auto;
@@ -70,20 +69,21 @@
     #cont{
     }
         section{
-            float: left;
+
             position:relative;
-            margin-left: 10px;
         }
             .appointments{
-                border-right: 1px solid #6678b1;
-                width: 730px;
+                width: 90%;
+                left:50%;
+            }
+            #tabs{
+                left:-50%;
             }
             .notify{
                 position:relative;
                 top: 20px;
                 font-size: 20px;
                 color: #ff0000;
-                max-width: 640px;
             }
              .reminder{
                 background: #F2F2F2;

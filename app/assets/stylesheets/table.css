@@ -1,8 +1,7 @@
 table.pretty{
 	font-size: 1em;
 	background: #fff;
-
-	width: 640px;
+	width: auto;
 	border-collapse: collapse;
 	text-align: left;
 
@@ -15,7 +14,7 @@ table.pretty{
         font-size: 14px;
         font-weight: normal;
         color: #6678b1;
-        padding: 10px 8px;
+        padding: 5px 8px;
         text-align: center;
         white-space: nowrap;
     }

@@ -66,7 +66,8 @@ $(function(){
 				$( "#AddNewAppointment" ).dialog("open");
 		});
 
-		$( "#tabs" ).tabs();
+		$( "#tabs" ).tabs({ selected: 3,
+         fx: { opacity: 'toggle' } });
 
         });
         $(function(){
