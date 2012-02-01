@@ -2,7 +2,7 @@
 
 table.pretty .group{
     width: 8px;
-    height: 100%;
+    max-height: 20px;
     padding:  0;
 }
 

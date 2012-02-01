@@ -4,7 +4,7 @@
 	<section class="appointments">
 
 
-	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
+
 
 
 
@@ -12,25 +12,35 @@
 
 
   <div id="tabs" class="noJquerycss">
-	<ul class="noJquerycss">
-		<li class="noJquerycss"><a href="#tabs-1" class="button list left"></a></li>
-		<li class="noJquerycss"><a href="#tabs-2" class="button calendar right"></a></li>
-        <li class= "noJquerycss floatright"><%= render :partial => 'appointments/search' %></li>
-	</ul>
+        <ul class="noJquerycss">
+              <li class="noJquerycss">
+                <a href="#tabs-1" class="button list left" title="List View"></a></li>
+              <li class="noJquerycss">
+                <a href="#tabs-2" class="button calendar right" title="Calendar View"></a></li>
 
-		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
-				<ul>
-					<% @appointments.reverse.each do |appointment| %>
-						<% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H') > Time.now.strftime('%H')%>
-						<li><%= appointment.start_at.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
-						<% end %>
-					<% end %>
-				</ul>
+              <li class="noJquerycss"><a class="button more"  src="hideNote" type="text/javascript" onClick="FadeContent('reminder'); return true;" href="#" title="Show/Hide Today's Appointments">
+                </a>
+              </li>
+              <li class="noJquerycss daytime"><h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4></li>
+              <li class= "noJquerycss floatright"><%= render :partial => 'appointments/search' %></li>
+        </ul>
+        <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
+            <ul>
+                <% @appointments.reverse.each do |appointment| %>
+                    <% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H') > Time.now.strftime('%H')%>
+                    <li><%= appointment.start_at.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
+                    <% end %>
+                <% end %>
+            </ul>
 
-			</div>
-			<div class="reminderFader">
-				<div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#" title="Today's Appointments"></a></div>
-			</div>
+        </div>
+
+
+
+        <!-- <div class="reminderFader">
+            <div><a class="button more" src="hideNote" type="text/javascript" language="JavaScript" onClick="FadeContent('reminder'); return true;" href="#" title="Today's Appointments"></a></div>
+        </div>          -->
+
 
 
 	<div id="tabs-1">
@@ -86,7 +96,7 @@
 </table>
     </div>
 	<div id="tabs-2">
-
+            <p>calendar View</p>
     </div>
 </div>
 

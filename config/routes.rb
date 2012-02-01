@@ -7,7 +7,7 @@ Terminplaner::Application.routes.draw do
   resources :user_sessions
   resources :users
   #resource :user, :as => 'account'  # a convenience route
-  resource :user, :as => :friend
+  resources :user, :as => :friend
   resources :application
   resources :appointments
   resources :appointments, :collection => {:with_code => :get}
@@ -29,9 +29,9 @@ Terminplaner::Application.routes.draw do
   # Calendar
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
-
   get "home/index"
 
+  root :to => 'appointments#index'
   #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
 
 
@@ -105,7 +105,7 @@ Terminplaner::Application.routes.draw do
   # root :to => 'welcome#index'
 
   #            rm public/index.html # in der console
-  root :to => 'appointments#index'
+
   #root :to => 'user_sessions#new'
 
   # See how all your routes lay out with "rake routes"

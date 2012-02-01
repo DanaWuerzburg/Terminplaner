@@ -5,15 +5,16 @@ a.button, input.button {
     text-decoration: none;
     border:  1px solid #dcdcdc;
     position: relative;
-    display: inline-block;
+
     text-shadow: 0 1px 0 #fff;
     transition: border-color .218s;
     border-radius: 2px;
 
-    cursor: pointer;
+    cursor: pointer !important;
     float: left;
     min-height: 28px;
     min-width: 38px;
+    vertical-align: middle
 }
 
 input.button{
@@ -132,17 +133,8 @@ a.clear, input.clear{
     border-left: none;
 }
 a.more, input.more{
-    width:16px;
-    height:16px;
-    background-color: transparent;
-    text-decoration: none;
-    border:  none;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    cursor: pointer;
-    float: left;
-    background-position: -40px -485px;
+    background-position: -40px -480px;
+
 }
 a.list, input.list{
     background-position: -40px -540px;
@@ -202,9 +194,10 @@ a.clear:hover, input.clear:hover{
     box-shadow: none;
 }
 a.more:hover, input.more:hover{
-    background-position: 0 -485px;
+    background-position: 0 -480px;
     background-color: transparent;
     box-shadow: none;
+
 }
 a.list:hover, input.list:hover{
     background-position: 0 -540px;

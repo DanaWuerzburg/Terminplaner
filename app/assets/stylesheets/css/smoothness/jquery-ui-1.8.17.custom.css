@@ -583,11 +583,18 @@ li.noJquerycss{
     width: inherit;
     height: inherit;
     padding: 0 !important;
-    margin: 5px 0 !important;
+    margin: 5px 0;
+    opacity:1 !important;
 }
 .noJquerycss  a {
     padding: 0 !important;
 }
 .noJquerycss{
     border:  none !important;
+}
+li.daytime{
+    margin-top: 10px;
+    width:auto;
+    left:10%;
+    text-align: center;
 }
