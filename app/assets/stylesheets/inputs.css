@@ -1,5 +1,7 @@
 a.button, input.button {
-    background: url("/images/sprite_icons.png") no-repeat #F2F2F2;
+    background-image: url("/images/sprite_icons.png") !important;
+    background-repeat: no-repeat;
+    background-color: #F2F2F2;
     color: #6e6e6e;
     font: bold 12px Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -87,7 +89,7 @@ a.right, input.right {
 }
 
 a.add, input.add{
-    background-position: -40px -30px;
+    background-position: -40px -30px !important;
 }
 a.edit, input.edit{
     background-position: -40px -60px;
@@ -146,7 +148,9 @@ a.calendar, input.calendar{
 
 
 a.add:hover, input.add:hover{
-    background-position: 0 -30px;
+    background-color: transparent;
+    box-shadow: none;
+    background-position: 0 -30px !important;
 }
 a.edit:hover, input.edit:hover{
     background-position: 0 -60px;
