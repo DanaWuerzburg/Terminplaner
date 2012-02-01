@@ -27,7 +27,7 @@
 	<ul>
 		<li><a href="#tabs-1">List</a></li>
 		<li><a href="#tabs-2">Calendar</a></li>
-        <li><%= render :partial => 'appointments/search' %></li>
+        <li class= "floatright"><%= render :partial => 'appointments/search' %></li>
 	</ul>
 	<div id="tabs-1">
 		<table class="pretty">
@@ -40,7 +40,7 @@
     <th>Friend</th>
     <!--ADMINFIELD -->
     <% if current_user.admin? %>
-        <th>Group ID</th>
+
         <th><%= sortable "ID", "ID"%></th>
         <th><%= sortable "user_id","User ID" %></th>
     <% end %>
@@ -61,7 +61,7 @@
     <td><%= render :partial => 'appointments/friendshares', :locals => {:appointment => appointment} %></td>
     <!---->
     <% if current_user.admin? %>
-        <td><%= appointment.group_id%></td>
+
         <td><%= appointment.id %></td>
         <td><%= appointment.user_id %></td>
     <% end %>

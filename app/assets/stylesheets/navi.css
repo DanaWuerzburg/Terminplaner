@@ -32,7 +32,10 @@
  }
 
  .floatleft{
-     float:left;
+     float:left !important;
+ }
+ .floatright{
+     float:right !important;
  }
 .navleft{
     width: auto;

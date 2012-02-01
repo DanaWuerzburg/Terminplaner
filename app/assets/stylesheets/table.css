@@ -5,6 +5,7 @@ table.pretty{
 	width: 640px;
 	border-collapse: collapse;
 	text-align: left;
+
 }
     /*table header*/
     table.pretty > thead{
@@ -16,6 +17,7 @@ table.pretty{
         color: #6678b1;
         padding: 10px 8px;
         text-align: center;
+        white-space: nowrap;
     }
     table.pretty > thead th a{
         font-size: 14px;
@@ -41,7 +43,7 @@ table.pretty{
         text-align: justify;
     }
     table.pretty > tbody > tr > td.tdtools{
-         width: 150px;
+             white-space: nowrap;
     }
     table.pretty > tbody tr:hover td{
         color: #666699;

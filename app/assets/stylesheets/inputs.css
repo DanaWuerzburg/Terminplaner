@@ -59,7 +59,7 @@ a.right, input.right {
 
 .drop, .textarea{
     margin-top: 10px;
-    padding-left: 4px;
+    padding: 2px 0 2px 4px;
     color: #669;
     transition: border-color .218s;
     background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
@@ -75,11 +75,13 @@ a.right, input.right {
 
 .textarea{
     background:  #fff;
+    line-height: 18pt;
 }
 .searcharea{
     margin-top: 0;
     padding: 2px 0;
     border-right: none;
+    line-height: 18pt;
 }
 
 a.add, input.add{
