@@ -4,50 +4,49 @@ Terminplaner::Application.routes.draw do
 
 
   resources :groups
-
   resources :user_sessions
-
-
-
   resources :users
-
   #resource :user, :as => 'account'  # a convenience route
   resource :user, :as => :friend
+  resources :application
+  resources :appointments
+  resources :appointments, :collection => {:with_code => :get}
+  resources :friendships
+  resources :friendship_appointments
+  resources :password_resets
 
   match 'signup' => 'users#new', :as => :signup
-
-  get "home/index"
-
-  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
-  resources :application
   match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"1"
   match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
-
-
-  resources :appointments
-
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
   match ':controller(/:id(.:format)(/:action))'
   match ':controller(/:action(/:id(.:format)))'
-  resources :appointments, :collection => {:with_code => :get}
-
-
-
   # User Activation
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation
-
   # Calendar
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
 
-  resources :friendships
-  resources :friendship_appointments
+  get "home/index"
+
+  #TODO  testen und so umschreiben das man das lazout aendert,gendwas mit dem session im application_controller def setLayout stimmt nicht
 
 
-  resources :password_resets
+
+
+
+
+
+
+
+
+
+
+
+
 
   #put 'password_reset/:password_reset_code' => 'users#password_reset', :as => :password_reset, :via => :put
   #get 'password_reset/:password_reset_code' => 'users#password_reset', :as => :password_reset, :via => :get

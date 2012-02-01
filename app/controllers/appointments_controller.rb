@@ -83,6 +83,9 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
     @users= User.all
     @shared_friendships = FriendshipAppointment.all
     @shared_friendship = FriendshipAppointment.new
@@ -93,7 +96,7 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @appointment }
-      format.xml {render :xml => @appointment, :status => :created, :location => @appoitnment }
+      format.xml {render :xml => @appointment, :status => :created, :location => @appointment }
     end
   end
 

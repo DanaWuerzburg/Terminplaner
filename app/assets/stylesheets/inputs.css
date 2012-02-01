@@ -9,7 +9,7 @@ a.button, input.button {
     text-shadow: 0 1px 0 #fff;
     transition: border-color .218s;
     border-radius: 2px;
-    margin-right: 10px;
+
     cursor: pointer;
     float: left;
     min-height: 28px;
@@ -144,6 +144,12 @@ a.more, input.more{
     float: left;
     background-position: -40px -485px;
 }
+a.list, input.list{
+    background-position: -40px -540px;
+}
+a.calendar, input.calendar{
+        background-position: -40px -510px;
+}
 
 
 a.add:hover, input.add:hover{
@@ -190,15 +196,23 @@ a.search:hover, input.search:hover{
 }
 a.clear:hover, input.clear:hover{
     background-position: -40px -90px;
+    background-color: #ffffff;
     border-color: #dcdcdc;
     border-left: none;
-    background-color: #fff;
     box-shadow: none;
 }
 a.more:hover, input.more:hover{
     background-position: 0 -485px;
     background-color: transparent;
     box-shadow: none;
+}
+a.list:hover, input.list:hover{
+    background-position: 0 -540px;
+    cursor: pointer !important;
+}
+a.calendar:hover, input.calendar:hover{
+    background-position: 0 -510px;
+    cursor: pointer !important;
 }
 .displaynone{
     display:none;

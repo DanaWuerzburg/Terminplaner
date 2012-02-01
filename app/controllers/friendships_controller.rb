@@ -2,7 +2,6 @@ class FriendshipsController < ApplicationController
   # GET /friendships
   # GET /friendships.json
   def index
-    @groups = Group.all
     @group = Group.new
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
@@ -19,6 +18,10 @@ class FriendshipsController < ApplicationController
   # GET /friendships/1
   # GET /friendships/1.json
   def show
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+
+
    # redirect_to user_path(current_user)
    # @friendship1 = Friendship.find(params[:id])
     @friend = User.find(params[:id])

@@ -5,6 +5,19 @@
 
 
 	    <h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4>
+
+
+
+
+
+
+  <div id="tabs" class="noJquerycss">
+	<ul class="noJquerycss">
+		<li class="noJquerycss"><a href="#tabs-1" class="button list left"></a></li>
+		<li class="noJquerycss"><a href="#tabs-2" class="button calendar right"></a></li>
+        <li class= "noJquerycss floatright"><%= render :partial => 'appointments/search' %></li>
+	</ul>
+
 		   <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
 				<ul>
 					<% @appointments.reverse.each do |appointment| %>
@@ -20,15 +33,6 @@
 			</div>
 
 
-
-
-
-  <div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">List</a></li>
-		<li><a href="#tabs-2">Calendar</a></li>
-        <li class= "floatright"><%= render :partial => 'appointments/search' %></li>
-	</ul>
 	<div id="tabs-1">
 		<table class="pretty">
 
@@ -85,7 +89,7 @@
 
     </div>
 </div>
-    <br />
+
   <div class="padded-body">
   <h2>Generate and Download Sample XML Document</h2>
 

@@ -12,7 +12,6 @@
     #navbar > div{
     }
     #navbar ul{
-        padding-right: 20px;
     }
     #navbar ul.info{
         float:left;
@@ -51,6 +50,7 @@
     width: auto;
     margin-left:auto;
     margin-right: 15px;
+    padding-right: 10px;
     text-align:right;
     float:right;
 }
