@@ -67,17 +67,23 @@
         height: 55px;
     }
     #cont{
+
+    }
+    .centered{
+        width: 90%;
+        position:relative;
+        left: 50%;
     }
         section{
 
+            left:-50%;
             position:relative;
         }
             .appointments{
-                width: 90%;
-                left:50%;
+
             }
             #tabs{
-                left:-50%;
+
             }
             .notify{
                 position:relative;
@@ -135,9 +141,11 @@
                    border-radius: 4px;
                 }
                 .formular{
-                    margin: 45px;
+
                 }
                 .label{
+                    margin-top:10px;
+                    margin-bottom:5px;
                     margin-left:5px;
 		            font-size: 14px;
 		            color: #003399;

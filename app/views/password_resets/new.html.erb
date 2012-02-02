@@ -9,14 +9,13 @@
             <%= flash[:notice] %>
           </section>
         <p>
-          <br /> <br />
-          Fill out the form below and instructions to reset your password will be emailed to you:<br />
-        <br />
+
+          Fill out the form below and instructions to reset your password will be emailed to you:
         </p>
 
     <%= form_tag password_resets_path do %>
     <div class="field">
-      <label class="label"> <%= label_tag(:email, "")+ "Email:"  %> </label>
+      <label class="label"><%= label_tag(:email, "")+ "Email:"  %></label>
 
         <%= email_field_tag(:email) %>
     </div>

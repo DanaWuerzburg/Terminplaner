@@ -10,9 +10,8 @@
     </section>
 
     <p>
-       <br /><br />
-       Fill out the form below and instructions to reset your password will be emailed to you:<br />
-       <br />
+       Fill out the form below and instructions to reset your password will be emailed to you:
+
     </p>
 
     <%= form_for @user do |f| %>
@@ -30,8 +29,7 @@
       <div class="field">
         <label class="label" >Password</label>
         <%= f.password_field :password, :class=>"textarea" %>
-      </div>
-      <div class="field">
+
           <label class="label" >Password (confirm)</label>
           <%= f.password_field :password_confirmation, :class=>"textarea" %>
       </div>

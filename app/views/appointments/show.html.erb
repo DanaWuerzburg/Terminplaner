@@ -3,17 +3,12 @@
 <div id="cont">
   <section class="appointments">
 
-
-    <div class="formular">
         <label for="date" class="label">Date</label>
         <p><%= @appointment.start_at %></p>
 
-      <label for="note" class="label">Note:</label>
-      <p><%= @appointment.note %></p>
+        <label for="note" class="label">Note:</label>
+        <p><%= @appointment.note %></p>
 
-
-
-      </div>
     <%  aFile = File.new("./datein/testfile", "a") %>
               <%  aFile.puts "hallo"   %>
               <%  aFile.close  %>

@@ -1,3 +1,4 @@
+<div class="group">
 <%= form_for(@group) do |f| %>
   <% if @group.errors.any? %>
     <div id="error_explanation">
@@ -14,12 +15,11 @@
 
 
     <input class="picker color {valueElement:'tfcolour',hash:true}" />
-    <%= f.text_field :name, :class => "smalltextarea textarea" %>
+    <%= f.text_field :name, :class => "textarea" %>
 
     <!--hidden colortextfield-->
     <%= f.text_field :colour, :id => "tfcolour", :class => "displaynone textarea small {hash:true}" %>
-
-  <div class="actions">
     <%= f.submit '', :class=> '', :title=>'New Group' %>
-  </div>
+
 <% end %>
+</div>

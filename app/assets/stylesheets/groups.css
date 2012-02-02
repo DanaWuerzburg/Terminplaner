@@ -10,9 +10,13 @@ table.pretty .group{
     width: 210px;
 }
 
+.group{
+    margin-top: 5px;
+
+}
 .picker{
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     float: left;
     border: 1px solid #f5f5f5;
     margin: 2px 5px;

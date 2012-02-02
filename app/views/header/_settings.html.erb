@@ -1,0 +1,19 @@
+   <% if current_user %>
+    <div id="Settings">
+      <div class="field">
+        <h4>Profile</h4>
+      </div>
+      <div class="field">
+        <h4>Groups</h4>
+        <% @groups.each do |group| %>
+            <% unless group.id == 1 %>
+                <%= render :partial => 'groups/editallgroups', :locals => {:meinevariable => group} %>
+            <% end %>
+        <% end %>
+	    <%= render :partial => "groups/form" %>
+      </div>
+      <div class="field">
+        <h4>Friends</h4>
+      </div>
+   </div>
+   <% end %>

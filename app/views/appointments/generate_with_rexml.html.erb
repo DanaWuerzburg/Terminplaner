@@ -33,7 +33,7 @@
   <p>
     <% form_tag( {:action => 'upload'}, {:multipart => true} ) do -%>
          <p>
-        <label for="file">File:</label><%= file_field_tag "xml_file" %><br/>
+        <label for="file">File:</label><%= file_field_tag "xml_file" %>
         <%= submit_tag "Parse with REXML" %>
         <%= submit_tag "Parse with REXML recursively" %>
         </p>

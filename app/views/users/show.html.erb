@@ -1,11 +1,11 @@
 <div id="cont">
-  <br />
+
   <section class="appointments">
     <h1><%= current_user.login %>'s Account</h1>
   <section class="notify">
     <%= flash[:notice] %>
   </section>
-    <br />
+
     <div class="field">
         <label class='label'>
           Here you can see into your account data.
@@ -31,7 +31,7 @@
   <!-- Friends -->
 
     <h2>Your Friends</h2>
-  <br />
+
     <ul>
       <% for friendship in @user.friendships %>
       <li>

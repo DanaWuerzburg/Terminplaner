@@ -41,10 +41,13 @@ $(function(){
 
          //dialog
 		$( "#Settings" ).dialog({
+            title: '<h4>Settings</h4>',
 			autoOpen: false,
-			height: 400,
-			width: 400,
-			modal: true
+			height: 'auto',
+			width: 'auto',
+			modal: true,
+            show: 'drop',
+            hide: 'highlight'
 		});
 
 		$( "#btSettings" )
@@ -54,11 +57,15 @@ $(function(){
 			});
 
         $( "#AddNewAppointment" ).dialog({
+            title: '<h4>Add Appointment</h4>',
 			autoOpen: false,
-            height: 400,
-			width: 400,
-			modal: true
+            height: 'auto',
+			width: 'auto',
+			modal: true,
+            show: 'drop',
+            hide: 'highlight'
 		});
+
 
 		$( "#btAddNewAppointment" )
 			.button()
@@ -66,8 +73,19 @@ $(function(){
 				$( "#AddNewAppointment" ).dialog("open");
 		});
 
-		$( "#tabs" ).tabs({ selected: 3,
-         fx: { opacity: 'toggle' } });
+
+		$( "#tabs" ).tabs({
+         selected: 1,
+         fx: { opacity: 'toggle' },
+         ajaxOptions: {
+                async: false,
+				error: function( xhr, status, index, anchor ) {
+					$( anchor.hash ).html(
+						"Couldn't load this tab. We'll try to fix this as soon as possible. " +
+						"If this wouldn't be a demo." );
+				}
+			}
+        });
 
         });
         $(function(){
