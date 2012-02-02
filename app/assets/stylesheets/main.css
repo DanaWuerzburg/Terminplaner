@@ -75,7 +75,7 @@
         left: 50%;
     }
         section{
-
+            height: auto;
             left:-50%;
             position:relative;
         }

@@ -11,7 +11,9 @@ table.pretty .group{
 }
 
 .group{
-    margin-top: 5px;
+    position: relative;
+    height:30px;
+    margin: 5px 0;
 
 }
 .picker{

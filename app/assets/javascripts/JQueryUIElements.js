@@ -47,7 +47,7 @@ $(function(){
 			width: 'auto',
 			modal: true,
             show: 'drop',
-            hide: 'highlight'
+            hide: 'drop'
 		});
 
 		$( "#btSettings" )
@@ -63,7 +63,7 @@ $(function(){
 			width: 'auto',
 			modal: true,
             show: 'drop',
-            hide: 'highlight'
+            hide: 'drop'
 		});
 
 
