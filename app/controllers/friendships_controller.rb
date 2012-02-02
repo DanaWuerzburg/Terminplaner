@@ -100,9 +100,9 @@ class FriendshipsController < ApplicationController
 
     if @friendship1.update_attributes(params[:friendship1]) && @friendship2.update_attributes(params[:friendship2])
       flash[:notice] = 'Friend sucessfully accepted!'
-      redirect_to friendships_path
+      redirect_to appointments_path
     else
-      redirect_to friendships_path
+      redirect_to appointments_path
     end
     #@friendship = Friendship.find(params[:id])
     #

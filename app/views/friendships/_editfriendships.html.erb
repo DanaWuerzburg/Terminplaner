@@ -1,0 +1,10 @@
+
+
+  <%= render :partial => 'friendships/friends' %>
+
+    <%= link_to 'Find new Friends',friendship_path(current_user) %>
+
+    <label class="label">Requested</label>
+    <%= render :partial => 'friendships/requested_friends' %>
+    <label class="label">Pending</label>
+    <%= render :partial => 'friendships/pending_friends' %>

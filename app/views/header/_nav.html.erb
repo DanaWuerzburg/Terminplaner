@@ -14,14 +14,11 @@
     <div class="navright">
 
         <% if current_user %>
-            <a id="btSettings" class='button settings' href="#" title="Settings"></a>
+
             <% if current_user.admin? %>
               <%= link_to '',  users_path, :class=> 'button users', :alt => 'Users', :title => 'Users' %>
             <% end %>
-
-
-            <%= link_to '',  user_path(current_user.id), :class=> 'button userinfo left', :alt => 'My Account', :title => 'My Account', :name => 'My Account' %>
-            <%= link_to '',  friendships_path, :class=> 'button users middle', :alt => 'Friends', :title => 'Friends' %>
+            <a id="btSettings" class='button settings left' href="#" title="Settings"></a>
             <%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
         <% else %>
 

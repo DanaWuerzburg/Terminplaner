@@ -432,7 +432,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Dialog#theming
  */
-.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+.ui-dialog { border: none; position: absolute; margin: 5px 20px; width: 300px; overflow: hidden; background: #ffffff url(/images/bg_dialog.png) center repeat-y; background-color: transparent !important; }
 .ui-dialog .ui-dialog-titlebar { position: relative;  }
 .ui-dialog .ui-dialog-title { float: left; margin: 5px 0 5px 10px; }
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
