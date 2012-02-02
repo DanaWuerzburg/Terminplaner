@@ -2,7 +2,13 @@
     <div id="Settings">
       <div class="field">
         <h4>Profile</h4>
+        <%= render :partial => 'users/edituser', :locals => {:meinevariable => current_user} %>
       </div>
+
+      <div class="field">
+        <h4>Friends</h4>
+      </div>
+
       <div class="field">
         <h4>Groups</h4>
         <% @groups.each do |group| %>
@@ -11,9 +17,6 @@
             <% end %>
         <% end %>
 	    <%= render :partial => "groups/form" %>
-      </div>
-      <div class="field">
-        <h4>Friends</h4>
       </div>
    </div>
    <% end %>

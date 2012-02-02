@@ -1,4 +1,3 @@
-
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -52,70 +51,3 @@
 
   </div>
 <% end %>
-
-
-
-
-
-<!-- ALTESDOKUMENT
-<%#= form_for(@user) do |f| %>
-  <%# if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%#= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <%# @user.errors.full_messages.each do |msg| %>
-        <li><%#= msg %></li>
-      <%# end %>
-      </ul>
-    </div>
-  <%# end %>
-
-  <div class="field">
-    <%#= f.label :login %>
-    <%#= f.text_field :login %>
-
-    <%#= f.label :email %>
-    <%#= f.text_field :email %>
-
-    <%#= f.label :persistence_token %>
-    <%#= f.text_field :persistence_token %>
-
-    <%#= f.label :crypted_password %>
-    <%#= f.text_field :crypted_password %>
-
-    <%#= f.label :password_salt %>
-    <%#= f.text_field :password_salt %>
-
-    <%#= f.label :single_access_token %>
-    <%#= f.text_field :single_access_token %>
-
-    <%#= f.label :perishable_token %>
-    <%#= f.text_field :perishable_token %>
-
-    <%#= f.label :login_count %>
-    <%#= f.number_field :login_count %>
-
-    <%#= f.label :failed_login_count %>
-    <%#= f.number_field :failed_login_count %>
-
-    <%#= f.label :last_request_at %>
-    <%#= f.datetime_select :last_request_at %>
-
-    <%#= f.label :current_login_at %>
-    <%#= f.datetime_select :current_login_at %>
-
-    <%#= f.label :last_login_at %>
-    <%#= f.datetime_select :last_login_at %>
-
-    <%#= f.label :current_login_ip %>
-    <%#= f.text_field :current_login_ip %>
-
-    <%#= f.label :last_login_ip %>
-    <%#= f.text_field :last_login_ip %>
-  </div>
-  <div class="actions">
-    <%#= f.submit %>
-  </div>
-<%# end %>
--->
