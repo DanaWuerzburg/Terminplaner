@@ -5,12 +5,12 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
+
     @group = Group.new
-    @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
      if current_user.admin?
       #admin darf alle Gruppen sehen und verwalten und nach user sortieren
+       @groups = Group.all
 
     else
       #wenn der User kein Admin ist, werden nur com user angelegte Gruppen gezeigt
@@ -29,6 +29,7 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
     respond_to do |format|
       format.html # show.html.erb
@@ -79,7 +80,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.update_attributes(params[:group])
-        format.html { redirect_to @group, notice: 'Group was successfully updated.' }
+        format.html { redirect_to appointments_path, notice: 'Group was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

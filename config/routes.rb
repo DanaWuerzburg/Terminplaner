@@ -1,8 +1,5 @@
 Terminplaner::Application.routes.draw do
 
-
-
-
   resources :groups
   resources :user_sessions
   resources :users
@@ -20,6 +17,8 @@ Terminplaner::Application.routes.draw do
   match 'appointments#index' => "application", :action=>"set_layout", :mobile=>"0"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  match 'appointments#index' => "application", :action=>"groups#edit"
 
   match ':controller(/:id(.:format)(/:action))'
   match ':controller(/:action(/:id(.:format)))'
