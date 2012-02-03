@@ -158,7 +158,7 @@ class AppointmentsController < ApplicationController
         if @appointment.save
           @appointment.create_friendshare(params['friendshare'])
           #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
-          flash[:notice] = 'Der Termin wurde hinzugefuegt '
+          flash[:notice] = 'Appointment saved.'
           format.xml  { render :xml => @appointment, :status => :created, :location => @appointment }
           redirect_to :action => :index and return
         else
@@ -181,7 +181,7 @@ class AppointmentsController < ApplicationController
         @appointment.create_friendshare(params['friendshare'])
 
         strg = "#{@appointment.note}"
-        flash[:notice] = "Updated appointment:  " + strg[0..30] + "..."
+        flash[:notice] = "Appointment updated."
         format.xml {render :xml => @appointment}
         format.html { redirect_to :action => :index and return }
         format.json { head :ok }
@@ -205,7 +205,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
 
     respond_to do |format|
-       flash[:notice] = 'Appointment was deleted'
+       flash[:notice] = 'Appointment deleted.'
       format.html { redirect_to appointments_url }
       format.json { head :ok }
     end

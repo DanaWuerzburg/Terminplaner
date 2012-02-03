@@ -60,18 +60,18 @@ class FriendshipsController < ApplicationController
     @friendship2 = Friendship.create(params[:friendship2])
 
     if @friendship1.save && @friendship2.save
-      flash[:notice] = "Added friend."
+      flash[:notice] = "You sent a friend request to " + @friend.login + "."
       redirect_to friendships_path
     else
-      flash[:error] = "Unable to add friend."
+      flash[:error] = "Unable to sent a friend request to " + @friend.login + "."
       redirect_to friendships_path
     end
 
     #if @friendship.save
-    #  flash[:notice] = "Added friend."
+    #  flash[:notice] = "You sent a friend request to " + @friend.login + "."
     #  redirect_to root_url
     #else
-    #  flash[:error] = "Unable to add friend."
+    #  flash[:error] = "Unable to sent a friend request to " + @friend.login + "."
     #  redirect_to root_url
     #end
 
@@ -99,7 +99,7 @@ class FriendshipsController < ApplicationController
     @friendship2 = Friendship.find_by_user_id_and_friend_id(@friend.id, @user.id)
 
     if @friendship1.update_attributes(params[:friendship1]) && @friendship2.update_attributes(params[:friendship2])
-      flash[:notice] = 'Friend sucessfully accepted!'
+      flash[:notice] = "You are now friends with " + @friend.login + "."
       redirect_to appointments_path
     else
       redirect_to appointments_path
@@ -129,7 +129,7 @@ class FriendshipsController < ApplicationController
 
     #@friendship = current_user.friendships.find(params[:id])
     #@friendship.destroy
-    #flash[:notice] = "Removed friendship."
+    #flash[:notice] = "You are not friends with " + @friend.login + " anymore."
     #redirect_to current_user
 
     #@friendship = Friendship.find(params[:id])
