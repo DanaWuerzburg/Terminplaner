@@ -8,27 +8,11 @@
         <input type="text" disabled="disabled" value="<%= @appointment.note %>">
 
 
-    <%  aFile = File.new("./datein/testfile", "a") %>
-              <%  aFile.puts "hallo"   %>
-              <%  aFile.close  %>
-              <%  file = File.new("./datein/testfile2", "a") %>
-              <%  aFile = File.new("./datein/testfile", "r") %>
-              <%  b=aFile.gets    %>
-              <%=  file.write(b)    %>
-              <%  aFile.close    %>
-              <%  file.close    %>
+        <h4>Generate and Download XML Document</h4>
 
-
-
-        <h4>Generate and Download Sample XML Document</h4>
-
-              <%=link_to "Download as xml", :action => "generate_with_rexml" %>
-              <%=link_to "Show as xml", :action => "show_with_rexml" %>
-
-
-
-
-
+           <%=link_to "Download as xml", :action => "send_xml_file_single" %>
+           <%=link_to "Show as xml", :action => "show_with_xml_single" %>
+            <%=link_to "Download ALL xml", :action => "send_xml_file" %>
 
      <h4>Upload the Sample XML Document, Parse and Manipulate</h4>
 
@@ -39,11 +23,11 @@
            <%= submit_tag("Parse with REXML") %>
 
 
+        <%#= render :partial => 'appointments/xml', :locals => {:apps => @appointment} %>
 
-     <%= form_tag({:action => 'upload', :id => @appointment}, :multipart => true) %>
-     Fuer die zweite Implementierung noch eine Version
-     Waehlen Sie eine Datei : <%= file_field("appointment", "report")  %>
-     <%= submit_tag("upload au dBuch")%>
+     <%#= form_tag({:action => 'upload', :id => @appointment}, :multipart => true) %>
+     <%#= file_field("appointment", "report")  %>
+     <%#= submit_tag("upload au dBuch")%>
 
 
 </div>
