@@ -58,10 +58,10 @@ class FriendshipAppointmentsController < ApplicationController
 
 
     if @friendship1.save && @friendship2.save
-      flash[:notice] = "Added friend to appointment."
+      flash[:notice] = "You shared your appointment with " + @shared_friend.login + "."
       #redirect_to appointments_path
     else
-      flash[:error] = "Unable to add friend to appointment."
+      flash[:error] = "Unable to share your appointment with " + @shared_friend.login + "."
       #redirect_to appointments_path
     end
 
@@ -79,7 +79,7 @@ class FriendshipAppointmentsController < ApplicationController
     @friendship2 = Friendship.find_by_user_id_and_friend_id(@shared_friend.id, @user.id)
 
     if @friendship1.update_attributes(params[:friendship1]) && @friendship2.update_attributes(params[:friendship2])
-      flash[:notice] = 'Appointment friend sucessfully updated!'
+      flash[:notice] = "You shared your appointment with " + @shared_friend.login + "."
       redirect_to appointments_path
     else
       redirect_to appointments_path

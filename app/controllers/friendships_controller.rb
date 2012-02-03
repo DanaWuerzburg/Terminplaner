@@ -125,6 +125,9 @@ class FriendshipsController < ApplicationController
     @friend = User.find(params[:id])
     @friendship1 = @user.friendships.find_by_friend_id(params[:id]).destroy
     @friendship2 = @friend.friendships.find_by_user_id(params[:id]).destroy
+
+
+    flash[:notice] = "You cancelled your friend request to " + @friend.login + "."
     redirect_to friendships_path
 
     #@friendship = current_user.friendships.find(params[:id])
