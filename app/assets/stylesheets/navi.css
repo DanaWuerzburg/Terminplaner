@@ -1,7 +1,7 @@
  #navbar{
     height: 30px;
     width: 100%;
-    background: #F2F2F2;
+    background: url("/images/bg_dialog.png") transparent center repeat-y;
     padding: 5px 15px;
     position: fixed;
     top:0;

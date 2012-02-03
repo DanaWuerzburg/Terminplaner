@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120131204816) do
+ActiveRecord::Schema.define(:version => 20120202175824) do
 
   create_table "appointments", :force => true do |t|
     t.datetime "start_at"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20120131204816) do
     t.string   "group"
     t.integer  "user_id"
     t.integer  "group_id"
-    t.string   "colour"
+    t.string   "color"
     t.datetime "end_at"
     t.string   "name"
   end

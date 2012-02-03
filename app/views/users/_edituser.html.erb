@@ -1,6 +1,6 @@
 <%= form_for(meinevariable) do |f| %>
 
-  <div class="field">
+
    <label class="label" >Username</label>
     <%= f.text_field :login, :class=>"textarea" %>
 
@@ -12,9 +12,8 @@
 
       <label class="label" >Password (confirm)</label>
       <%= f.password_field :password_confirmation, :class=>"textarea" %>
-  </div>
-  <div class="actions">
-    <%= f.submit '', :class=> 'button create', :title=>'Save Account' %>
 
-  </div>
+    <%= f.submit '', :class=> 'button create floatright', :title=>'Save Account' %>
+
+
 <% end %>

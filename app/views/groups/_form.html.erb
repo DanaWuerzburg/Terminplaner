@@ -15,7 +15,7 @@
 
 
     <input class="picker color {valueElement:'tfcolour',hash:true}" />
-    <%= f.text_field :name, :class => "textarea searcharea floatleft" %>
+    <%= f.text_field :name, :class => "textarea searcharea floatleft", :placeholder => "New Group..." %>
     <%= f.submit '', :class=> 'button accept without right', :title=>'New Group' %>
     <!--hidden colortextfield-->
     <%= f.text_field :colour, :id => "tfcolour", :class => "displaynone textarea small {hash:true}" %>

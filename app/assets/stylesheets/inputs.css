@@ -41,6 +41,7 @@ a.left, input.left {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-left: 5px;
+    margin-right: 0 !important;
 }
 a.middle, input.middle {
     border-radius: 0;
@@ -51,7 +52,8 @@ a.middle:hover,
 a.right:hover,
 input.middle:hover,
 input.right:hover {
-    border-left: solid 1px #999
+    border-left: solid 1px #999;
+
 }
 a.right, input.right {
     border-top-left-radius: 0;
@@ -59,6 +61,7 @@ a.right, input.right {
     border-left: solid 1px #F2F2F2;
     border-left: solid 1px rgba(255, 255, 255, 0);
     margin-right: 5px;
+    margin-left: 0 !important;
 }
 
 .drop, .textarea{

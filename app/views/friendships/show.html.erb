@@ -1,24 +1,20 @@
 <section>
+<div class="field">
 <h4>Find a new Friend! </h4>
-
-
 <p id="notice"><%= notice %></p>
-<table>
-  <tr>
 
-    <th>Username</th>
-    <th></th>
-  </tr>
+
+    <label class="label">Username</label>
+
 
 <% @users.each do |user| %>
-  <tr>
+
 
     <% unless user== current_user %>
 
-        <td><%= user.login %></td>
-        <td><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>  </td>
+        <label><%= user.login %></label>
+        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
     <%end%>
-  </tr>
 <% end %>
-</table>
+    </div>
 </section>

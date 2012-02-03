@@ -1,5 +1,8 @@
 <footer>
           <!-- Mobile seite -->
-         <%= link_to "", :controller => "application", :action => "set_layout", :mobile => "1" %>
+            <div class="notify">
+                <%= flash[:notice] %>
+            </div>
+            <%= link_to "", :controller => "application", :action => "set_layout", :mobile => "1" %>
          <%#= link_to "MOBILE SITE2", :controller => "user_session", :action => "set_layout", :mobile => "1" %>
         </footer>

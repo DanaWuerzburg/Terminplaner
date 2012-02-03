@@ -1,13 +1,9 @@
 
 
 
-  <section class="passwordReset">
+  <section>
 
     <h1>Change <%= @user.login %>'s Password</h1>
-
-    <section class="notify">
-       <%= flash[:notice] %>
-    </section>
 
     <p>
        Fill out the form below and instructions to reset your password will be emailed to you:
@@ -32,9 +28,7 @@
 
           <label class="label" >Password (confirm)</label>
           <%= f.password_field :password_confirmation, :class=>"textarea" %>
-      </div>
 
-      <div class="actions">
         <%= f.submit '',:url => password_reset_path, :method => :put , :class=> 'button create', :title=>'Save new Password' %>
       </div>
     <% end %>

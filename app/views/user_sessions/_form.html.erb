@@ -19,9 +19,7 @@
     <%= f.password_field :password, class: 'textarea' %>
 
     <%= link_to "Forgot Password?", :controller => 'password_resets', :action => 'new' %>
-  </div>
 
-  <div class="actions">
     <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create login left', :title=>'Login'  %>
     <%= link_to "", new_user_path, :class=> 'button useradd right', :alt => 'Register', :title => 'Register'%>
   </div>

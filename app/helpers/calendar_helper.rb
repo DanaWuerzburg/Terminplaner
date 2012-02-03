@@ -22,7 +22,7 @@ module CalendarHelper
       event, day = args[:event], args[:day]
       html = %(<a href="/appointments/#{event.id}/edit" title="#{h(event.note)}">)
       html << display_event_time(event, day)
-      html << %(#{h(event.note)}</a>)
+      html << %(#{h(event.color)}</a>)
       html
     end
   end

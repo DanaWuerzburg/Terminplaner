@@ -1,13 +1,10 @@
 
 
-  <section class="passwordReset">
+  <section>
 
 
         <h1>Forgot Password</h1>
 
-           <section class="notify">
-            <%= flash[:notice] %>
-          </section>
         <p>
 
           Fill out the form below and instructions to reset your password will be emailed to you:
@@ -18,9 +15,7 @@
       <label class="label"><%= label_tag(:email, "")+ "Email:"  %></label>
 
         <%= email_field_tag(:email) %>
-    </div>
 
-    <div class="actions">
       <%= submit_tag"",:class=> 'button create', :title=>'Send Password Reset Link' %>
     </div>
 

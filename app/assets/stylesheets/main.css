@@ -69,7 +69,7 @@
         height: 100%;
     }
     header{
-        height: 55px;
+        height: 50px;
     }
     #cont{
 
@@ -91,12 +91,7 @@
             #tabs{
 
             }
-            .notify{
-                position:relative;
-                top: 20px;
-                font-size: 20px;
-                color: #ff0000;
-            }
+
              .reminder{
                 background: #F2F2F2;
                 width: auto;
@@ -140,11 +135,13 @@
             .newappointment{
             }
                 .field, .actions{
-                   padding: 5px 8px;
+                   padding: 8px;
+                   margin:  10px 10px;
                 }
                 .field{
                    background: #F5F5F5;
                    border-radius: 4px;
+                   float: left;
                 }
                 .formular{
 
@@ -164,8 +161,19 @@
     }
 
     footer{
-        height:30px;
+        height: 15px;
+        width: 100%;
         position:fixed;
-        bottom:30px;
-        text-align:right;
+        left:0;
+        bottom: 0;
+        text-align:center;
+        background: url("/images/bg_dialog.png") transparent center repeat-y;
+        padding: 5px 15px;
+        z-index: 2000;
+        box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
     }
+    .notify{
+        position:relative;
+        color: #A63232;
+        width:auto;
+            }
