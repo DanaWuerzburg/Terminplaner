@@ -25,10 +25,11 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.xml
   def create
     @user_session = UserSession.new(params[:user_session])
+    #@user = User.find_all_by_login(params[:user_session][:email])
 
     respond_to do |format|
       if @user_session.save
-
+        #flash[:notice] = "Welcome " + @user + "!"
         format.html { redirect_to(:appointments, :notice => 'Welcome!') }  #redirection von appointment hier
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else

@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-   require "rexml/document"
+  require "rexml/document"
   include REXML
   before_filter :require_user, :only  => [:edit,:index, :new , :show , :destroy]
 
@@ -8,17 +8,17 @@ class AppointmentsController < ApplicationController
    #das statische um zu testen
    #TODO dynamisch fuellen
      APPOINTMENTLIST = [
-    { :priority_number => 3, :date => "24.01.2012", :category => "singaporean", :dish_name => "Fish Head Curry", :group => "Little India" },
-    { :priority_number => 3, :date => "24.01.2012",:category => "singaporean", :dish_name => "Pig Organ Soup", :group => "Food Court" },
-    { :priority_number =>8, :date => "24.01.2012",:category => "indian", :dish_name => "Chicken Biryani", :group => "Al Ameen's" },
-    { :priority_number =>9, :date => "24.01.2012",:category => "german", :dish_name => "Pork Knuckle", :group => "Stammtisch Restaurant" },
-    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :dish_name => "Butter Chicken", :group => "Jaggi's Northern Indian Cuisine" },
-    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :dish_name => "Chicken Tikka", :group => "Jaggi's Northern Indian Cuisine" },
-    { :priority_number =>7,:date => "24.01.2012", :category => "singaporean", :dish_name => "Mutton Murtabak", :group => "Zam Zam Restaurant" },
-    { :priority_number =>8,:date => "24.01.2012", :category => "singaporean", :dish_name => "Chicken Murtabak", :group => "Ah Mei Kaya Toast" },
-    { :priority_number =>9, :date => "24.01.2012",:category => "western", :dish_name => "Beef Cheek", :group => "Ember Restaurant" },
-    { :priority_number =>8,:date => "24.01.2012", :category => "western", :dish_name => "Cowboy Burger", :group => "Brewerkz" },
-    { :priority_number =>8,:date => "24.01.2012", :category => "mexican", :dish_name => "Pork Enchilada", :group => "Iguana Cafe" }
+    { :priority_number => 3, :date => "24.01.2012", :category => "singaporean", :note => "Fish Head Curry", :group => "Little India" },
+    { :priority_number => 3, :date => "24.01.2012",:category => "singaporean", :note  => "Pig Organ Soup", :group => "Food Court" },
+    { :priority_number =>8, :date => "24.01.2012",:category => "indian", :note => "Chicken Biryani", :group => "Al Ameen's" },
+    { :priority_number =>9, :date => "24.01.2012",:category => "german", :note => "Pork Knuckle", :group => "Stammtisch Restaurant" },
+    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :note => "Butter Chicken", :group => "Jaggi's Northern Indian Cuisine" },
+    { :priority_number =>10, :date => "24.01.2012",:category => "indian", :note => "Chicken Tikka", :group => "Jaggi's Northern Indian Cuisine" },
+    { :priority_number =>7,:date => "24.01.2012", :category => "singaporean", :note => "Mutton Murtabak", :group => "Zam Zam Restaurant" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "singaporean", :note => "Chicken Murtabak", :group => "Ah Mei Kaya Toast" },
+    { :priority_number =>9, :date => "24.01.2012",:category => "western", :note => "Beef Cheek", :group => "Ember Restaurant" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "western", :note => "Cowboy Burger", :group => "Brewerkz" },
+    { :priority_number =>8,:date => "24.01.2012", :category => "mexican", :note => "Pork Enchilada", :group => "Iguana Cafe" }
   ]
 
   helper_method :sort_column, :sort_direction, :selected_friend
@@ -56,6 +56,23 @@ class AppointmentsController < ApplicationController
       @appointments = Appointment.search2(params[:search],current_user)
     end
 
+
+    #@LISTE = @appointments.to_a
+    #hasha = Hash.new()
+    final = Array.new
+    @appointments.each do |appointment|
+    zw = {:appointment => {:id => appointment.id,:priority => appointment.priority_number, :groupe => appointment.group_id, :date => appointment.start_at, :note => appointment.note } }
+    hasha[appointment] = zw
+    final.push(zw)
+    end
+    if File.exists?("./datein/allXML") then File.delete("./datein/allXML") end
+    dats = File.new("./datein/allXML", "a")
+    dats.write(final.to_xml)
+    dats.close()
+   #dats = File.new("./datein/AppointmentToXML42222", "a")
+    #dats.write(hasha.to_xml)
+    #dats.close()
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @appointments }
@@ -79,9 +96,6 @@ class AppointmentsController < ApplicationController
     end
 
 
-  def zeit
-    puts "HEYHOHELLO"
-  end
   # GET /appointments/1
   # GET /appointments/1.json
 
@@ -95,11 +109,16 @@ class AppointmentsController < ApplicationController
 
     @appointment = Appointment.find(params[:id])
 
+    single = {:appointment => {:id => @appointment.id,:priority => @appointment.priority_number, :groupe => @appointment.group_id, :date => @appointment.start_at, :note => @appointment.note } }
+    if File.exists?("./datein/temp/singleXML") then File.delete("./datein/temp/singleXML") end  # zum saubern der datei
+    dats = File.new("./datein/temp/singleXML", "a")
+    dats.write(single.to_xml)
+    dats.close()
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @appointment }
-      format.xml {render :xml => @appointment, :status => :created, :location => @appointment }
+      format.xml { render :xml => @appointment, :location => @appointment }
     end
   end
 
@@ -123,19 +142,6 @@ class AppointmentsController < ApplicationController
   end
 
 
-   def show_with_rexml
-    @appointment = Appointment.find(params[:id])
-    hijack_response_inline( generate_rexml )
-   end
-  # - - - - - - - - - - - - - - - - - - - - - - - -
-  # - - - - - - - - - - - - - - - - - - - - - - - -
-  #def getNote
-  #  s= String.new
-  #  @appointment = Appointment.find(params[:id])
-  #  s= @appointment.note.to_s
-  #  puts s
-   #return s
- #end
 
   # GET /appointments/1/edit
   def edit
@@ -173,6 +179,8 @@ class AppointmentsController < ApplicationController
       end
   end
 
+
+
   # PUT /appointments/1
   # PUT /appointments/1.json
   def update
@@ -196,7 +204,74 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+ def send_xml_file
+    aFile = File.new("./datein/allXML", "r")
+    aFile.close
+    send_file("./datein/allXML") and return
 
+ end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def send_xml_file_single
+    aFile = File.new("./datein/temp/singleXML", "r")
+    send_file("./datein/temp/singleXML")
+    aFile.close
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def show_with_xml
+    @appointment = Appointment.find(params[:id])
+    out_data << @appointment.to_xml.to_s
+    #send_data(@appointment.toxml, :disposition => "inline")
+    send_data( out_data, :type => "text/xml", :filename => "appointment #{@appointment.id}.xml", :disposition => "inline")
+    #hijack_response_inline( generate_rexml )
+  end
+
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def show_with_xml_single
+    #single = File.new("./datein/temp/singleXML", "r")
+    @appointment = Appointment.find(params[:id])
+
+   #redirect_to "#{appointment_url}.xml"
+     render :partial => 'appointments/xml', :locals => {:apps => @appointment}
+
+
+      #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
+
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def show_with_rexml_single
+    single = File.new("./datein/temp/singleXML", "r")
+    #send_data("./datein/temp/singleXML", :disposition => "inline")
+       @appointments = Appointment.find(:all)
+
+    hash = @appointments
+       doc = REXML::Document.new
+       root = doc.add_element( "Kalender" )
+       hash.each{ |element_data|
+
+         hash_element = root.add_element( "Termin" )
+
+          hash_element.add_attribute( "Gruppe", element_data[:group_id] )
+          hash_element.add_attribute( "Prioritaet", element_data[:priority_number] )
+
+          hash_note_element = hash_element.add_element( "Notiz" )
+          hash_note_element.add_text( element_data[:note] )
+
+         hash_date_element = hash_element.add_element( "Date" )
+         hash_date_element.add_text( element_data[:start_at].to_s )
+       }
+       doc.write( out_string = "", 2 )
+      send_data( out_string, :type => "text/xml", :filename => "appointment #{@appointment.id}.xml", :disposition => "inline")
+    #hijack_response_inline(single)
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  #TODO
   #test fuer layoutV3
   #def about
     #render :action => "index", :layout => "mobile"
@@ -209,18 +284,23 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
 
     respond_to do |format|
-       flash[:notice] = 'Appointment deleted.'
+      flash[:notice] = 'Appointment deleted.'
       format.html { redirect_to appointments_url }
       format.json { head :ok }
     end
   end
-
-
   # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
   def generate_with_rexml
     hijack_response( generate_rexml )
   end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def generate_with_rexml2
+    hijack_response( inapphash )
+  end
+
+
 
   #########################
   private
@@ -230,17 +310,17 @@ class AppointmentsController < ApplicationController
   # @param out_data [Object]
   def hijack_response( out_data )
 
-    send_data( out_data, :type => "text/xml", :filename => "sample.xml")
+    send_data( out_data, :type => "text/xml", :filename => "outline.xml")
 
   end
 
   def hijack_response_inline( out_data )
 
-    send_data( out_data, :type => "text/xml", :filename => "sample.xml", :disposition => "inline")
+    send_data( out_data, :type => "text/xml", :filename => "inline.xml", :disposition => "inline")
 
   end
 
-  # - - - - - - - - - - - - - - - - - - - - - - - -
+ # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
   def generate_rexml
     doc = REXML::Document.new
@@ -252,8 +332,8 @@ class AppointmentsController < ApplicationController
        appointmentlist_element.add_attribute( "Gruppe", element_data[:group] )
        appointmentlist_element.add_attribute( "Prioritaet", element_data[:priority_number] )
 
-        appointmentlist_note_element = appointmentlist_element.add_element( "Notiz" )
-       appointmentlist_note_element.add_text( element_data[:dish_name] )
+       appointmentlist_note_element = appointmentlist_element.add_element( "Notiz" )
+       appointmentlist_note_element.add_text( element_data[:note] )
 
       date_element = appointmentlist_element.add_element( "Date" )
       date_element.add_text( element_data[:date] )
@@ -267,19 +347,43 @@ class AppointmentsController < ApplicationController
   # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
 
-  def parse_with_rexml( xml_data )
-    doc = REXML::Document.new( xml_data )
-    REXML::XPath.each( doc, "//AppointmentlistNote" ){ |appointmentlist_note_element|
-     if appointmentlist_note_element.text == "Fish Head Curry" or appointmentlist_note_element.text == "Pig Organ Soup"
-       parent = appointmentlist_note_element.parent
-       parent.attributes["priority_number"] = 6
-     end
+  #def parse_with_rexml( xml_data )
+  #  doc = REXML::Document.new( xml_data )
+  #  REXML::XPath.each( doc, "//AppointmentlistNote" ){ |appointmentlist_note_element|
+  #   if appointmentlist_note_element.text == "Fish Head Curry" or appointmentlist_note_element.text == "Pig Organ Soup"
+  #     parent = appointmentlist_note_element.parent
+  #     parent.attributes["priority_number"] = 6
+  #   end
+  #  }
+   # doc.write( out_string = "", 2 )
+  #  hijack_response( out_string )
+ # end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  #TODO needs work
+  def inapphash
+    doc = REXML::Document.new
+    root = doc.add_element( "Agenda" )
+
+
+    LISTE.each{ |element_data|
+
+      liste_element = root.add_element( "Appoitnment" )
+
+       liste_element.add_attribute( "Identifikation", element_data[:id] )
+       #appointments_element.add_attribute( "priority_number", element_data[:priority_number] )
+      liste_priority_element = liste_element.add_element("priority")
+      liste_priority_element.add_text(element_data[:priority])
+
+      liste_note_element = liste_element.add_element( "note" )
+      liste_note_element.add_text( element_data[:note] )
+
+      date_element = liste_element.add_element( "Start at" )
+      date_element.add_text( element_data[:date] )
     }
     doc.write( out_string = "", 2 )
-    hijack_response( out_string )
+    return out_string
   end
-  # - - - - - - - - - - - - - - - - - - - - - - - -
-  # - - - - - - - - - - - - - - - - - - - - - - - -
    # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
   def parse_recursive( xml_data )
@@ -299,10 +403,5 @@ class AppointmentsController < ApplicationController
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
-
-
-
-
-
 
 end
