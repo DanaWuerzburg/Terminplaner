@@ -5,7 +5,7 @@
     <div class="navleft">
       <ul>
        <% if current_user %>
-          <li><h1><%= current_user.login %>'s Agenda</h1></li>
+          <li><h1><%= link_to "#{current_user.login}'s Agenda", appointments_path, :class => "title" %></h1></li>
        <% else %>
           <li><h1>Agenda </h1></li>
        <% end %>
