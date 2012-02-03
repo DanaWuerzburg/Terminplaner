@@ -56,16 +56,18 @@ class AppointmentsController < ApplicationController
       @appointments = Appointment.search2(params[:search],current_user)
     end
 
-
-    #@LISTE = @appointments.to_a
     #hasha = Hash.new()
     final = Array.new
     @appointments.each do |appointment|
     zw = {:appointment => {:id => appointment.id,:priority => appointment.priority_number, :groupe => appointment.group_id, :date => appointment.start_at, :note => appointment.note } }
-    hasha[appointment] = zw
+    #hasha[appointment] = zw
     final.push(zw)
     end
-    if File.exists?("./datein/allXML") then File.delete("./datein/allXML") end
+
+    if File.exists?("./datein/allXML") then
+      File.delete("./datein/allXML")
+    end
+
     dats = File.new("./datein/allXML", "a")
     dats.write(final.to_xml)
     dats.close()
