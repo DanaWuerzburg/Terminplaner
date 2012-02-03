@@ -21,6 +21,8 @@
 
     <%= f.label :shared_friend_id %>
     <%= f.number_field :shared_friend_id %>
-    <%= f.submit %>
+    <span class="floatright">
+        <%= f.submit '', :action => :new, :class=> 'button create', :title=>'Save Friend' %>
+    </span>
   </div>
 <% end %>

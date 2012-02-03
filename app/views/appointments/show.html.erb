@@ -1,13 +1,11 @@
+<section>
 
-
-
-  <section>
-
+  <div class = "field">
         <label for="date" class="label">Date</label>
-        <p><%= @appointment.start_at %></p>
-
+        <input type="text" disabled="disabled" value="<%= @appointment.start_at.strftime('%d. %m. %Y %H:%M') %>">
+        <input type="text" disabled="disabled" value="<%= @appointment.end_at.strftime('%d. %m. %Y %H:%M') %>">
         <label for="note" class="label">Note:</label>
-        <p><%= @appointment.note %></p>
+        <input type="text" disabled="disabled" value="<%= @appointment.note %>">
 
     <%  aFile = File.new("./datein/testfile", "a") %>
               <%  aFile.puts "hallo"   %>
@@ -20,37 +18,33 @@
               <%  file.close    %>
 
 
-      <div class="padded-body">
-        <h2>Generate and Download Sample XML Document</h2>
 
-               <%=link_to "Download as xml", :action => "generate_with_rexml" %>
+        <h4>Generate and Download Sample XML Document</h4>
+
+              <%=link_to "Download as xml", :action => "generate_with_rexml" %>
               <%=link_to "Show as xml", :action => "show_with_rexml" %>
 
-       </div>
 
 
 
-   <div class="padded-body">
-     <h2>Upload the Sample XML Document, Parse and Manipulate</h2>
 
-     <p>
+
+     <h4>Upload the Sample XML Document, Parse and Manipulate</h4>
+
        <% form_tag({:action => 'upload'}, :multipart => true )%>
-         <p>
-           <label for="file"> File:   </label> <br>
-           <%= file_field("appointment","xml_file") %><br>
+
+           <label for="file"> File:   </label>
+           <%= file_field("appointment","xml_file") %>
            <%= submit_tag("Parse with REXML") %>
 
-           </p>
 
-      <br><br><br><br>
 
      <%= form_tag({:action => 'upload', :id => @appointment}, :multipart => true) %>
-     Fuer die zweite Implementierung noch eine Version <br>
+     Fuer die zweite Implementierung noch eine Version
      Waehlen Sie eine Datei : <%= file_field("appointment", "report")  %>
-      <br>
      <%= submit_tag("upload au dBuch")%>
-    fooooo </p>
 
-   </div>
 
-  </section>
+</div>
+
+</section>

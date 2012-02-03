@@ -20,7 +20,9 @@
 
     <%= f.label :status %>
     <%= f.text_field :status %>
+    <span class="floatright">
+        <%= f.submit '', :action => :new, :class=> 'button create', :title=>'Save friendship' %>
+    </span>
 
-    <%= f.submit %>
   </div>
 <% end %>

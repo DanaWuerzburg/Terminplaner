@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
     @users = User.all
-    @user = User.find(params[:id])
+    @user = current_user
 
     respond_to do |format|
       format.html # index.html.erb

@@ -29,7 +29,9 @@
           <label class="label" >Password (confirm)</label>
           <%= f.password_field :password_confirmation, :class=>"textarea" %>
 
-        <%= f.submit '',:url => password_reset_path, :method => :put , :class=> 'button create', :title=>'Save new Password' %>
+          <span class="floatright">
+            <%= f.submit '',:url => password_reset_path, :method => :put , :class=> 'button create', :title=>'Save new Password' %>
+          </span>
       </div>
     <% end %>
 

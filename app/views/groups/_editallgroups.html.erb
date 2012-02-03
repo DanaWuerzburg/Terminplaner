@@ -4,7 +4,10 @@
       <input class="picker color {valueElement:'<%= variable %>',hash:true}" />
 
       <%= f.text_field :name, :class => "textarea searcharea floatleft" %>
-      <%= f.submit '', :class=> 'button edittrans without right', :title=>'Edit Group' %><!--hidden colortextfield-->
+      <span class="floatright">
+        <%= f.submit '', :class=> 'button edittrans without right', :title=>'Edit Group' %>
+      </span>
+      <!--hidden colortextfield-->
       <%= f.text_field :colour, :id => meinevariable.id, :class => "displaynone textarea small {hash:true}" %>
 
 

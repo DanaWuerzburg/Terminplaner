@@ -59,7 +59,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @appointments, :notice => 'Appointment in index.' }
+      format.json { render json: @appointments }
       format.xml {render :xml => @appointments}
     end
     end
@@ -116,7 +116,7 @@ class AppointmentsController < ApplicationController
     #@appointment.user_id = current_user.id
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @appointment, :notice => 'Appointment in new' }
+      format.json { render json: @appointment }
       format.xml {render :xml => @appointment}
     end
 

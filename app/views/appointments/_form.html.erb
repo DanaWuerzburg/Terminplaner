@@ -31,7 +31,7 @@
 
     <!-- Shared Friends -->
     <% unless current_user.friends.blank?%>
-         <label class="label">Share With Friends</label>
+         <label class="label">Share with</label>
         <% @appointment %>
         <% current_user.friends.each do |friend| %>
             <ul>
@@ -41,7 +41,9 @@
             </ul>
           <% end %>
      <% end %>
-    <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create floatright', :title=>'Save Appointment' %>
+    <span class="floatright">
+        <%= f.submit '', :action => :new, :class=> 'button create', :title=>'Save Appointment' %>
+    </span>
   </div>
 
 

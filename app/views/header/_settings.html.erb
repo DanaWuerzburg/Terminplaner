@@ -6,11 +6,6 @@
       </div>
 
       <div class="field">
-        <h4>Friends</h4>
-        <%= render :partial => 'friendships/editfriendships' %>
-      </div>
-
-      <div class="field">
         <h4>Groups</h4>
         <% @groups.each do |group| %>
             <% unless group.id == 1 %>
@@ -18,6 +13,10 @@
             <% end %>
         <% end %>
 	    <%= render :partial => "groups/form" %>
+      </div>
+      <div class="field">
+        <h4>Friends</h4>
+        <%= render :partial => 'friendships/editfriendships' %>
       </div>
    </div>
    <% end %>

@@ -60,18 +60,18 @@ class FriendshipsController < ApplicationController
     @friendship2 = Friendship.create(params[:friendship2])
 
     if @friendship1.save && @friendship2.save
-      flash[:notice] = "You sent a friend request to " + @friend.login + "."
+      flash[:notice] = "Added friend."
       redirect_to friendships_path
     else
-      flash[:error] = "Unable to sent a friend request to " + @friend.login + "."
+      flash[:error] = "Unable to add friend."
       redirect_to friendships_path
     end
 
     #if @friendship.save
-    #  flash[:notice] = "You sent a friend request to " + @friend.login + "."
+    #  flash[:notice] = "Added friend."
     #  redirect_to root_url
     #else
-    #  flash[:error] = "Unable to sent a friend request to " + @friend.login + "."
+    #  flash[:error] = "Unable to add friend."
     #  redirect_to root_url
     #end
 
@@ -99,7 +99,7 @@ class FriendshipsController < ApplicationController
     @friendship2 = Friendship.find_by_user_id_and_friend_id(@friend.id, @user.id)
 
     if @friendship1.update_attributes(params[:friendship1]) && @friendship2.update_attributes(params[:friendship2])
-      flash[:notice] = "You are now friends with " + @friend.login + "."
+      flash[:notice] = 'Friend sucessfully accepted!'
       redirect_to appointments_path
     else
       redirect_to appointments_path
@@ -125,14 +125,11 @@ class FriendshipsController < ApplicationController
     @friend = User.find(params[:id])
     @friendship1 = @user.friendships.find_by_friend_id(params[:id]).destroy
     @friendship2 = @friend.friendships.find_by_user_id(params[:id]).destroy
-
-
-    flash[:notice] = "You cancelled your friend request to " + @friend.login + "."
     redirect_to friendships_path
 
     #@friendship = current_user.friendships.find(params[:id])
     #@friendship.destroy
-    #flash[:notice] = "You are not friends with " + @friend.login + " anymore."
+    #flash[:notice] = "Removed friendship."
     #redirect_to current_user
 
     #@friendship = Friendship.find(params[:id])

@@ -12,8 +12,8 @@
 
       <label class="label" >Password (confirm)</label>
       <%= f.password_field :password_confirmation, :class=>"textarea" %>
-
-    <%= f.submit '', :class=> 'button create floatright', :title=>'Save Account' %>
-
+    <span class="floatright">
+    <%= f.submit '', :class=> 'button create', :title=>'Save Account' %>
+    </span>
 
 <% end %>
