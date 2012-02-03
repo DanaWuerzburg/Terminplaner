@@ -2,29 +2,160 @@
 <objects type="array">
   <object>
     <appointment>
-      <id type="integer">5</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">6</groupe>
-      <date type="datetime">2012-02-04T00:00:00Z</date>
-      <note>ein test termin</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">6</id>
-      <priority type="integer">3</priority>
+      <id type="integer">24</id>
+      <priority type="integer">5</priority>
       <groupe type="integer">2</groupe>
-      <date type="datetime">2012-02-04T00:00:00Z</date>
-      <note>zweiter testtermin </note>
+      <date type="datetime">2012-02-04T12:00:00Z</date>
+      <note>Very important meeting with Chris!</note>
     </appointment>
   </object>
   <object>
     <appointment>
-      <id type="integer">7</id>
+      <id type="integer">25</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-15T09:00:00Z</date>
+      <note>Shopping trip to London! 
+The Strand Palace Hotel
+372 Strand, London, WC2R 0JJ
+RESERVATIONS: +44 207379 4737
+EMAIL: reservations@strandpalacehotel.co.uk</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">26</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-09T00:00:00Z</date>
+      <note>Birthday Klaus!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">27</id>
+      <priority type="integer">5</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-24T00:00:00Z</date>
+      <note>Birthday Stefan!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">28</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-12T00:00:00Z</date>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">29</id>
       <priority type="integer">3</priority>
-      <groupe type="integer">6</groupe>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-13T00:00:00Z</date>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">30</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">4</groupe>
       <date type="datetime">2012-02-04T00:00:00Z</date>
-      <note>test2</note>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">31</id>
+      <priority type="integer">2</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-25T00:00:00Z</date>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">32</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">3</groupe>
+      <date type="datetime">2012-02-15T00:00:00Z</date>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">33</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-03T23:00:00Z</date>
+      <note>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa .</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">34</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-03T21:45:00Z</date>
+      <note>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa </note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">35</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-03T22:00:00Z</date>
+      <note>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa </note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">36</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">3</groupe>
+      <date type="datetime">2012-02-04T00:00:00Z</date>
+      <note></note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">37</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">3</groupe>
+      <date type="datetime">2012-02-03T22:30:00Z</date>
+      <note>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa </note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">38</id>
+      <priority type="integer">2</priority>
+      <groupe type="integer">11</groupe>
+      <date type="datetime">2012-02-03T00:00:00Z</date>
+      <note>Geburtstag Fabian Körner!
+Geschenk kaufen!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">39</id>
+      <priority type="integer">2</priority>
+      <groupe type="integer">12</groupe>
+      <date type="datetime">2012-02-17T00:00:00Z</date>
+      <note>Reise nach Gran Canaria mit Omi und Opi...Sonnencreme nicht vergessen!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">40</id>
+      <priority type="integer">5</priority>
+      <groupe type="integer">4</groupe>
+      <date type="datetime">2012-02-03T23:45:00Z</date>
+      <note>WICHTIG!</note>
     </appointment>
   </object>
 </objects>
