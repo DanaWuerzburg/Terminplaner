@@ -16,7 +16,6 @@ $(function(){
 	            stepMinute: 15});
 
 
-                <!--$('#appointment_start_at').datetimepicker( "setDate" , +7 );-->
 
                 //slider
                 $( "#priority_number_slider" ).slider(

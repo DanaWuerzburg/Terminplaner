@@ -15,7 +15,7 @@
         <div id="reminder"  class="reminder" src="hideNote" type="text/javascript" language="JavaScript" >
             <ul>
                 <% @appointments.reverse.each do |appointment| %>
-                    <% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H') > Time.now.strftime('%H')%>
+                    <% if appointment.start_at.strftime('%y%m%d') == Time.now.strftime('%y%m%d') && appointment.start_at.strftime('%H%M') > Time.now.strftime('%H%M')%>
                     <li><%= appointment.start_at.strftime('%H:%M') + " – " %><%= link_to truncate(appointment.note.to_s, :length => 90, :separator => ' ') , appointment, :popup=> true, :title=>"Show more" %></li>
                     <% end %>
                 <% end %>
