@@ -27,7 +27,6 @@
     <label class="label">Group</label>
     <%#= f.collection_select(:colour, @groups, :colour, :name, options={}, :class=> 'drop') %>
     <%= f.collection_select(:group_id, @groups, :id, :name, options={}, :class=> 'drop') %>
-    <%= f.text_field :color, id: "color"  %>
 
     <!-- Shared Friends -->
     <% unless current_user.friends.blank?%>

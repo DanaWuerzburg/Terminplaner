@@ -27,7 +27,6 @@ class AppointmentsController < ApplicationController
   attr_accessor :friends_array
 
   def index
-    @groups = Group.all
     @group = Group.new
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
@@ -85,6 +84,7 @@ class AppointmentsController < ApplicationController
   end
   # GET /appointments/1
   # GET /appointments/1.json
+
   def show
     @group = Group.new
     @groups = Group.find(:all, :conditions => {:user_id => current_user})
@@ -106,8 +106,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   # GET /appointments/new.json
   def new
-    @groups = Group.all
     @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
 
     @shared_friendships = FriendshipAppointment.all
     @shared_friendship = FriendshipAppointment.new
@@ -139,11 +139,13 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
-    @groups = Group.all
+
     @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
     @shared_friendships = FriendshipAppointment.all
     @shared_friendship = FriendshipAppointment.new
     @appointment = Appointment.find(params[:id])
+    @appointment.color = @appointment.group.colour
     respond_to { |format|
       format.html
       format.xml { render :xml => @appointment } }
@@ -152,7 +154,9 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user )) #user id mit user verknüpfen
+
+      @appointment = Appointment.new(params[:appointment].merge(:user =>current_user)) #user id mit user verknüpfen
+      @appointment.color = @appointment.group.colour
       #@appointment = Appointment.new(params[:appointment])
       respond_to do |format|
         if @appointment.save
@@ -173,7 +177,7 @@ class AppointmentsController < ApplicationController
   # PUT /appointments/1.json
   def update
     @appointment = Appointment.find(params[:id])
-
+    @appointment.color = @appointment.group.colour
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
 
