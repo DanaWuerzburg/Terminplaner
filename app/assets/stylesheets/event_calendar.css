@@ -20,7 +20,7 @@
   line-height: 14px;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #d5d5d5;
+  border-collapse: collapse;
 }
 
 /* Month name header & links */
@@ -42,34 +42,30 @@
 /* Containers */
 .ec-body {
   position: relative;
-  border-right: 1px solid #303030;
   white-space: nowrap;
 }
 
 /* Day names */
 .ec-day-names {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   table-layout: fixed;
-  padding: 2px 0;
+  padding: 18px 5px 0 5px;
   background: transparent;
 }
 
 .ec-day-name {
   font-weight: normal;
+  color: #666699;
 }
 
 /* Rows container and Row */
 .ec-rows {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
   width: 100%;
   background: white;
   overflow: hidden;
-  border-right: 1px solid #d5d5d5;
+
 }
 
 .ec-row {
@@ -87,14 +83,18 @@
   height: 100%;
   width: 100%;
   table-layout: fixed;
+
 }
 
 .ec-day-bg {
-  border-left: 1px solid #d5d5d5;
+    background: #F6F6F2;
+    border-collapse: collapse;
 }
 
 .ec-today-bg {
-  background-color: #ffffdd;
+  background: #cccccc;
+  border-collapse:collapse;
+
 }
 
 .ec-row-table {
@@ -105,36 +105,32 @@
 
 /* Day header */
 .ec-day-header {
-  color: #444;
-  text-align: right;
+  color: #666699;
+  text-align: left;
   padding: 0 5px;
   line-height: 16px;
-  border-top: 1px solid #d5d5d5;
-  border-left: 1px solid #d5d5d5;
-  border-bottom: 1px dotted #bbbbbb;
-  background-color: #ecede2;
+  background:  url(/images/bg_dialog.png) right;
   overflow: hidden;
+  border-top: 1px solid #6678b1;
+
 }
 
 a.ec-day-link {
-  color: #444;
+  color: #666699;
 }
 
 .ec-today-header {
-  background-color: #d7d7ba;
 }
 
 .ec-weekend-day-header {
-
 }
 
 .ec-other-month-header {
-  background-color: #efefef;
-  color: #777;
+  color: #cccccc;
 }
 
 .ec-other-month-bg {
-
+    background: #ffffff;
 }
 
 
@@ -142,8 +138,7 @@ a.ec-day-link {
 .ec-event-cell {
   cursor: pointer;
   vertical-align: top;
-  padding-right: 1px;
-  padding-left: 2px;
+  padding: 0 2px;
 }
 
 .ec-event-cell a {
@@ -159,18 +154,14 @@ a.ec-day-link {
 
 .ec-event {
   color: white;
-  padding-right: 1px;
-  padding-left: 11px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  -moz-border-radius: 3px;
+  padding: 0 1px;
+  border-radius: 3px;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .ec-event :hover {
-  /* doesn't look as good as js highlighting */
-  /* background-color: #2eac6a; */
+    text-shadow: #fbf9ee;
 }
 
 .ec-event-bg a {
@@ -189,9 +180,6 @@ a.ec-day-link {
 }
 
 .ec-event-time {
-  font-size: 85%;
-  font-weight: bold;
-  padding-right: 3px;
 }
 
 
@@ -211,7 +199,7 @@ a.ec-day-link {
 
 .ec-left-arrow {
   margin-left: -7px;
-  margin-right: auto;
+
   border-right: 4px solid white;
 }
 
@@ -230,7 +218,17 @@ a.ec-day-link {
   height: 4px;
   margin-left: -7px;
   margin-right: auto;
-  -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.time{
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000000;
+}
+.time:hover{
+    color: #ffffff;
+}
+.time span{
+    font-size: 11pt;
+    color: #666699;
 }

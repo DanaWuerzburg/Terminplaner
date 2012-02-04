@@ -23,8 +23,9 @@ module CalendarHelper
     calendar event_calendar_opts do |args|
 
         event, day = args[:event], args[:day]
-        html = %(<a href="/appointments/#{event.id}/edit" title="#{h(event.start_at.strftime('%d. %b %y %R') + ' - ' + event.end_at.strftime('%d. %b %y %R'))}">)
-        html << %(#{h(event.start_at.strftime('%R'))}) << %(&nbsp;&nbsp;)
+
+        html = %(<a class="time" href="/appointments/#{event.id}/edit" title="#{h(event.start_at.strftime('%d. %b %y %R') + ' - ' + event.end_at.strftime('%d. %b %y %R'))}">)
+        html << %(<span>#{h(event.start_at.strftime('%R'))}</span>) << %(&nbsp;&nbsp;)
         html << %(#{h(event.note)}</a>)
         html
 

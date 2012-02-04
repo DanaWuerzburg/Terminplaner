@@ -27,4 +27,13 @@
       <note>#@appointments = Appointment.find(:all, :conditions =&gt; {:user_id =&gt; current_user})</note>
     </appointment>
   </object>
+  <object>
+    <appointment>
+      <id type="integer">46</id>
+      <priority type="integer">5</priority>
+      <groupe type="integer">13</groupe>
+      <date type="datetime">2012-02-19T07:45:00Z</date>
+      <note>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </note>
+    </appointment>
+  </object>
 </objects>
