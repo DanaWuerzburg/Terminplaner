@@ -36,4 +36,13 @@
       <note>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </note>
     </appointment>
   </object>
+  <object>
+    <appointment>
+      <id type="integer">47</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-03-03T00:00:00Z</date>
+      <note>asgaersfg </note>
+    </appointment>
+  </object>
 </objects>

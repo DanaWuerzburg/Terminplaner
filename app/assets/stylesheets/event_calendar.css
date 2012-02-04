@@ -25,7 +25,6 @@
 /* Month name header & links */
 .ec-calendar-header {
   border:  none;
-  float: right;
 }
 
 .ec-month-name {
