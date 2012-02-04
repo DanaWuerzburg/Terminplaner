@@ -21,19 +21,14 @@ module CalendarHelper
   def event_calendar
     # args is an argument hash containing :event, :day, and :options
     calendar event_calendar_opts do |args|
-      if current_user.id.eql?(args[:event].user_id)
-        event, day, options = args[:event], args[:day], args[:options]
-        html = %(<a href="/appointments/#{event.id}/edit" title="#{h(event.note)}">)
-        html << display_event_time(event, day)
+
+        event, day = args[:event], args[:day]
+        html = %(<a href="/appointments/#{event.id}/edit" title="#{h(event.start_at.strftime('%d. %b %y %R') + ' - ' + event.end_at.strftime('%d. %b %y %R'))}">)
+        html << %(#{h(event.start_at.strftime('%R'))}) << %(&nbsp;&nbsp;)
         html << %(#{h(event.note)}</a>)
         html
 
-      else
-        event, day = args[:event], args[:day]
-        html = %(#{h(event.user_id)})
-        html << %(#{h(options)})
 
-      end
 
     end
   end
