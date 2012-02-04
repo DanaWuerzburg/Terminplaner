@@ -21,10 +21,10 @@
   <object>
     <appointment>
       <id type="integer">45</id>
-      <priority type="integer">3</priority>
+      <priority type="integer">4</priority>
       <groupe type="integer">4</groupe>
-      <date type="datetime">2012-02-06T00:00:00Z</date>
-      <note>#@appointments = Appointment.find(:all, :conditions =&gt; {:user_id =&gt; current_user})</note>
+      <date type="datetime">2012-02-08T11:00:00Z</date>
+      <note>Cooking Session with Susanna!</note>
     </appointment>
   </object>
   <object>

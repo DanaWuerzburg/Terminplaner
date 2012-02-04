@@ -1,8 +1,8 @@
 module CalendarHelper
 
 
-  def month_link(month_date)
-    link_to(I18n.localize(month_date, :format => "%B"), {:month => month_date.month, :year => month_date.year})
+  def month_link(month_date, str)
+    link_to(I18n.localize(month_date, :format => ""), {:month => month_date.month, :year => month_date.year}, :class => str, :title => month_date.strftime('%B'))
   end
   
   # custom options for this calendar
@@ -11,9 +11,9 @@ module CalendarHelper
       :year => @year,
       :month => @month,
       :event_strips => @event_strips,
-      :month_name_text => "<h4>" + I18n.localize(@shown_month, :format => "%B %Y") + "</h4>",
-      :previous_month_text => month_link(@shown_month.prev_month),
-      :next_month_text => month_link(@shown_month.next_month),
+      :month_name_text => "",
+      :previous_month_text => month_link(@shown_month.prev_month, "button back left"),
+      :next_month_text => month_link(@shown_month.next_month, "button forward right"),
       :use_all_day => true
     }
   end

@@ -20,23 +20,23 @@
   line-height: 14px;
   margin: 0;
   padding: 0;
-  border-collapse: collapse;
 }
 
 /* Month name header & links */
 .ec-calendar-header {
-  padding: 5px 0;
-  width: 100%;
-  table-layout: fixed;
+  border:  none;
+  float: right;
 }
 
 .ec-month-name {
-  font-size: 16px;
-  font-weight: bold;
+
 }
 
+.ec-next-month {
+    position: relative;
+    left: -2px;
+}
 .ec-month-nav {
-
 }
 
 /* Containers */
@@ -50,7 +50,7 @@
   position: relative;
   width: 100%;
   table-layout: fixed;
-  padding: 18px 5px 0 5px;
+  padding: 18px 0 0;
   background: transparent;
 }
 
@@ -116,7 +116,6 @@
 }
 
 a.ec-day-link {
-  color: #666699;
 }
 
 .ec-today-header {
@@ -153,7 +152,6 @@ a.ec-day-link {
 }
 
 .ec-event {
-  color: white;
   padding: 0 1px;
   border-radius: 3px;
   overflow: hidden;
@@ -161,11 +159,10 @@ a.ec-day-link {
 }
 
 .ec-event :hover {
-    text-shadow: #fbf9ee;
+
 }
 
 .ec-event-bg a {
-  color: white;
 }
 
 /* used to distinguish non-all_day events */
@@ -175,8 +172,6 @@ a.ec-day-link {
 }
 
 .ec-event-no-bg a {
-  /* isn't implemented in all browsers */
-  color: inherit;
 }
 
 .ec-event-time {
@@ -221,12 +216,8 @@ a.ec-day-link {
   border-radius: 2px;
 }
 .time{
-    font-size: 11pt;
-    font-weight: bold;
-    color: #000000;
 }
 .time:hover{
-    color: #ffffff;
 }
 .time span{
     font-size: 11pt;

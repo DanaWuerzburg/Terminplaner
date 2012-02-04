@@ -37,10 +37,10 @@
 
     a{
          font-size: 14px;
-         color: #E58A8A;
+         color: #A63232;
     }
     a:visited{
-        color: #E58A8A;
+        color: #A63232;
     }
     a:focus{
         color: #E58A8A;
@@ -97,10 +97,10 @@
             }
 
              .reminder{
-                background: #F2F2F2;
+                background: #F6F6F2;
                 width: auto;
-                padding: 5px  5px 10px;
-                margin-top: 5px;
+                padding: 10px;
+                margin: 10px 15px 0;
                 border-radius: 4px;
             }
             .reminder ul{
@@ -108,29 +108,8 @@
 
             }
             .reminder ul li{
-                color: #E58A8A;
                 list-style: none;
                 font-size: 11pt;
-            }
-            .reminderFader {
-                width: 100%;
-                height: 16px;
-                border-bottom-left-radius: 25px;
-                border-bottom-right-radius: 25px;
-                margin-bottom: 5px;
-            }
-            .reminderFader:hover {
-                background-color: #F2F2F2;
-                cursor:pointer;
-            }
-            .reminderFader div {
-                position:relative;
-                left: 300px;
-            }
-            .reminderFader div:hover {
-                position:relative;
-                left: 300px;
-
             }
             .searchright{
                 float: right;

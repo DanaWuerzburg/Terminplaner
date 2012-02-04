@@ -154,6 +154,9 @@ a.accept, input.accept{
     background-color: #ffffff;
     border-left: none;
 }
+a.forward, input.forward{
+        background-position: -40px -630px;
+}
 /******WITHOUT BACKGROUND*/
 a.without, input.without{
     background-color: #ffffff;
@@ -230,6 +233,9 @@ a.calendar:hover, input.calendar:hover{
 }
 a.accept:hover, input.accept:hover{
     background-position: -120px -570px;
+}
+a.forward:hover, input.forward:hover{
+    background-position: 0 -630px;
 }
 .displaynone{
     display:none;
