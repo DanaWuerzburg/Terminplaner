@@ -1,7 +1,8 @@
 class AppointmentsController < ApplicationController
   require "rexml/document"
+  require 'csv'
   include REXML
-  require 'fastercsv'
+
   before_filter :require_user, :only  => [:edit,:index, :new , :show , :destroy]
 
   # GET /appointments
@@ -307,27 +308,29 @@ class AppointmentsController < ApplicationController
 
 
 
-def dump_csv
-  @appointments = Appointment.find(:all, :order => "id ASC")
+def outlook_csv
+  @appointments = Appointment.find(:all)
   @outfile = "appointment_" + Time.now.strftime("%m-%d-%Y") + ".csv"
 
-  csv_data = FasterCSV.generate do |csv|
+  csv_data = CSV.generate do |csv|
     csv << [
     "start at",
-    "updated_at",
+    "start_at_time",
     "end_at",
+    "end_at_time",
     "note",
-    "group",
+    "name",
     "priority_number"
     ]
     @appointments.each do |appointment|
       csv << [
-     appointment.start_at,
-      appointment.updated_at,
-      appointment.end_at,
-     appointment.note,
-     appointment.group,
-     appointment.priority_number
+    appointment.start_at.strftime("%d.%m.%Y"),
+    appointment.start_at.strftime("%H:%M:%S"),
+    appointment.end_at.strftime("%d.%m.%Y"),
+    appointment.end_at.strftime("%H:%M:%S"),
+    appointment.note,
+    "#{appointment.name}aus Agenda",
+    appointment.priority_number
       ]
     end
   end
@@ -337,6 +340,8 @@ def dump_csv
     :disposition => "attachment; filename=#{@outfile}"
 
   flash[:notice] = "Export complete!"
+
+
 end
 
   #########################

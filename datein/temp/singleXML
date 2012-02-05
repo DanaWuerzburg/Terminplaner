@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hash>
   <appointment>
-    <id type="integer">7</id>
+    <id type="integer">5</id>
     <priority type="integer">3</priority>
     <groupe type="integer">6</groupe>
     <date type="datetime">2012-02-04T00:00:00Z</date>
-    <note>test2</note>
+    <note>ein test termin</note>
   </appointment>
 </hash>
