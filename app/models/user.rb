@@ -17,7 +17,8 @@ class User < ActiveRecord::Base
   has_many :friendship_appointments, :dependent => :destroy
 
 
-  acts_as_authentic do |config|
+
+  acts_as_authentic do |c|
     #	Add	custom	conﬁgura'on	op'ons	here
     #config.crypto_provider = Authlogic::CryptoProviders::MD5
   end
@@ -46,7 +47,7 @@ class User < ActiveRecord::Base
 
   def send_activation_instructions!
     reset_perishable_token!
-    Notifier.activation_instructions(self).deliver
+
   end
 
   def send_activation_confirmation!
