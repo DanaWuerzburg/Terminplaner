@@ -88,6 +88,5 @@ $(function(){
 
         });
         $(function(){
-            $('#appointment_start_at').datetimepicker( "setDate" , +1 );
-            $('#appointment_end_at').datetimepicker( "setDate" , +1 );
+
         });
