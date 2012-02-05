@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   require "rexml/document"
   include REXML
+  require 'fastercsv'
   before_filter :require_user, :only  => [:edit,:index, :new , :show , :destroy]
 
   # GET /appointments
@@ -303,6 +304,40 @@ class AppointmentsController < ApplicationController
   end
 
 
+
+
+
+def dump_csv
+  @appointments = Appointment.find(:all, :order => "id ASC")
+  @outfile = "appointment_" + Time.now.strftime("%m-%d-%Y") + ".csv"
+
+  csv_data = FasterCSV.generate do |csv|
+    csv << [
+    "start at",
+    "updated_at",
+    "end_at",
+    "note",
+    "group",
+    "priority_number"
+    ]
+    @appointments.each do |appointment|
+      csv << [
+     appointment.start_at,
+      appointment.updated_at,
+      appointment.end_at,
+     appointment.note,
+     appointment.group,
+     appointment.priority_number
+      ]
+    end
+  end
+
+  send_data csv_data,
+    :type => 'text/csv; charset=iso-8859-1; header=present',
+    :disposition => "attachment; filename=#{@outfile}"
+
+  flash[:notice] = "Export complete!"
+end
 
   #########################
   private
