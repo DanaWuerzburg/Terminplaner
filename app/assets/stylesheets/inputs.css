@@ -98,7 +98,7 @@ a.edit, input.edit{
     background-position: -40px -60px;
 }
 a.edittrans, input.edittrans{
-    background-position: -80px -630px;
+    background-position: -120px -60px;
 }
 a.delete, input.delete{
     background-position: -40px -90px;
@@ -137,7 +137,7 @@ a.search, input.search{
     background-position: -40px -420px;
 }
 a.clear, input.clear{
-    background-position: -80px -630px;
+    background-position: -80px -600px;
 }
 a.more, input.more{
     background-position: -40px -480px;
@@ -150,7 +150,7 @@ a.calendar, input.calendar{
         background-position: -40px -510px;
 }
 a.accept, input.accept{
-    background-position: -80px -630px;
+    background-position: -120px -570px;
     background-color: #ffffff;
     border-left: none;
 }
@@ -181,7 +181,7 @@ a.edit:hover, input.edit:hover{
     background-position: 0 -60px;
 }
 a.edittrans:hover, input.edittrans:hover{
-    background-position: -120px -60px;
+    background-position: -80px -60px;
 }
 a.create:hover, input.create:hover{
     background-position: 0 -120px;
@@ -232,7 +232,7 @@ a.calendar:hover, input.calendar:hover{
     background-position: 0 -510px;
 }
 a.accept:hover, input.accept:hover{
-    background-position: -120px -570px;
+    background-position: -80px -570px;
 }
 a.forward:hover, input.forward:hover{
     background-position: 0 -630px;

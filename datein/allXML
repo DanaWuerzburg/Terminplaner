@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects type="array">
-  <object>
-    <appointment>
-      <id type="integer">49</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">7</groupe>
-      <date type="datetime">2012-02-06T00:00:00Z</date>
-      <note>Hallo, Testnachricht!</note>
-    </appointment>
-  </object>
-</objects>
+<nil-classes type="array"/>
