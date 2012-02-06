@@ -8,7 +8,7 @@
                     <!-- Since <%#= u.created_at.to_s(:long) %>  -->
 
                     <%= link_to '[Accept]', friendship_path(:user_id => current_user, :id => u), :method => :put, :confirm => 'Accept friend request! Are you sure?' %> |
-                    <%= link_to '', friendship_path(:user_id => current_user, :id => u), :method => :delete, confirm: 'Your are about to reject a friendsrequest! Are you sure?',  class: 'button right delete', title: 'Delete Friend'  %>
+                    <%= link_to '[Reject]', friendship_path(:user_id => current_user, :id => u), :method => :delete, confirm: 'Your are about to reject a friendsrequest! Are you sure?' %>
                 </ul>
             <% end %>
         <% else %>

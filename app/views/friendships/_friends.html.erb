@@ -6,7 +6,7 @@
                 <%= link_to u.login, user_path(u.id) %>
                  <!-- Since <%#= u.created_at.to_s(:long) %>  -->
 
-                 <%= link_to'', friendship_path(:user_id => current_user, :id => u), :method => :delete, confirm: 'Are you sure?',  class: 'button right delete', title: 'Delete Friend' %>
+                 <%= link_to '[Remove]', friendship_path(:user_id => current_user, :id => u), :method => :delete, :confirm => 'Are you sure?' %>
                </ul>
             <% end %>
         <% else %>

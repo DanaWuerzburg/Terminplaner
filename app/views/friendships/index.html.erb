@@ -1,11 +1,16 @@
 
     <h1><%= current_user.login %>'s Friends</h1>
-
-    <%= render :partial => 'friendships/friends' %>
-
-    <%= link_to 'Find new Friends',friendship_path(current_user) %>
-
+    <div>
+        <%= render :partial => 'friendships/friends' %>
+    </div>
+    <div>
+        <%= link_to 'Find new Friends',friendship_path(current_user) %>
+    </div>
+    <div>
     <h4>Requested Friends: </h4>
-    <%= render :partial => 'friendships/requested_friends' %>
-    <h4>Pending Friends:  </h4>
-    <%= render :partial => 'friendships/pending_friends' %>
+        <%= render :partial => 'friendships/requested_friends' %>
+        </div>
+    <div>
+        <h4>Pending Friends:  </h4>
+        <%= render :partial => 'friendships/pending_friends' %>
+    </div>
