@@ -6,10 +6,10 @@ describe User do
 
   before(:each) do
     @valid_attributes = {
-      :login => "NewUser",
-      :password => "12345678",
-      :password_confirmation => "12345678",
-      :email => "newuser@newuser.com",
+      :login => "Dagobert",
+      :email => "dagobert@mail.com",
+      :password => "dagobert",
+      :password_confirmation => "dagobert"
     }
   end
 

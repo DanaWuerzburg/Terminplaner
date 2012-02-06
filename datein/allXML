@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <objects type="array">
   <object>
@@ -12,11 +11,29 @@
   </object>
   <object>
     <appointment>
+      <id type="integer">2</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">2</groupe>
+      <date type="datetime">2012-02-06T00:00:00Z</date>
+      <note>Ich liebe dich</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
       <id type="integer">3</id>
       <priority type="integer">3</priority>
       <groupe type="integer">1</groupe>
       <date type="datetime">2012-02-08T17:00:00Z</date>
       <note>blubb ich liebe dich</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">4</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-06T00:00:00Z</date>
+      <note>termin</note>
     </appointment>
   </object>
   <object>
@@ -29,35 +46,3 @@
     </appointment>
   </object>
 </objects>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<objects type="array">
-  <object>
-    <appointment>
-      <id type="integer">50</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">13</groupe>
-      <date type="datetime">2012-02-10T00:00:00Z</date>
-      <note>sg olehf oihefoh wegf</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">52</id>
-      <priority type="integer">4</priority>
-      <groupe type="integer">18</groupe>
-      <date type="datetime">2012-02-08T14:00:00Z</date>
-      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">49</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">9</groupe>
-      <date type="datetime">2012-02-06T23:00:00Z</date>
-      <note>Hallo, Testnachricht!</note>
-    </appointment>
-  </object>
-</objects>
->>>>>>> 3f0a2f54318bfa34d90d8bc999e5df88cba9b609
