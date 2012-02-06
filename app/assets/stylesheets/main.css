@@ -102,7 +102,7 @@
 
             }
             #loginbg{
-
+                max-width: 1200px;
                 height: 600px;
                 background: url("/images/calendar_bg.png") left no-repeat;
                 border-radius: 4px;
@@ -140,11 +140,15 @@
                    min-height:250px;
                    padding: 10px;
                    margin: 5px;
-                   background: #F5F5F5;
+
                    border-radius: 4px;
                    float: left;
                    opacity: 0.9;
 
+                }
+                .transbg{
+                    background: url("/images/bg_dialog.png") center repeat-x;
+                    background-color: transparent;
                 }
                 .formular{
 

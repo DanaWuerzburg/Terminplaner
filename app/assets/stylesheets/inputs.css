@@ -98,6 +98,8 @@ a.add, input.add{
 a.save, input.save{
     background-position: -120px -120px;
     border:  none;
+    background-color: transparent;
+
 }
 a.edit, input.edit{
     background-position: -40px -60px;
@@ -202,7 +204,8 @@ a.useradd:hover, input.useradd:hover{
 }
 a.save:hover, input.save:hover{
     background-position: -80px -120px;
-    box-shadow: none
+    box-shadow: none;
+    background-color: transparent;
 }
 a.userremove:hover, input.userremove:hover{
     background-position: 0 -210px;
