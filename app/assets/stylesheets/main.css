@@ -89,11 +89,22 @@
             left: 55%;
             position:relative;
         }
-            .appointments{
-
+            .link, .link:visited{
+                font-size: 14px;
+                color: #A63232 !important;
+                font-weight:bold;
+                margin: 0 15px;
+            }
+            .link:hover, .link:active, .link:focus{
+                 color: #E58A8A !important;
             }
             #tabs{
 
+            }
+            #logintabs{
+                min-width: 1200px;
+                height: 600px;
+                background: green;
             }
 
              .reminder{

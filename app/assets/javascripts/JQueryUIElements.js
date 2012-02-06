@@ -95,8 +95,10 @@ $(function(){
 				}
 			}
         });
+
+
         $('#forgetpw_link').click(function() { // bind click event to link
-            $logintabs.tabs('select', 2); // switch to third tab
+            $( "#logintabs" ).tabs('select', 2); // switch to third tab
             return false;
         });
 });
