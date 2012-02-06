@@ -67,11 +67,10 @@ class UsersController < ApplicationController
     if @user.save_without_session_maintenance
       @user.create_no_group
       @user.send_activation_instructions!      # new method in the User model
-      flash[:notice] = "Your account has been created. Please confirm your account by following the instructions we've sent to your " + @user.email + " email address."
+      flash[:notice] = "Please confirm your account by following the instructions we've sent to your " + @user.email + " email address."
       redirect_to new_user_session_url
     else
-      flash[:notice] = "There was a problem creating a user account. Please try again."
-      render :action => :new
+
     end
   end
 

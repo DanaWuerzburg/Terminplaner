@@ -7,7 +7,7 @@
        <% if current_user %>
           <li><h1><%= link_to "#{current_user.login}'s Agenda", appointments_path, :class => "title" %></h1></li>
        <% else %>
-          <li><h1>Agenda </h1></li>
+          <li><h1>Get Your Agenda</h1></li>
        <% end %>
       </ul>
     </div>
@@ -21,9 +21,6 @@
             <a id="btSettings" class='button settings left' href="#" title="Settings"></a>
             <%= link_to '', :logout, :class=> 'button logout right', :alt => 'Logout', :title => 'Logout'%>
         <% else %>
-
-            <%= link_to "", new_user_path, :class=> 'button useradd left', :alt => 'Register', :title => 'Register'%>
-            <%= link_to "", :login, :class=> 'button login right', :alt => 'Login', :title => 'Login' %>
         <% end %>
     </div>
   </div>

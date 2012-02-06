@@ -80,14 +80,25 @@ $(function(){
                 async: false,
 				error: function( xhr, status, index, anchor ) {
 					$( anchor.hash ).html(
-						"Couldn't load this tab. We'll try to fix this as soon as possible. " +
-						"If this wouldn't be a demo." );
+						"Couldn't load this tab. We'll try to fix this as soon as possible.");
+				}
+			}
+        });
+        $( "#logintabs" ).tabs({
+            selected: 0,
+         fx: { opacity: 'toggle' },
+         ajaxOptions: {
+                async: false,
+				error: function( xhr, status, index, anchor ) {
+					$( anchor.hash ).html(
+						"Couldn't load this tab. We'll try to fix this as soon as possible. ");
 				}
 			}
         });
 
+
+        $('#forgetpw_link').click(function() { // bind click event to link
+            $( "#logintabs" ).tabs('select', 2); // switch to third tab
+            return false;
         });
-        $(function(){
-            $('#appointment_start_at').datetimepicker( "setDate" , +1 );
-            $('#appointment_end_at').datetimepicker( "setDate" , +1 );
-        });
+});

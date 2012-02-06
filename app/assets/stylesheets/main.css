@@ -68,14 +68,16 @@
         background-attachment: fixed;
 		}
     #wrap{
-	    position:relative;
+        position:fixed;
         width: 100%;
         height: 100%;
+        background: url("/images/bg_smoke.png") bottom no-repeat;
     }
     header{
         height: 50px;
     }
     #cont{
+
 
     }
     .centered{
@@ -89,15 +91,39 @@
             left: 55%;
             position:relative;
         }
-            .appointments{
-
+            .link, .link:visited{
+                font-size: 14px;
+                color: #A63232 !important;
+                font-weight:bold;
+                margin: 0 15px;
+            }
+            .link:hover, .link:active, .link:focus{
+                 color: #E58A8A !important;
             }
             #tabs{
-
+                background: transparent;
+                opacity: 0.9;
+            }
+            #loginbg{
+                max-width: 1200px;
+                height: 600px;
+                background: url("/images/calendar_bg.png") left no-repeat;
+                border-radius: 4px;
             }
 
+            #logintabs{
+                background: transparent;
+            }
+            #tabbg{
+                max-width: 1200px;
+                border-radius: 4px;
+            }
+
+            #logintabs ul, #tabs ul{
+                background: transparent;
+            }
              .reminder{
-                background: #F6F6F2;
+
                 width: auto;
                 padding: 10px;
                 margin: 10px 15px 0;
@@ -122,10 +148,15 @@
                    min-height:250px;
                    padding: 10px;
                    margin: 5px;
-                   background: #F5F5F5;
+
                    border-radius: 4px;
                    float: left;
+                   opacity: 0.9;
 
+                }
+                .transbg{
+                    background: url("/images/bg_dialog.png") center repeat-x;
+                    background-color: transparent;
                 }
                 .formular{
 
@@ -138,6 +169,7 @@
 		            color: #003399;
                     clear: both;
                     display:block;
+                    max-width: 220px;
                 }
     #priority_number{
         margin-left: 0;
@@ -161,3 +193,12 @@
         color: #A63232;
         width:auto;
             }
+
+li.daytime{
+    margin: 10px 15px 0 15px;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+.today{
+}

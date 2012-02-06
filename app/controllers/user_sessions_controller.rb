@@ -10,6 +10,7 @@ class UserSessionsController < ApplicationController
   # GET /user_sessions/new.xml
   def new
     @user_session = UserSession.new
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -25,6 +26,7 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.xml
   def create
     @user_session = UserSession.new(params[:user_session])
+    @user = User.new
     #@user = User.find_all_by_login(params[:user_session][:email])
 
     respond_to do |format|

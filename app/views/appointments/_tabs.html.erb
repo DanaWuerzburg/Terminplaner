@@ -5,9 +5,10 @@
             <li class= "noJquerycss "><a href="#tabs-2" class="button calendar middle" title="Calendar View"></a></li>
             <li class= "noJquerycss "><a class="button more right" src="hideNote" type="text/javascript" onClick="FadeContent('reminder'); return true;" href="#" title="Show/Hide Today's Appointments"></a></li>
             <li class= "noJquerycss"><a class="button add" href="#" title="Add New Appointment" id='btAddNewAppointment'></a></li>
-            <span class="floatright" >
-            <li class= "noJquerycss daytime"><span><h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4></span></li>
-            <li class= "noJquerycss"><%= render :partial => 'appointments/search' %></li>
+            <li class= "noJquerycss daytime"><span class="today"><h4><%= Time.now.strftime('%A, %d. %B %Y')%></h4></span></li>
+              <span class="floatright" >
+
+                <li class= "noJquerycss"><%= render :partial => 'appointments/search' %></li>
 
             </span>
 

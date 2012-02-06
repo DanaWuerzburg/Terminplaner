@@ -1,0 +1,20 @@
+
+
+<%= form_tag password_resets_path do %>
+    <div class="field">
+      <h4>Forgot Password?</h4>
+
+        <label class="label">
+
+          Fill in your Email and we're gonna help you reset your Password:
+        </label>
+      <label class="label"><%= label_tag(:email, "")+ "Email:"  %></label>
+
+        <%= email_field_tag(:email, '', :class => "textarea searcharea floatleft")%>
+
+        <%= submit_tag"",:class=> 'button accept without floatright', :title=>'Send Password Reset Link' %>
+    </div>
+
+
+
+<% end %>

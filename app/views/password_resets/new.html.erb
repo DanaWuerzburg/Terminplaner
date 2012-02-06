@@ -1,20 +1,3 @@
 
-        <h1>Forgot Password</h1>
-
-        <p>
-
-          Fill out the form below and instructions to reset your password will be emailed to you:
-        </p>
-
-    <%= form_tag password_resets_path do %>
-    <div class="field">
-      <label class="label"><%= label_tag(:email, "")+ "Email:"  %></label>
-
-        <%= email_field_tag(:email) %>
-
-      <%= submit_tag"",:class=> 'button create', :title=>'Send Password Reset Link' %>
-    </div>
 
 
-
-<% end %>
