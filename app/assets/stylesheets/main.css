@@ -68,14 +68,16 @@
         background-attachment: fixed;
 		}
     #wrap{
-	    position:relative;
+        position:fixed;
         width: 100%;
         height: 100%;
+        background: url("/images/bg_smoke.png") top no-repeat;
     }
     header{
         height: 50px;
     }
     #cont{
+
 
     }
     .centered{
@@ -100,7 +102,7 @@
             }
             #tabs{
                 background: transparent;
-
+                opacity: 0.9;
             }
             #loginbg{
                 max-width: 1200px;
@@ -114,15 +116,14 @@
             }
             #tabbg{
                 max-width: 1200px;
-                min-height: 600px;
-                background: url("/images/bg_smoke.png") center no-repeat;
                 border-radius: 4px;
             }
-            #logintabs ul{
+
+            #logintabs ul, #tabs ul{
                 background: transparent;
             }
              .reminder{
-                background: #F6F6F2;
+
                 width: auto;
                 padding: 10px;
                 margin: 10px 15px 0;

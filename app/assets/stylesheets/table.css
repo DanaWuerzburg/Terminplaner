@@ -1,6 +1,6 @@
 table.pretty{
 	font-size: 1em;
-	background: #fff;
+
 	width: auto;
 	border-collapse: collapse;
 	text-align: left;
@@ -9,6 +9,7 @@ table.pretty{
     /*table header*/
     table.pretty > thead{
         border-bottom: 2px solid #6678b1;
+        background:  transparent !important;
     }
     table.pretty > thead th{
         font-size: 14px;
@@ -28,7 +29,7 @@ table.pretty{
     }
     table.pretty > thead th a:hover{
         color: #666699;
-        background: none;
+        background:  transparent;
     }
 
     /*table data*/
@@ -48,6 +49,9 @@ table.pretty{
         color: #666699;
         background:  #CCCCCC;
     }
+    table.pretty > tbody tr:nth-child(even){
+        background: #fff ;
+    }
     table.pretty > tbody tr:nth-child(odd){
-        background: #F6F6F2;
+        background: #F6F6F2 !important;
     }
