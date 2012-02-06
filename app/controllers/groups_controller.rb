@@ -43,6 +43,7 @@ class GroupsController < ApplicationController
     @group = Group.new
 
     respond_to do |format|
+      flash[:notice] = 'Group saved.'
       format.html # new.html.erb
       format.json { render json: @group }
     end
@@ -64,6 +65,7 @@ class GroupsController < ApplicationController
     @group = Group.new(params[:group].merge(:user_id =>current_user.id)) #user id mit user verknüpfen
     respond_to do |format|
       if @group.save
+        flash[:notice] = 'Group "' + @group.name + '" saved.'
         format.html { redirect_to :action => :index, :controller => :appointments }
         format.json { render json: @group, status: :created, location: @group }
       else
