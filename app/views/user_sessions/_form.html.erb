@@ -2,16 +2,18 @@
 
 
   <div class="field">
+    <h4>Login</h4>
+    <label class="label" ></label>
     <%= f.label "Username", class: 'label' %>
     <%= f.text_field :login, class: 'textarea' %>
 
     <%= f.label :password, class: 'label' %>
     <%= f.password_field :password, class: 'textarea' %>
+    <div><%= link_to "Forgot Password?", :id => 'forgetpw_link' %></div>
+    <span class="buttonsfloat">
+         <%= f.submit '', :class=> 'button save', :title=>'New Group' %>
+      </span>
 
-    <%= link_to "Forgot Password?", :controller => 'password_resets', :action => 'new' %>
-    <span class="floatright">
-        <%= f.submit '', :action => :new, :notice => 'Appointment in form', :class=> 'button create login left', :title=>'Login'  %>
-        <%= link_to "", new_user_path, :class=> 'button useradd right', :alt => 'Register', :title => 'Register'%>
-    </span>
   </div>
+
 <% end %>

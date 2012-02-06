@@ -83,6 +83,7 @@ a.right, input.right {
 .textarea{
     background:  #fff;
     line-height: 18pt;
+    width: 200px;
 }
 .searcharea{
     margin-top: 0;
@@ -93,6 +94,10 @@ a.right, input.right {
 
 a.add, input.add{
     background-position: -40px -30px !important;
+}
+a.save, input.save{
+    background-position: -120px -120px;
+    border:  none;
 }
 a.edit, input.edit{
     background-position: -40px -60px;
@@ -195,6 +200,10 @@ a.back:hover, input.back:hover{
 a.useradd:hover, input.useradd:hover{
     background-position: 0 -180px;
 }
+a.save:hover, input.save:hover{
+    background-position: -80px -120px;
+    box-shadow: none
+}
 a.userremove:hover, input.userremove:hover{
     background-position: 0 -210px;
 }
@@ -245,4 +254,10 @@ a.forward:hover, input.forward:hover{
     max-width: 100px;
     height: 18px;
     margin:  0 !important;
+}
+
+.buttonsfloat{
+position: relative;;
+float: right;
+
 }

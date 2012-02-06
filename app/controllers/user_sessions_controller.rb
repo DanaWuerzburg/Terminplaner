@@ -26,6 +26,7 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.xml
   def create
     @user_session = UserSession.new(params[:user_session])
+    @user = User.new
     #@user = User.find_all_by_login(params[:user_session][:email])
 
     respond_to do |format|

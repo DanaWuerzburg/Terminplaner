@@ -1,15 +1,19 @@
 <div id="logintabs" class="noJquerycss">
         <ul class="noJquerycss">
 
-            <li class= "noJquerycss "><a href="#tabs-1" title="Login">Login</a></li>
-            <li class= "noJquerycss "><a href="#tabs-2" title="Sign up">Sign up</a></li>
+            <li class= "noJquerycss "><a href="#logintabs-1" title="Login">Login</a></li>
+            <li class= "noJquerycss "><a href="#logintabs-2" title="Sign up">Sign up</a></li>
+            <li class= "noJquerycss "><a href="#logintabs-3" title="Sign up">Password reset</a></li>
         </ul>
 
-	<div id="tabs-1">
+	<div id="logintabs-1">
         <%= render :partial => 'user_sessions/form' %>
     </div>
-	<div id="tabs-2">
+	<div id="logintabs-2">
         <%= render :partial => 'users/form' %>
+    </div>
+    <div id="logintabs-3">
+        <%= render 'password_resets/form' %>
     </div>
 
 

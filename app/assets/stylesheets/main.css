@@ -138,6 +138,7 @@
 		            color: #003399;
                     clear: both;
                     display:block;
+                    max-width: 220px;
                 }
     #priority_number{
         margin-left: 0;
