@@ -13,6 +13,8 @@ class Appointment < ActiveRecord::Base
 
   validates :user_id, :presence => true
   validates :group_id, :presence => true
+   validates :start_at, :presence => true
+  validates  :end_at, :presence => true
 
   # @param search [Appointment]
  # def self.search(search)
