@@ -70,8 +70,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Please confirm your account by following the instructions we've sent to your " + @user.email + " email address."
       redirect_to new_user_session_url
     else
-      flash[:notice] = "There was a problem creating a user account. Please try again."
-      render :action => :new
+
     end
   end
 
