@@ -593,14 +593,3 @@ li.noJquerycss{
 .noJquerycss{
     border:  none !important;
 }
-li.daytime{
-    margin-top: 10px;
-    width: auto;
-    position: relative;
-
-    text-align: center;
-}
-
-li.daytime.span{
-    left: 50%;
-}

@@ -71,7 +71,7 @@
         position:fixed;
         width: 100%;
         height: 100%;
-        background: url("/images/bg_smoke.png") top no-repeat;
+        background: url("/images/bg_smoke.png") bottom no-repeat;
     }
     header{
         height: 50px;
@@ -193,3 +193,12 @@
         color: #A63232;
         width:auto;
             }
+
+li.daytime{
+    margin: 10px 15px 0 15px;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+.today{
+}
