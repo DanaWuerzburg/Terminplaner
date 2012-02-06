@@ -99,6 +99,7 @@
                  color: #E58A8A !important;
             }
             #tabs{
+                background: transparent;
 
             }
             #loginbg{
@@ -110,6 +111,12 @@
 
             #logintabs{
                 background: transparent;
+            }
+            #tabbg{
+                max-width: 1200px;
+                min-height: 600px;
+                background: url("/images/bg_smoke.png") center no-repeat;
+                border-radius: 4px;
             }
             #logintabs ul{
                 background: transparent;
