@@ -74,7 +74,7 @@ $(function(){
 
 
 		$( "#tabs" ).tabs({
-         selected: 1,
+         selected: 0,
          fx: { opacity: 'toggle' },
          ajaxOptions: {
                 async: false,
