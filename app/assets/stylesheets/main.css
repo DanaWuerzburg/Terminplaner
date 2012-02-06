@@ -101,12 +101,19 @@
             #tabs{
 
             }
-            #logintabs{
-                min-width: 1200px;
+            #loginbg{
+
                 height: 600px;
-                background: green;
+                background: url("/images/calendar_bg.jpg") left no-repeat;
+                border-radius: 4px;
             }
 
+            #logintabs{
+                background: transparent;
+            }
+            #logintabs ul{
+                background: transparent;
+            }
              .reminder{
                 background: #F6F6F2;
                 width: auto;
@@ -136,6 +143,7 @@
                    background: #F5F5F5;
                    border-radius: 4px;
                    float: left;
+                   opacity: 0.9;
 
                 }
                 .formular{
