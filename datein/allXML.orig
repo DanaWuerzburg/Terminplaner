@@ -3,11 +3,11 @@
 <objects type="array">
   <object>
     <appointment>
-      <id type="integer">1</id>
-      <priority type="integer">5</priority>
-      <groupe type="integer">1</groupe>
-      <date type="datetime">2012-02-05T22:15:00Z</date>
-      <note>Blubb</note>
+      <id type="integer">2</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">2</groupe>
+      <date type="datetime">2012-02-06T00:00:00Z</date>
+      <note>Ich liebe dich</note>
     </appointment>
   </object>
   <object>
@@ -17,15 +17,6 @@
       <groupe type="integer">1</groupe>
       <date type="datetime">2012-02-08T17:00:00Z</date>
       <note>blubb ich liebe dich</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">5</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">3</groupe>
-      <date type="datetime">2012-02-06T00:00:00Z</date>
-      <note>blublsadlask</note>
     </appointment>
   </object>
 </objects>
@@ -52,6 +43,16 @@
   </object>
   <object>
     <appointment>
+      <id type="integer">54</id>
+      <priority type="integer">3</priority>
+      <groupe type="integer">5</groupe>
+      <date type="datetime">2012-02-08T09:00:00Z</date>
+      <note>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
       <id type="integer">49</id>
       <priority type="integer">3</priority>
       <groupe type="integer">9</groupe>
@@ -60,4 +61,4 @@
     </appointment>
   </object>
 </objects>
->>>>>>> 3f0a2f54318bfa34d90d8bc999e5df88cba9b609
+>>>>>>> b4d8ab10ad321f395829bfbf4985edb434a31165

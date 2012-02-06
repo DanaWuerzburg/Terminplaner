@@ -8,7 +8,12 @@
 
 </head>
 <body>
-    <div id="wrap" >
+
+      <% if current_user %>
+          <div id="wrap" >
+       <% else %>
+          <div id="wraplogin">
+       <% end %>
         <%= render 'header/nav' %>
         <div id="cont">
           <div class="centered">
