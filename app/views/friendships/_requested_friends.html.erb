@@ -7,7 +7,7 @@
                      <%= link_to u.login, user_path(u.id) %>
                     <!--Since <%#= u.created_at.to_s(:long) %> -->
 
-                    <%= link_to '[Cancel]', friendship_path(:user_id => current_user, :id => u), :method => :delete, :confirm => 'Are you sure?' %>
+                    <%= link_to '[Cancel]', friendship_path(:user_id => current_user, :id => u), :method => :delete, confirm: 'Your are about to cancel a your request! Are you sure?'%>
                 </ul>
             <% end %>
         <% else %>

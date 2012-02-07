@@ -34,6 +34,12 @@ describe UsersController do
     {}
   end
 
+  before(:each) do
+    activate_authlogic
+    @user = Factory.create(:valid_user)
+    UserSession.create(@user)
+  end
+
   describe "GET index" do
     it "assigns all users as @users" do
       user = User.create! valid_attributes

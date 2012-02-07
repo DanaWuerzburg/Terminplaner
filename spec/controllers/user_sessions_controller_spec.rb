@@ -20,6 +20,12 @@ require 'spec_helper'
 
 describe UserSessionsController do
 
+  before(:each) do
+    activate_authlogic
+    @user = Factory.create(:valid_user)
+    UserSession.create(@user)
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # UserSession. As you add validations to UserSession, be sure to
   # update the return value of this method accordingly.
@@ -54,14 +60,6 @@ describe UserSessionsController do
     it "assigns a new user_session as @user_session" do
       get :new, {}, valid_session
       assigns(:user_session).should be_a_new(UserSession)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested user_session as @user_session" do
-      user_session = UserSession.create! valid_attributes
-      get :edit, {:id => user_session.to_param}, valid_session
-      assigns(:user_session).should eq(user_session)
     end
   end
 
@@ -134,14 +132,6 @@ describe UserSessionsController do
         UserSession.any_instance.stub(:save).and_return(false)
         put :update, {:id => user_session.to_param, :user_session => {}}, valid_session
         assigns(:user_session).should eq(user_session)
-      end
-
-      it "re-renders the 'edit' template" do
-        user_session = UserSession.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        UserSession.any_instance.stub(:save).and_return(false)
-        put :update, {:id => user_session.to_param, :user_session => {}}, valid_session
-        response.should render_template("edit")
       end
     end
   end

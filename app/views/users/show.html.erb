@@ -21,7 +21,7 @@
       <% for friendship in @user.friendships %>
       <li>
         <%= h friendship.friend.login %>
-        (<%= link_to "remove", friendship, :method => :delete %>)
+        (<%= link_to "", friendship,  :method => :delete, confirm: 'Your are about to delete a friendship! Are you sure?',  class: 'button right delete', title: 'Delete Friend' %>)
       </li>
       <% end %>
     </ul>

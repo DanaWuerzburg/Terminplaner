@@ -101,4 +101,9 @@ $(function(){
             $( "#logintabs" ).tabs('select', 2); // switch to third tab
             return false;
         });
+
+        $('#search_link').click(function() { // bind click event to link
+            $( "#tabs" ).tabs('select', 0); // switch to first tab
+            return false;
+        });
 });

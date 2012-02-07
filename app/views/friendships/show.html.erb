@@ -1,19 +1,17 @@
 
 <div class="field">
-<h4>Find a new Friend! </h4>
-<p id="notice"><%= notice %></p>
+    <h4>Find a new Friend! </h4>
+    <p id="notice"><%= notice %></p>
+
+    <% @users.each do |user| %>
 
 
-    <label class="label">Username</label>
+        <% unless user== current_user %>
+            <ul>
+                <td><label><%= user.login %></label> </td>
+                <td><%= link_to "[Add Friend]", friendships_path(:friend_id => user), :method => :post %></td>
+            </ul>
+        <%end%>
+    <% end %>
 
-
-<% @users.each do |user| %>
-
-
-    <% unless user== current_user %>
-
-        <label><%= user.login %></label>
-        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-    <%end%>
-<% end %>
-    </div>
+</div>

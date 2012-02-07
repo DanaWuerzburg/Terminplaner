@@ -2,47 +2,20 @@
 <objects type="array">
   <object>
     <appointment>
-      <id type="integer">50</id>
-      <priority type="integer">5</priority>
-      <groupe type="integer">13</groupe>
-      <date type="datetime">2012-02-10T00:00:00Z</date>
-      <note>Hausaufgaben machen!</note>
+      <id type="integer">2</id>
+      <priority type="integer">4</priority>
+      <groupe type="integer">2</groupe>
+      <date type="datetime">2012-02-06T00:00:00Z</date>
+      <note>Ich liebe dich</note>
     </appointment>
   </object>
   <object>
     <appointment>
-      <id type="integer">52</id>
+      <id type="integer">3</id>
       <priority type="integer">3</priority>
-      <groupe type="integer">18</groupe>
-      <date type="datetime">2012-02-08T14:00:00Z</date>
-      <note>Besuch von Tante Doris.</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">54</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">5</groupe>
-      <date type="datetime">2012-02-08T09:00:00Z</date>
-      <note>Urlaub mit Klaus.</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">55</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">4</groupe>
-      <date type="datetime">2012-02-09T00:00:00Z</date>
-      <note>Tanzen mit Lisa!</note>
-    </appointment>
-  </object>
-  <object>
-    <appointment>
-      <id type="integer">56</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">4</groupe>
-      <date type="datetime">2012-02-05T00:00:00Z</date>
-      <note>Kochkurs in Hamburg-Altona!</note>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-08T17:00:00Z</date>
+      <note>blubb ich liebe dich</note>
     </appointment>
   </object>
 </objects>
