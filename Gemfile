@@ -13,16 +13,19 @@ gem "event-calendar", :require => "event_calendar"
 
 
 gem 'sqlite3'
+
+group :development, :test do
+
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+
+end
+
 group :test, :development do
    gem 'capybara'
    gem 'rspec-rails'
 end
 
-group :development, :test do  
 
-  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-
-end
 
 # Gems used only for assets and not required
 # in production environments by default.

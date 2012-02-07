@@ -1,0 +1,16 @@
+
+<!-- Invoke the Photo Controller's "create" action -->
+<%= form_for(@appointment, :url => {:action=>'speicher'}, :html=> {:multipart=>true}) do |f| %>
+
+
+
+  <p>
+    <%= f.label "data" %><br />
+    <!-- Upload file and invoke "load_photo_file" method in the Controller to process the upload file -->
+    <%= f.file_field :load_csv_file %>
+  </p>
+
+  <p>
+    <%= f.submit 'load' %>
+  </p>
+<% end %>

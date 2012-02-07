@@ -12,15 +12,15 @@
 
            <%=link_to "Download as xml", :action => "send_xml_file_single" %>
            <%=link_to "Show as xml", :action => "show_with_xml_single" %>
-            <%=link_to "Download ALL xml", :action => "send_xml_file" %>
-
+           <%=link_to "Download ALL xml", :action => "send_xml_file" %>
+          <%=button_to "CSV Import", :action => "test3" %>
      <h4>Upload the Sample XML Document, Parse and Manipulate</h4>
 
-       <% form_tag({:action => 'upload'}, :multipart => true )%>
+       <%# form_tag({:action => 'upload'}, :multipart => true )%>
 
-           <label for="file"> File:   </label>
-           <%= file_field("appointment","xml_file") %>
-           <%= submit_tag("Parse with REXML") %>
+           <!--label for="file"> File:   </label-->
+           <%#= file_field("appointment","xml_file") %>
+           <%#= submit_tag("Parse with REXML") %>
 
 
         <%#= render :partial => 'appointments/xml', :locals => {:apps => @appointment} %>
