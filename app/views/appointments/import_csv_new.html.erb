@@ -1,6 +1,11 @@
-<%= form_for(@appointment) do |f| %>
+<h4> Importierter Termin </h4>
+<%#= render "form" %>
 
-  <div class="field">
+<%= form_for (:appointment), :url => appointment_path,
+  :html => { :class => "new_appointment",
+  :id => "new_appointment" } do |f| %>
+
+   <div class="field">
     <label class="label">Date</label>
     <%= f.text_field :start_at, class: 'textarea' %>
     <%= f.text_field :end_at, class: 'textarea' %>
@@ -29,15 +34,10 @@
             </ul>
           <% end %>
      <% end %>
+
+     <%# @appointment.test3%>
     <span class="floatright">
-        <%= f.submit '', :action => :new, :class=> 'button create', :title=>'Save Appointment'%>
+       CSV Upload jetzt starten: <%= f.submit '', :action => :import_csv_new, :class=> 'button create', :title=>'Save Appointment'%>
     </span>
   </div>
-    Create Appointment via CSV :  <%=button_to "Upload CSV now", :action => "import_csv_new" %>
 <% end %>
-<h5>Generate and Download XML Document</h5>
-
-      <%=link_to "Download as xml", :action => "send_xml_file_single" %>
-      <%=link_to "Show as xml", :action => "show_with_xml_single" %>
-      <%=link_to "Download ALL xml", :action => "send_xml_file" %>
-     <%=button_to "CSV Import", :action => "import_csv_new" %>

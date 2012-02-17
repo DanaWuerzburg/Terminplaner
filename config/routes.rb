@@ -22,6 +22,7 @@ Terminplaner::Application.routes.draw do
 
   match ':controller(/:id(.:format)(/:action))'
   match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(.:format))'
   # User Activation
   match 'activate(/:activation_code)' => 'users#activate', :as => :activate_account
   match 'send_activation(/:user_id)' => 'users#send_activation', :as => :send_activation

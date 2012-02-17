@@ -33,11 +33,5 @@
         <%= f.submit '', :action => :new, :class=> 'button create', :title=>'Save Appointment'%>
     </span>
   </div>
-    Create Appointment via CSV :  <%=button_to "Upload CSV now", :action => "import_csv_new" %>
-<% end %>
-<h5>Generate and Download XML Document</h5>
 
-      <%=link_to "Download as xml", :action => "send_xml_file_single" %>
-      <%=link_to "Show as xml", :action => "show_with_xml_single" %>
-      <%=link_to "Download ALL xml", :action => "send_xml_file" %>
-     <%=button_to "CSV Import", :action => "import_csv_new" %>
+<% end %>

@@ -3,64 +3,118 @@
   <object>
     <appointment>
       <id type="integer">1</id>
-      <priority type="integer">5</priority>
-      <groupe type="integer">10</groupe>
-      <date type="datetime">2012-02-08T14:30:00Z</date>
-      <note>Vorbereitung Klausur</note>
+      <priority type="integer">3</priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T19:28:06Z</date>
+      <note>hey</note>
     </appointment>
   </object>
   <object>
     <appointment>
       <id type="integer">2</id>
-      <priority type="integer">1</priority>
-      <groupe type="integer">12</groupe>
-      <date type="datetime">2012-02-09T00:00:00Z</date>
-      <note>Omi's Geburtstag</note>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-04T04:00:00Z</date>
+      <note>UploadTestNeu1!!</note>
     </appointment>
   </object>
   <object>
     <appointment>
       <id type="integer">3</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">13</groupe>
-      <date type="datetime">2012-02-10T13:00:00Z</date>
-      <note>Treffen mit Hans und Otto</note>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-07T07:00:00Z</date>
+      <note>UploadTestNeu2!</note>
     </appointment>
   </object>
   <object>
     <appointment>
       <id type="integer">4</id>
-      <priority type="integer">2</priority>
-      <groupe type="integer">13</groupe>
-      <date type="datetime">2012-02-07T00:00:00Z</date>
-      <note>Urlaub</note>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:08:00Z</date>
+      <note>fuenf</note>
     </appointment>
   </object>
   <object>
     <appointment>
       <id type="integer">5</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">11</groupe>
-      <date type="datetime">2012-02-21T07:00:00Z</date>
-      <note>Berichte bearbeiten</note>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:00:00Z</date>
+      <note>sieben!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">6</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-04T04:00:00Z</date>
+      <note>UploadTestNeu1!!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">7</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-07T07:00:00Z</date>
+      <note>UploadTestNeu2!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">8</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:08:00Z</date>
+      <note>fuenf</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">9</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:00:00Z</date>
+      <note>sieben!</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">10</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-04T04:00:00Z</date>
+      <note>UploadTestNeu1!!</note>
     </appointment>
   </object>
   <object>
     <appointment>
       <id type="integer">11</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">16</groupe>
-      <date type="datetime">2012-02-23T00:00:00Z</date>
-      <note>Lust auf ein Treffen?</note>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-07T07:00:00Z</date>
+      <note>UploadTestNeu2!</note>
     </appointment>
   </object>
   <object>
     <appointment>
-      <id type="integer">20</id>
-      <priority type="integer">3</priority>
-      <groupe type="integer">23</groupe>
-      <date type="datetime">2012-02-10T00:00:00Z</date>
-      <note>Kaffe Trinken</note>
+      <id type="integer">12</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:08:00Z</date>
+      <note>fuenf</note>
+    </appointment>
+  </object>
+  <object>
+    <appointment>
+      <id type="integer">13</id>
+      <priority nil="true"></priority>
+      <groupe type="integer">1</groupe>
+      <date type="datetime">2012-02-06T07:00:00Z</date>
+      <note>sieben!</note>
     </appointment>
   </object>
 </objects>

@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  require 'csv'
   require "rexml/document"
   include REXML
   before_filter :require_user, :only  => [:edit,:index, :new , :show , :destroy]
@@ -57,6 +58,8 @@ class AppointmentsController < ApplicationController
     end
 
 
+    file = File.new("./datein/appointment_02-05-2012.csv", "w+")
+    file.close
     #@LISTE = @appointments.to_a
     #hasha = Hash.new()
     final = Array.new
@@ -96,6 +99,30 @@ class AppointmentsController < ApplicationController
     end
 
 
+  # GET /appointments/1
+  # GET /appointments/1.json
+    # "f.file_field :load_photo_file" in the view triggers Rails to invoke this method
+   # This method only store the information
+   # The file saving is done in after_save
+   def load_csv_file(data)
+     # Record the filename
+     @filename = data.original_filename
+     # Store the data for later use
+     @csv_data = data
+     save_csvf
+   end
+
+   # Called when save is completed
+   def save_csvf
+     if @csv_data then
+       # Write the data out to a file
+       name = File.join PHOTO_STORE, :filename
+       File.open(name, 'wb') do |f|
+         f.write(@csv_data.read)
+       end
+       @csv_data = nil
+     end
+   end
   # GET /appointments/1
   # GET /appointments/1.json
 
@@ -152,6 +179,14 @@ class AppointmentsController < ApplicationController
     @shared_friendship = FriendshipAppointment.new
     @appointment = Appointment.find(params[:id])
     @appointment.color = @appointment.group.colour
+
+    file = File.new("./datein/appointment_02-05-2012.csv")
+    file.close
+    hasha = Hash.new
+      CSV.parse(File.open("./datein/appointment_02-05-2012.csv", 'rb'), hasha) do |row|
+      hasha={:note => row[3]}
+    end
+
     respond_to { |format|
       format.html
       format.xml { render :xml => @appointment } }
@@ -232,11 +267,11 @@ class AppointmentsController < ApplicationController
   # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
   def show_with_xml_single
-    #single = File.new("./datein/temp/singleXML", "r")
-    @appointment = Appointment.find(params[:id])
+    single = File.new("./datein/temp/singleXML", "r")
+  #  @appointment = Appointment.find(params[:id])
 
-   #redirect_to "#{appointment_url}.xml"
-     render :partial => 'appointments/xml', :locals => {:apps => @appointment}
+   redirect_to "#{appointment_url}.xml"
+     #render :partial => 'appointments/xml', :locals => {:apps => @appointment}
 
 
       #FriendshipAppointment.where(:appointment_id => @appointment.id).update_all(:user =>current_user)
@@ -289,6 +324,139 @@ class AppointmentsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+     # - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+  def download_full_csv
+    @appointments = Appointment.find(:all)
+    @outfile = "appointment_ALLES" + Time.now.strftime("%m-%d-%Y") + ".csv"
+
+    csv_data = CSV.generate do |csv|
+      csv << ["start_at","note","created_at","updated_at","priority_number","group","user_id","group_id","color", "end_at","name" ]
+      @appointments.each do |appointment|
+        csv << [ appointment.start_at,appointment.note,appointment.created_at, appointment.updated_at,appointment.priority_number,
+                 appointment.group, appointment.user_id, appointment.color, appointment.end_at, appointment.name ]
+      end
+    end
+
+      send_data csv_data,
+        :type => 'text/csv; charset=iso-8859-1; header=present',
+        :disposition => "attachment; filename=#{@outfile}"
+       flash[:notice] = "Export complete!"
+    end
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+    def outlook_csv
+      @appointments = Appointment.find(:all)
+      @outfile = "appointmentOutlook_" + Time.now.strftime("%m-%d-%Y") + ".csv"
+
+      csv_data = CSV.generate do |csv|
+      csv << [
+        "start_at", "start_at_time", "end_at", "end_at_time", "note", "name", "priority_number"]
+      @appointments.each do |appointment|
+        csv << [ appointment.start_at.strftime("%d.%m.%Y"), appointment.start_at.strftime("%H:%M:%S"), appointment.end_at.strftime("%d.%m.%Y"),
+        appointment.end_at.strftime("%H:%M:%S"), appointment.note,"#{appointment.name}aus Agenda", appointment.priority_number ]
+      end
+    end
+
+    send_data csv_data,
+      :type => 'text/csv; charset=iso-8859-1; header=present',
+      :disposition => "attachment; filename=#{@outfile}"
+
+      flash[:notice] = "Export complete!"
+
+    end
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+    def csv_import
+      @appointment= Appointment.find(params[:id])
+      @group = Group.find(params[:id])
+      ident = @appointment.group
+      filetest = File.open("./datein/test.csv", "r")
+      #file = File.new(params[:file])
+      temp = CSV.new(filetest, {:headers => true,:header_converters => :symbol})
+      arr_of_arrays = CSV.read("#{filetest.path}")
+
+      #temp.each do |row|
+      #@newhash << {:var1 => row[0], :var2 => row[1]}
+      #end
+      arr_of_arrays.each do |da|
+
+        #apps = arr_ofarrays(da)
+        @appointment= Appointment.new(:start_at => da[0], :end_at => da[1], :note => da[2], :group => ident)
+      end
+    end
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - -
+   def uploadFile
+    stringf = params[:upload]
+    srtingjust = sanitize_filename(stringf)
+    e = File.open("./datein/#{stringf}", "r")
+    File.new("./datein/string.txt")
+    d = File.open("./datein/string.txt")
+    d.write(e)
+    d.close
+   # post = File.new()
+    render :text => "File has been uploaded successfully"
+  end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  def import_csv_new
+   @group = Group.new
+   @groups = Group.find(:all, :conditions => {:user_id => current_user})
+   @appointments = Appointment.find(:all)
+   #@appointment = Appointment.new
+   appd = Appointment.new
+
+    filename = "./datein/test.csv"
+    filename2 = "./datein/testindatei.csv"
+    @a = []
+    f = File.open("#{filename}", "r")
+    f2 = File.open("#{filename2}", "w")
+    f.readlines.each {|e|
+          e.chomp!
+          b=e.split(",") #or comma's if you prefer.
+          @a.push(b)
+     }
+    f.close
+    f2.write(@a.to_s)
+    create_csv_appointment(@a)
+    end
+        #appd = Appointment.new ({:start_at => b[0], :end_at => b[2], :note => b[3], :group => Group.new})
+     #@appointment= Appointment.new({:start_at => @a[1], :end_at => Time.now.strftime('%d,%m,%y'), :note => "testuploadperhand", :group => Group.new() })
+  # @appointment = Appointment.new(params[@a[1]])
+   #@appointment <<  @a[1]
+ # - - - - - - - - - - - - - - - - - - - - - - - -
+ # - - - - - - - - - - - - - - - - - - - - - - - -
+ def create_csv_appointment(appointment_csv)
+    @group = Group.new
+    @groups = Group.find(:all, :conditions => {:user_id => current_user})
+    @appointment = Appointment.find(params[:id])
+    x=[]
+    x=appointment_csv
+    unless x.nil? then
+      #FriendshipAppointment.all
+      x.each do |fid|
+          app1 = Appointment.create! \
+                    :start_at => fid[0],
+                    :end_at => fid[2],
+                    :note => fid[3],
+                     :group => @appointment.group,
+                    :user_id => current_user
+                  #:appointment_id => self.id,
+
+      end
+    end
+ end
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+  # - - - - - - - - - - - - - - - - - - - - - - - -
+   def sanitize_filename(file_name)
+  # get only the filename, not the whole path (from IE)
+  just_filename = File.basename(file_name)
+  # replace all none alphanumeric, underscore or perioids
+  # with underscore
+  just_filename.sub(/[^\w\.\-]/,'_')
+  end
   # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
   def generate_with_rexml
@@ -299,10 +467,7 @@ class AppointmentsController < ApplicationController
   def generate_with_rexml2
     hijack_response( inapphash )
   end
-
-
-
-  #########################
+    #########################
   private
  # - - - - - - - - - - - - - - - - - - - - - - - -
   # - - - - - - - - - - - - - - - - - - - - - - - -
